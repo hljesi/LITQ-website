@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research — LITQ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<!-- ══════════ NAV ══════════ -->
+<nav id="nav" class="always-solid">
+  <a href="index.html" class="nav-logo">
+    <span class="nav-logo-name">LITQ</span>
+    <span class="nav-logo-sub">Université de Montréal</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="research.html" class="active">Research</a></li>
+    <li><a href="index.html#people">People</a></li>
+    <li><a href="index.html#publications">Publications</a></li>
+    <li><a href="index.html#positions">Open Positions</a></li>
+  </ul>
+  <a href="../fr/research.html" class="lang-toggle">FR</a>
+  <button class="nav-burger" id="burger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ══════════ PAGE HEADER ══════════ -->
+<header class="page-header">
+  <div class="page-header-mesh" aria-hidden="true">
+    <!-- purple5: two tall oval pods — large, right side, bleeds down behind first research item -->
+    <img src="../brand_assets/tilde-ellipse-green5.png" alt=""
+         style="width: 65vw; max-width: 860px; min-width: 600px;; right: -10%; top: -20%; opacity: 0.20;" />
+  </div>
+  <div class="page-header-inner">
+    <div class="page-header-eyebrow">LITQ · Research</div>
+    <h1>Research <em>themes</em></h1>
+    <p class="page-header-body">
+      Our research aims to understand the theoretical and mathematical interplay of information,
+      computational and physical foundations. We develop applied protocols that utilise foundational properties
+      such as locality, entanglement and causality. Our algorithms aim to efficiently solve
+      new problems and learn from unknown quantum oracles — for implementation in quantum communication and experimental realisation.
+    </p>
+  </div>
+  <div class="page-header-deco">06</div>
+</header>
+
+<!-- ══════════ RESEARCH AREAS ══════════ -->
+<main class="research-list">
+
+  <!-- 01 — Quantum Algorithmics -->
+  <article class="research-item" id="algorithms">
+    <div class="ri-image ri-image--purple">
+      <img src="../images/UHET_alg.png" alt="Quantum Algorithmics">
+    </div>
+    <div class="ri-content">
+      <div class="ri-number reveal">01 / 06</div>
+      <h2 class="ri-title reveal">Quantum<br>Algorithmics</h2>
+      <div class="ri-rule ri-rule--purple reveal"></div>
+      <p class="ri-body reveal">
+        We design algorithms that harness quantum superposition, interference, and
+        entanglement to solve computational problems beyond the reach of any classical
+        method. Our work spans query complexity, quantum walks, algebraic techniques,
+        and novel paradigms for search, simulation, and sampling — with a focus on
+        proving tight upper and lower bounds on quantum query and time complexity.
+      </p>
+      <div class="ri-refs reveal reveal-d1">
+        <span class="ri-refs-label">Refs</span>
+        <a href="https://arxiv.org/abs/0811.3171" class="ri-ref ri-ref--purple" target="_blank" rel="noopener">arXiv:0811.3171</a>
+        <a href="https://arxiv.org/abs/quant-ph/0311001" class="ri-ref ri-ref--purple" target="_blank" rel="noopener">arXiv:quant-ph/0311001</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- 02 — Quantum Information Theory -->
+  <article class="research-item" id="info">
+    <div class="ri-image ri-image--teal">
+      <img src="../images/teleportation.jpg" alt="Quantum Information Theory">
+    </div>
+    <div class="ri-content">
+      <div class="ri-number reveal">02 / 06</div>
+      <h2 class="ri-title reveal">Quantum Information<br>Theory</h2>
+      <div class="ri-rule ri-rule--teal reveal"></div>
+      <p class="ri-body reveal">
+        How do quantum systems store, process, and communicate information? We study
+        entanglement structure, quantum channel capacities, entropy measures, and
+        quantum error-correcting codes. Our results build the information-theoretic
+        foundations that underpin quantum computing and connect to physics, mathematics,
+        and communication theory.
+      </p>
+      <div class="ri-refs reveal reveal-d1">
+        <span class="ri-refs-label">Refs</span>
+        <a href="https://arxiv.org/abs/1907.11157" class="ri-ref ri-ref--teal" target="_blank" rel="noopener">arXiv:1907.11157</a>
+        <a href="https://arxiv.org/abs/quant-ph/9604038" class="ri-ref ri-ref--teal" target="_blank" rel="noopener">arXiv:quant-ph/9604038</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- 03 — Quantum Complexity Theory -->
+  <article class="research-item" id="complexity">
+    <div class="ri-image ri-image--purple">
+      <img src="../images/quantum_complexity_theory.png" alt="Quantum Complexity Theory">
+    </div>
+    <div class="ri-content">
+      <div class="ri-number reveal">03 / 06</div>
+      <h2 class="ri-title reveal">Complexity Theory &amp;<br>Quantum Complexity Theory</h2>
+      <div class="ri-rule ri-rule--purple reveal"></div>
+      <p class="ri-body reveal">
+        We characterise the power and limits of quantum computation through the lens
+        of complexity theory — studying complexity classes such as BQP, QMA, QIP, and
+        QPCP, and mapping their relationships to classical counterparts. Our proofs
+        draw on algebraic geometry, interactive proof systems, and novel reductions to
+        establish where quantum computers are provably more powerful.
+      </p>
+      <div class="ri-refs reveal reveal-d1">
+        <span class="ri-refs-label">Refs</span>
+        <a href="https://arxiv.org/abs/2001.04383" class="ri-ref ri-ref--purple" target="_blank" rel="noopener">arXiv:2001.04383</a>
+        <a href="https://arxiv.org/abs/quant-ph/0406180" class="ri-ref ri-ref--purple" target="_blank" rel="noopener">arXiv:quant-ph/0406180</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- 04 — Cryptography -->
+  <article class="research-item" id="crypto">
+    <div class="ri-image ri-image--teal">
+      <img src="../images/alice_bob_eve_QKD.png" alt="Cryptography">
+    </div>
+    <div class="ri-content">
+      <div class="ri-number reveal">04 / 06</div>
+      <h2 class="ri-title reveal">Cryptography</h2>
+      <div class="ri-rule ri-rule--teal reveal"></div>
+      <p class="ri-body reveal">
+        We build cryptographic protocols whose security is guaranteed by the laws of
+        quantum mechanics, not computational hardness assumptions. From quantum key
+        distribution and device-independent protocols to post-quantum constructions
+        secure against quantum adversaries, our work establishes the cryptographic
+        foundations needed for the quantum era.
+      </p>
+      <div class="ri-refs reveal reveal-d1">
+        <span class="ri-refs-label">Refs</span>
+        <a href="https://arxiv.org/abs/quant-ph/0003004" class="ri-ref ri-ref--teal" target="_blank" rel="noopener">arXiv:quant-ph/0003004</a>
+        <a href="https://arxiv.org/abs/0709.4267" class="ri-ref ri-ref--teal" target="_blank" rel="noopener">arXiv:0709.4267</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- 05 — Higher-Order Maps & Causality -->
+  <article class="research-item" id="optimization">
+    <div class="ri-image ri-image--purple">
+      <img src="../images/indefinite_causal_map.jpg" alt="Optimization and Learning">
+    </div>
+    <div class="ri-content">
+      <div class="ri-number reveal">05 / 06</div>
+      <h2 class="ri-title reveal">Higher-Order Maps<br>&amp; Causality</h2>
+      <div class="ri-rule ri-rule--purple reveal"></div>
+      <p class="ri-body reveal">
+        We study quantum processes that go beyond ordinary quantum circuits —
+        higher-order maps that transform quantum channels, and causal structures
+        that may themselves be in quantum superposition. This includes the quantum
+        switch, process matrices, and indefinite causal order, with applications
+        to quantum communication advantages, computational speedups, and the
+        foundations of quantum theory.
+      </p>
+      <div class="ri-refs reveal reveal-d1">
+        <span class="ri-refs-label">Refs</span>
+        <a href="https://arxiv.org/abs/0912.0195" class="ri-ref ri-ref--purple" target="_blank" rel="noopener">arXiv:0912.0195</a>
+        <a href="https://arxiv.org/abs/1406.5133" class="ri-ref ri-ref--purple" target="_blank" rel="noopener">arXiv:1406.5133</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- 06 — Graph Theory -->
+  <article class="research-item" id="graphs">
+    <div class="ri-image ri-image--teal">
+      <img src="../images/graph_image.png" alt="Graph Theory">
+    </div>
+    <div class="ri-content">
+      <div class="ri-number reveal">06 / 06</div>
+      <h2 class="ri-title reveal">Graph Theory<br>&amp; Networks</h2>
+      <div class="ri-rule ri-rule--teal reveal"></div>
+      <p class="ri-body reveal">
+        Graphs are the universal language of structure. We study graph-theoretic
+        problems in both classical and quantum settings — from spectral graph theory
+        and graph isomorphism to quantum walks on graphs and network-based quantum
+        protocols. Our work develops new algorithms, hardness results, and structural
+        insights for fundamental combinatorial problems on graphs and hypergraphs.
+      </p>
+      <div class="ri-refs reveal reveal-d1">
+        <span class="ri-refs-label">Refs</span>
+        <a href="https://arxiv.org/abs/quant-ph/0012090" class="ri-ref ri-ref--teal" target="_blank" rel="noopener">arXiv:quant-ph/0012090</a>
+        <a href="https://arxiv.org/abs/1310.3575" class="ri-ref ri-ref--teal" target="_blank" rel="noopener">arXiv:1310.3575</a>
+      </div>
+    </div>
+  </article>
+
+</main>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="footer-flex">
+  <div>
+    <div class="footer-logo">LITQ</div>
+    <p class="footer-desc">Laboratory for Theoretical and Quantum Informatics — Université de Montréal.</p>
+  </div>
+  <div class="footer-links">
+    <div class="footer-col">
+      <h4>Research</h4>
+      <ul>
+        <li><a href="#algorithms">Quantum Algorithmics</a></li>
+        <li><a href="#info">Quantum Info. Theory</a></li>
+        <li><a href="#complexity">Complexity Theory</a></li>
+        <li><a href="#crypto">Cryptography</a></li>
+        <li><a href="#optimization">Higher-Order Maps &amp; Causality</a></li>
+        <li><a href="#graphs">Graph Theory</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Lab</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#people">People</a></li>
+        <li><a href="index.html#publications">Publications</a></li>
+        <li><a href="index.html#positions">Open Positions</a></li>
+        <li><a href="index.html#location">Location</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <p>© 2026 LITQ — Université de Montréal.</p>
+  <p>Département d'Informatique et de Recherche Opérationnelle</p>
+</div>
+
+<script src="../script.js" defer></script>
+</body>
+</html>
