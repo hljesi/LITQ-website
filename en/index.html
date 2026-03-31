@@ -46,9 +46,8 @@
       <span class="hero-line"><span class="hero-line-inner">Quantum Informatics</span></span>
     </h1>
     <p class="hero-body">
-      We advance the mathematical and computational foundations of quantum
-      information — developing algorithms, complexity results, and cryptographic
-      protocols for the quantum era. Based at DIRO, Université de Montréal.
+      We research the mathematical foundations of computer science, and develop algorithms, complexity results, and cryptographic
+      protocols for quantum technology. Based at DIRO, Université de Montréal.
     </p>
     <div class="hero-actions">
       <a href="research.html" class="btn-pri">Explore Research →</a>
@@ -62,7 +61,7 @@
   <div class="about-grid">
     <div class="about-text">
       <div class="sec-eyebrow reveal">About LITQ</div>
-      <h2 class="sec-title reveal">Where theory meets<br>the <em class="teal">quantum frontier</em></h2>
+      <h2 class="sec-title reveal">Who we <em class="teal">are</em></h2>
       <div class="accent-rule reveal"></div>
       <p class="reveal">
         Welcome to the website of the Laboratory of Theoretical and Quantum Computing (LITQ) in the Department
@@ -178,48 +177,7 @@
 <section class="section section--alt" id="publications">
   <div class="sec-eyebrow reveal">Selected Publications</div>
   <h2 class="sec-title reveal">Recent <em>Research</em></h2>
-  <div class="reveal" id="pub-list">
-    <div class="pub-item">
-      <span class="pub-year">2025</span>
-      <div>
-        <p class="pub-title">Optimal quantum speedups for combinatorial optimization via coherent access</p>
-        <p class="pub-meta">A. Dupont, M. Tremblay, S. Brassard <span class="pub-venue">STOC 2025</span></p>
-      </div>
-      <a href="#" class="pub-link">PDF →</a>
-    </div>
-    <div class="pub-item">
-      <span class="pub-year">2025</span>
-      <div>
-        <p class="pub-title">Tight lower bounds for quantum state tomography with adaptive measurements</p>
-        <p class="pub-meta">L. Fontaine, A. Dupont <span class="pub-venue">FOCS 2025</span></p>
-      </div>
-      <a href="#" class="pub-link">PDF →</a>
-    </div>
-    <div class="pub-item">
-      <span class="pub-year">2024</span>
-      <div>
-        <p class="pub-title">Entanglement-assisted zero-error communication: capacity bounds and constructions</p>
-        <p class="pub-meta">C. Girard, M. Tremblay, P. Hayden <span class="pub-venue">IEEE ISIT 2024</span></p>
-      </div>
-      <a href="#" class="pub-link">PDF →</a>
-    </div>
-    <div class="pub-item">
-      <span class="pub-year">2024</span>
-      <div>
-        <p class="pub-title">QMA-hardness of approximating quantum constraint satisfaction</p>
-        <p class="pub-meta">M. Tremblay, L. Fontaine, C. Girard <span class="pub-venue">CCC 2024</span></p>
-      </div>
-      <a href="#" class="pub-link">PDF →</a>
-    </div>
-    <div class="pub-item">
-      <span class="pub-year">2023</span>
-      <div>
-        <p class="pub-title">Device-independent quantum key distribution from computational assumptions</p>
-        <p class="pub-meta">S. Brassard, A. Dupont <span class="pub-venue">CRYPTO 2023</span></p>
-      </div>
-      <a href="#" class="pub-link">PDF →</a>
-    </div>
-  </div>
+  <div class="reveal" id="pub-list"></div>
   <div class="reveal" style="text-align:center;margin-top:3.5rem;">
     <a href="https://arxiv.org/search/?searchtype=author&query=Brassard+OR+Dupuis+OR+Salvail+OR+Kristjansson+OR+Sokolov" id="pub-view-all" class="btn-sec" target="_blank" rel="noopener">View All Publications on arXiv →</a>
   </div>
@@ -355,146 +313,129 @@
 
 <script src="../script.js" defer></script>
 
-<!-- ══════════ ARXIV LIVE PUBLICATIONS ══════════
-     Queries the free arXiv Atom API on every page load.
+<!-- ══════════ OPENALEX LIVE PUBLICATIONS ══════════
+     Queries the free OpenAlex API on every page load.
      Replaces the static pub-list with the 5 most recent papers
      authored by any LITQ faculty. Falls back to static HTML on error.
      ══════════════════════════════════════════════════════════════ -->
 <script>
 (async function () {
 
-  /* ── 1. Grab the container and save static HTML as a fallback ── */
+  /* ── 1. Show loading state ── */
   const pubList = document.getElementById('pub-list');
   if (!pubList) return;
-  const staticHTML = pubList.innerHTML;
 
-  /* ── 2. Show a loading placeholder ── */
   pubList.innerHTML =
     '<div style="text-align:center;padding:2.8rem;font-family:var(--ff-mono);' +
     'font-size:0.68rem;letter-spacing:0.18em;color:var(--text-subtle);text-transform:uppercase;">' +
-    'Loading from arXiv\u2026</div>';
+    'Loading publications\u2026</div>';
 
-  /* ── 3. arXiv author query strings (au: prefix, LastName_FirstInitial) ── */
-  const AUTHOR_QUERIES = [
-    'au:Brassard_G',    // Prof. Gilles Brassard
-    'au:Dupuis_F',      // Prof. Frédéric Dupuis
-    'au:Salvail_L',     // Prof. Louis Salvail
-    'au:Kristjansson_H',// Prof. Hlér Kristjánsson
-    'au:Hahn_G',        // Prof. Gena Hahn
-    'au:Sokolov_D',     // Prof. Dmitry Sokolov
+  /* ── 2. OpenAlex author IDs — one permanent ID per faculty member.
+     These were looked up once from https://api.openalex.org/authors?search=NAME
+     and are stable forever (unlike name searches which can drift). ── */
+  const FACULTY = [
+    { id: 'A5110284072', name: 'G. Brassard'    }, // Prof. Gilles Brassard
+    { id: 'A5066085467', name: 'F. Dupuis'       }, // Prof. Frédéric Dupuis
+    { id: 'A5059511887', name: 'L. Salvail'      }, // Prof. Louis Salvail
+    { id: 'A5049102572', name: 'H. Kristjánsson' }, // Prof. Hlér Kristjánsson
+    { id: 'A5110941674', name: 'G. Hahn'         }, // Prof. Gena Hahn
+    { id: 'A5017300573', name: 'D. Sokolov'      }, // Prof. Dmitry Sokolov
   ];
 
-  /* Surnames used to verify a result actually includes a LITQ author
-     (avoids false positives from common names like "Hahn" or "Sokolov") */
-  const LITQ_SURNAMES = new Set([
-    'brassard','dupuis','salvail','kristjansson','hahn','sokolov'
-  ]);
-
-  /* ── 4. Utility: escape HTML special chars ── */
+  /* ── 3. Utility: HTML-escape a string ── */
   function esc(s) {
-    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    return String(s)
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+      .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   }
 
   try {
-    /* ── 5. Build the API URL ──────────────────────────────────────────────
-       API:  https://export.arxiv.org/api/query
-       Docs: https://info.arxiv.org/help/api/user-manual.html
+    /* ── 4. Build the API URL ──────────────────────────────────────────────
+       API:     https://api.openalex.org  (free, no key, CORS-enabled)
+       Docs:    https://docs.openalex.org
 
-       Parameters:
-         search_query  — Atom query; OR-joins all faculty author strings
-         max_results   — fetch top 30 newest to have enough after filtering
-         sortBy        — submittedDate = newest first
-         sortOrder     — descending
+       /works endpoint — filter to only works authored by LITQ faculty:
+         filter=authorships.author.id:A1|A2|...   pipe-separated OR list
+         sort=publication_date:desc                newest first
+         per_page=20                               fetch 20 to have enough after any dedup
+         select=...                                only the fields we actually need
     ── */
-    const query = AUTHOR_QUERIES.join('+OR+');
+    const authorFilter = FACULTY.map(function (f) { return f.id; }).join('|');
+    const fields = 'id,title,publication_year,publication_date,authorships,primary_location,open_access';
     const url =
-      'https://export.arxiv.org/api/query' +
-      '?search_query=' + query +
-      '&start=0&max_results=30' +
-      '&sortBy=submittedDate&sortOrder=descending';
+      'https://api.openalex.org/works' +
+      '?filter=authorships.author.id:' + authorFilter +
+      '&sort=publication_date:desc' +
+      '&per_page=20' +
+      '&select=' + fields +
+      '&mailto=litq@iro.umontreal.ca'; // polite pool: faster rate limits
 
-    /* ── 6. Fetch (arXiv supports CORS; no API key required) ── */
+    /* ── 5. Fetch — plain JSON, no XML parsing needed ── */
     const resp = await fetch(url);
     if (!resp.ok) throw new Error('HTTP ' + resp.status);
+    const data = await resp.json();
 
-    const xmlText = await resp.text();
-
-    /* ── 7. Parse the Atom XML response ── */
-    const xml = new DOMParser().parseFromString(xmlText, 'application/xml');
-    if (xml.querySelector('parsererror')) throw new Error('XML parse error');
-
-    /* ── 8. Extract and filter entries ── */
+    /* ── 6. Extract paper details from each result ── */
     const seen   = new Set();
     const papers = [];
 
-    xml.querySelectorAll('entry').forEach(function (entry) {
+    (data.results || []).forEach(function (work) {
+      const openAlexId = work.id || '';
+      if (!openAlexId || seen.has(openAlexId)) return;
+      seen.add(openAlexId);
 
-      /* arXiv ID — strip URL prefix and version suffix (e.g. v2) */
-      const rawId   = (entry.querySelector('id')?.textContent ?? '').trim();
-      const arxivId = rawId
-        .replace(/^https?:\/\/arxiv\.org\/abs\//, '')
-        .replace(/v\d+$/, '');
-      if (!arxivId || seen.has(arxivId)) return;
-      seen.add(arxivId);
+      const title = (work.title || '').trim().replace(/\s+/g, ' ');
+      if (!title) return;
 
-      const title     = (entry.querySelector('title')?.textContent ?? '')
-                          .trim().replace(/\s+/g, ' ');
-      const published = (entry.querySelector('published')?.textContent ?? '').trim();
+      const year = work.publication_year || '—';
+      const date = work.publication_date ? new Date(work.publication_date) : new Date(0);
 
-      /* Author names as returned by arXiv */
-      const authors = Array.from(entry.querySelectorAll('author name'))
-                           .map(function (n) { return n.textContent.trim(); });
+      /* Author display: only show LITQ faculty names, then "et al." if others */
+      const facultyIds = new Set(FACULTY.map(function (f) { return f.id; }));
+      const litqAuthors = (work.authorships || [])
+        .filter(function (a) { return a.author && facultyIds.has(a.author.id.replace('https://openalex.org/', '')); })
+        .map(function (a) {
+          /* Shorten to "F. Last" */
+          const parts = (a.author.display_name || '').trim().split(' ');
+          if (parts.length < 2) return parts[0];
+          return parts[0][0] + '. ' + parts[parts.length - 1];
+        });
+      const totalAuthors = (work.authorships || []).length;
+      const authorDisplay = litqAuthors.join(', ') +
+        (totalAuthors > litqAuthors.length ? ' et al.' : '');
 
-      /* Verify at least one LITQ surname is present in the author list
-         — guards against e.g. a paper by an unrelated "G. Hahn" */
-      const hasLITQ = authors.some(function (name) {
-        return name.toLowerCase().split(/[\s,]+/)
-                   .some(function (part) { return LITQ_SURNAMES.has(part); });
-      });
-      if (!hasLITQ || !title) return;
+      /* Link: prefer arXiv landing page, then DOI, then OpenAlex */
+      const oa        = work.open_access || {};
+      const loc       = work.primary_location || {};
+      const arxivUrl  = oa.oa_url && oa.oa_url.includes('arxiv.org') ? oa.oa_url : null;
+      const doiUrl    = loc.landing_page_url || null;
+      const paperLink = arxivUrl || doiUrl || ('https://openalex.org/' + openAlexId.replace('https://openalex.org/', ''));
 
-      /* Venue: prefer journal_ref, then comment field (often "Accepted at X"),
-         fall back to arXiv ID */
-      const journalRef = (entry.querySelector('journal_ref')?.textContent ?? '').trim();
-      const comment    = (entry.querySelector('comment')?.textContent ?? '').trim();
-      const venue      = journalRef || comment || ('arXiv:' + arxivId);
+      /* Venue: source name (journal/conference), or arXiv, or blank */
+      const source  = loc.source;
+      const venue   = (source && source.display_name) ? source.display_name
+                    : (arxivUrl ? 'arXiv' : '');
 
-      /* Author display: "F. Last" format */
-      const authorDisplay = authors.map(function (a) {
-        var parts = a.trim().split(' ');
-        if (parts.length < 2) return parts[0];
-        return parts[0][0] + '. ' + parts[parts.length - 1];
-      }).join(', ');
-
-      papers.push({
-        title, authorDisplay, venue,
-        year:    new Date(published).getFullYear() || '—',
-        date:    new Date(published),
-        absLink: 'https://arxiv.org/abs/' + arxivId,
-      });
+      papers.push({ title, authorDisplay, venue, year, date, paperLink });
     });
 
-    /* ── 9. Sort newest first, take top 5 ── */
-    papers.sort(function (a, b) { return b.date - a.date; });
-    const top5 = papers.slice(0, 5);
+    if (papers.length === 0) { showError(); return; }
 
-    if (top5.length === 0) { pubList.innerHTML = staticHTML; return; }
-
-    /* ── 10. Render into the page ── */
-    pubList.innerHTML = top5.map(function (p) {
+    /* ── 7. Render top 5 with staggered fade-in ── */
+    pubList.innerHTML = papers.slice(0, 5).map(function (p) {
       return '<div class="pub-item" style="opacity:0;transform:translateY(14px);' +
              'transition:opacity 0.5s ease,transform 0.5s cubic-bezier(0.16,1,0.3,1);">' +
-               '<span class="pub-year">' + p.year + '</span>' +
+               '<span class="pub-year">' + esc(p.year) + '</span>' +
                '<div>' +
-                 '<p class="pub-title">'  + esc(p.title)        + '</p>' +
-                 '<p class="pub-meta">'   + esc(p.authorDisplay) +
-                   ' <span class="pub-venue">' + esc(p.venue) + '</span></p>' +
+                 '<p class="pub-title">' + esc(p.title) + '</p>' +
+                 '<p class="pub-meta">'  + esc(p.authorDisplay) +
+                   (p.venue ? ' <span class="pub-venue">' + esc(p.venue) + '</span>' : '') +
+                 '</p>' +
                '</div>' +
-               '<a href="' + p.absLink + '" class="pub-link" target="_blank" rel="noopener">PDF →</a>' +
+               '<a href="' + esc(p.paperLink) + '" class="pub-link" target="_blank" rel="noopener">PDF →</a>' +
              '</div>';
     }).join('');
 
-    /* Staggered fade-in */
     pubList.querySelectorAll('.pub-item').forEach(function (el, i) {
       setTimeout(function () {
         el.style.opacity   = '1';
@@ -503,9 +444,39 @@
     });
 
   } catch (err) {
-    /* ── 11. Graceful fallback to static HTML on any error ── */
-    console.warn('[LITQ arXiv]', err);
-    pubList.innerHTML = staticHTML;
+    /* ── 8. Any error → show styled error message ── */
+    console.warn('[LITQ OpenAlex]', err);
+    showError();
+  }
+
+  function showError() {
+    pubList.innerHTML =
+      '<div style="' +
+        'border:1px solid var(--border);' +
+        'padding:3rem 2rem;' +
+        'text-align:center;' +
+      '">' +
+        '<p style="' +
+          'font-family:var(--ff-display);' +
+          'font-style:italic;' +
+          'font-size:1.35rem;' +
+          'font-weight:300;' +
+          'color:var(--text);' +
+          'letter-spacing:-0.01em;' +
+          'margin-bottom:0.75rem;' +
+        '">Could not fetch publications right now.</p>' +
+        '<p style="' +
+          'font-family:var(--ff-mono);' +
+          'font-size:0.62rem;' +
+          'letter-spacing:0.16em;' +
+          'text-transform:uppercase;' +
+          'color:var(--text-subtle);' +
+        '">Please try again later or browse directly on ' +
+          '<a href="https://arxiv.org/search/?searchtype=author&query=Brassard+OR+Dupuis+OR+Salvail+OR+Kristjansson+OR+Sokolov" ' +
+             'style="color:var(--teal);border-bottom:1px solid var(--border-teal);text-decoration:none;" ' +
+             'target="_blank" rel="noopener">arXiv</a>' +
+        '</p>' +
+      '</div>';
   }
 
 })();
