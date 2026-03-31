@@ -5,9 +5,9 @@
   --border:       rgba(88, 28, 135, 0.13);
   --border-teal:  rgba(15, 118, 110, 0.18);
   --border-mid:   rgba(88, 28, 135, 0.25);
-  --accent:       #6D28D9;
-  --accent-dim:   rgba(109, 40, 217, 0.10);
-  --accent-glow:  rgba(109, 40, 217, 0.22);
+  --accent:       #381ec9;
+  --accent-dim:   rgba(46, 40, 217, 0.1);
+  --accent-glow:  rgba(75, 40, 217, 0.22);
   --teal:         #0F766E;
   --teal-dim:     rgba(15, 118, 110, 0.12);
   --teal-glow:    rgba(15, 118, 110, 0.22);
@@ -459,7 +459,7 @@ a.location-pill:hover { opacity: 0.80; transform: translateY(-2px); }
   transition: opacity 0.5s;
 }
 .ri-image--purple::after {
-  background: linear-gradient(135deg, rgba(109,40,217,0.20) 0%, transparent 60%);
+  background: linear-gradient(135deg, rgba(64, 40, 217, 0.2) 0%, transparent 60%);
 }
 .ri-image--teal::after {
   background: linear-gradient(135deg, rgba(15,118,110,0.20) 0%, transparent 60%);
@@ -511,7 +511,7 @@ a.location-pill:hover { opacity: 0.80; transform: translateY(-2px); }
   transition: opacity 0.2s, transform 0.2s cubic-bezier(0.16,1,0.3,1);
 }
 .ri-ref:hover { opacity: 0.78; transform: translateY(-2px); }
-.ri-ref--purple { border-color: rgba(109,40,217,0.28); background: var(--accent-dim); color: var(--accent); }
+.ri-ref--purple { border-color: rgba(61, 40, 217, 0.28); background: var(--accent-dim); color: var(--accent); }
 .ri-ref--teal   { border-color: rgba(15,118,110,0.28);  background: var(--teal-dim);   color: var(--teal);   }
 
 /* ── FOOTER ───────────────────────── */
@@ -547,10 +547,31 @@ footer.footer-flex {
 
 /* ── SCROLL REVEAL ────────────────── */
 .reveal { opacity:0; transform:translateY(28px); transition: opacity 0.75s ease, transform 0.75s cubic-bezier(0.16,1,0.3,1); }
-.reveal.in { opacity:1; transform:none; }
+.reveal.in { opacity:1; transform:none; transition-delay: 0s !important; }
 .reveal-d1 { transition-delay: 0.10s; }
 .reveal-d2 { transition-delay: 0.20s; }
 .reveal-d3 { transition-delay: 0.30s; }
+
+/* ── PROFILE PAGES ────────────────── */
+/* Ensure text stays fully opaque and black after reveal — no fade on hover */
+.profile-name, .profile-rank,
+.profile-tags-label,
+.profile-section h3, .profile-section p,
+.profile-section-label,
+.interest-list li, .teaching-name, .teaching-detail, .teaching-code,
+.sec-eyebrow { color: var(--text); }
+.profile-name em, .sec-title em { color: var(--accent); }
+.profile-rank, .profile-tags-label, .teaching-code,
+.people-section-title { color: var(--text-subtle); }
+.profile-section-label, .sec-eyebrow, .team-area { color: var(--teal); }
+/* Team cards as links — lock text colors, suppress inherited link transitions */
+a.team-card { color: var(--text); }
+a.team-card .team-name { color: var(--text); }
+a.team-card .team-role { color: var(--text-muted); }
+a.team-card .team-area { color: var(--teal); }
+a.team-card .team-name,
+a.team-card .team-role,
+a.team-card .team-area { transition: none; }
 
 /* ── RESPONSIVE ───────────────────── */
 @media (max-width: 1024px) {
