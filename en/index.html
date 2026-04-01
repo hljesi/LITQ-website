@@ -9,6 +9,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
+  <style>
+    .team-card--more .team-photo-more { aspect-ratio: 1/1; background: var(--surface); border: 1.5px dashed var(--border-teal); display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 0.7rem; transition: background 0.3s, border-color 0.25s; gap: 0.4rem; }
+    .team-card--more:hover .team-photo-more { background: var(--teal-dim); border-color: var(--teal); border-style: solid; }
+    .team-card-more-count { font-family: var(--ff-display); font-size: 2.1rem; font-weight: 300; color: var(--teal); line-height: 1; }
+    .team-card-more-label { font-family: var(--ff-mono); font-size: 0.60rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-subtle); text-align: center; padding: 0 0.6rem; }
+    .team-card--more .team-name { color: var(--teal) !important; }
+  </style>
 </head>
 <body>
 
@@ -21,7 +28,7 @@
   <ul class="nav-links">
     <li><a href="#home">Home</a></li>
     <li><a href="research.html">Research</a></li>
-    <li><a href="#people">People</a></li>
+    <li><a href="people.html">People</a></li>
     <li><a href="#publications">Publications</a></li>
     <li><a href="#positions">Join</a></li>
   </ul>
@@ -102,32 +109,7 @@
   <div class="team-carousel-wrap reveal">
     <button class="carousel-btn carousel-btn--prev" aria-label="Previous">&#8592;</button>
     <div class="team-carousel-track-outer">
-      <div class="team-grid" id="carousel-faculty">
-        <a class="team-card" href="profile.html?id=gilles-brassard" style="text-decoration:none;">
-          <div class="team-photo"><img src="../profile_icons/profile_filler.jpeg" alt="Prof. Gilles Brassard"></div>
-          <p class="team-name">Prof. Gilles Brassard</p><p class="team-role">Full Professor</p><p class="team-area">Quantum Cryptography · QKD</p>
-        </a>
-        <a class="team-card" href="profile.html?id=frederic-dupuis" style="text-decoration:none;">
-          <div class="team-photo"><img src="../profile_icons/profile_filler.jpeg" alt="Prof. Frédéric Dupuis"></div>
-          <p class="team-name">Prof. Frédéric Dupuis</p><p class="team-role">Associate Professor</p><p class="team-area">Quantum Information Theory</p>
-        </a>
-        <a class="team-card" href="profile.html?id=gena-hahn" style="text-decoration:none;">
-          <div class="team-photo"><img src="../profile_icons/profile_filler.jpeg" alt="Prof. Gena Hahn"></div>
-          <p class="team-name">Prof. Gena Hahn</p><p class="team-role">Full Professor</p><p class="team-area">Graph Theory · Combinatorics</p>
-        </a>
-        <a class="team-card" href="profile.html?id=hler-kristjansson" style="text-decoration:none;">
-          <div class="team-photo"><img src="../profile_icons/profile_filler.jpeg" alt="Prof. Hlér Kristjánsson"></div>
-          <p class="team-name">Prof. Hlér Kristjánsson</p><p class="team-role">Assistant Professor</p><p class="team-area">Higher-Order Quantum Maps</p>
-        </a>
-        <a class="team-card" href="profile.html?id=louis-salvail" style="text-decoration:none;">
-          <div class="team-photo"><img src="../profile_icons/louis_ SALVAIL.jpeg" alt="Prof. Louis Salvail"></div>
-          <p class="team-name">Prof. Louis Salvail</p><p class="team-role">Full Professor</p><p class="team-area">Cryptography · Complexity</p>
-        </a>
-        <a class="team-card" href="profile.html?id=dmitry-sokolov" style="text-decoration:none;">
-          <div class="team-photo"><img src="../profile_icons/profile_filler.jpeg" alt="Prof. Dmitry Sokolov"></div>
-          <p class="team-name">Prof. Dmitry Sokolov</p><p class="team-role">Assistant Professor</p><p class="team-area">Complexity Theory · Proofs</p>
-        </a>
-      </div>
+      <div class="team-grid" id="carousel-faculty"></div>
     </div>
     <button class="carousel-btn carousel-btn--next" aria-label="Next">&#8594;</button>
   </div>
@@ -135,41 +117,12 @@
   <div class="team-carousel-wrap reveal">
     <button class="carousel-btn carousel-btn--prev" aria-label="Previous">&#8592;</button>
     <div class="team-carousel-track-outer">
-      <div class="team-grid" id="carousel-students">
-        <a class="team-card" href="profile.html?id=daniel-bilsborrow" style="text-decoration:none;">
-          <div class="team-photo"><img src="../profile_icons/profile_filler.jpeg" alt="Daniel Bilsborrow"></div>
-          <p class="team-name">Daniel Bilsborrow</p><p class="team-role">PhD Student</p><p class="team-area">Research Area</p>
-        </a>
-        <a class="team-card" href="profile.html?id=marek-arsenault" style="text-decoration:none;">
-          <div class="team-photo"><img src="../profile_icons/profile_filler.jpeg" alt="Marek Arsenault"></div>
-          <p class="team-name">Marek Arsenault</p><p class="team-role">Masters Student</p><p class="team-area">Research Area</p>
-        </a>
-        <a class="team-card" href="profile.html?id=taha-skiredj" style="text-decoration:none;">
-          <div class="team-photo"><img src="../profile_icons/profile_filler.jpeg" alt="Taha Skiredj"></div>
-          <p class="team-name">Taha Skiredj</p><p class="team-role">Masters Student</p><p class="team-area">Research Area</p>
-        </a>
-        <a class="team-card" href="profile.html?id=samuel-ducharme" style="text-decoration:none;">
-          <div class="team-photo"><img src="../profile_icons/profile_filler.jpeg" alt="Samuel Ducharme"></div>
-          <p class="team-name">Samuel Ducharme</p><p class="team-role">PhD Student</p><p class="team-area">Research Area</p>
-        </a>
-        <a class="team-card" href="profile.html?id=charlie-pilon-senterre" style="text-decoration:none;">
-          <div class="team-photo"><img src="../profile_icons/profile_filler.jpeg" alt="Charlie Pilon-Senterre"></div>
-          <p class="team-name">Charlie Pilon-Senterre</p><p class="team-role">PhD Student</p><p class="team-area">Research Area</p>
-        </a>
-        <a class="team-card" href="profile.html?id=linhui-fu" style="text-decoration:none;">
-          <div class="team-photo"><img src="../profile_icons/profile_filler.jpeg" alt="Linhui Fu"></div>
-          <p class="team-name">Linhui Fu</p><p class="team-role">PhD Student</p><p class="team-area">Research Area</p>
-        </a>
-        <a class="team-card" href="profile.html?id=remi-ligez" style="text-decoration:none;">
-          <div class="team-photo"><img src="../profile_icons/profile_filler.jpeg" alt="Rémi Ligez"></div>
-          <p class="team-name">Rémi Ligez</p><p class="team-role">PhD Student</p><p class="team-area">Research Area</p>
-        </a>
-      </div>
+      <div class="team-grid" id="carousel-students"></div>
     </div>
     <button class="carousel-btn carousel-btn--next" aria-label="Next">&#8594;</button>
   </div>
   <div class="reveal" style="text-align:center;margin-top:3rem;">
-    <a href="#" class="btn-sec">View All Members →</a>
+    <a href="people.html" class="btn-sec">View All Members →</a>
   </div>
 </section>
 
@@ -310,6 +263,60 @@
   <p>© 2026 LITQ — Université de Montréal. All rights reserved.</p>
   <p>Département d'Informatique et de Recherche Opérationnelle</p>
 </div>
+
+<script src="../people.js"></script>
+<script>
+(function () {
+  var data = window.PEOPLE_DATA;
+  if (!data || !data.people) return;
+
+  function sortBySurname(arr) {
+    return arr.slice().sort(function (a, b) {
+      var aL = (a.en || a.fr).nameLast;
+      var bL = (b.en || b.fr).nameLast;
+      return aL.localeCompare(bL, undefined, { sensitivity: 'base' });
+    });
+  }
+
+  function makeCard(p) {
+    var l = p.en || p.fr;
+    var rankShort = l.rank ? l.rank.split('\u00b7')[0].trim() : l.eyebrow;
+    var area = (l.researchAreaTags || []).slice(0, 2).join(' \u00b7 ');
+    return '<a class="team-card" href="profile.html?id=' + p.id + '" style="text-decoration:none;">'
+      + '<div class="team-photo"><img src="../profile_icons/' + p.photo + '" alt="' + l.nameFirst + ' ' + l.nameLast + '" loading="lazy"></div>'
+      + '<p class="team-name">' + l.nameFirst + ' ' + l.nameLast + '</p>'
+      + '<p class="team-role">' + rankShort + '</p>'
+      + '<p class="team-area">' + area + '</p>'
+      + '</a>';
+  }
+
+  var faculty = sortBySurname(data.people.filter(function (p) {
+    return (p.en || p.fr).eyebrow === 'Faculty';
+  }));
+
+  var students = sortBySurname(data.people.filter(function (p) {
+    return (p.en || p.fr).eyebrow !== 'Faculty';
+  }));
+
+  var MAX = 8;
+  var shown = students.slice(0, MAX);
+  var remaining = students.length - shown.length;
+
+  var seeMoreCard = '<a href="people.html" class="team-card team-card--more" style="text-decoration:none;">'
+    + '<div class="team-photo-more">'
+    + (remaining > 0 ? '<span class="team-card-more-count">+' + remaining + '</span>' : '')
+    + '<span class="team-card-more-label">' + (remaining > 0 ? 'more\u00a0members' : 'view\u00a0all\u00a0members') + '</span>'
+    + '</div>'
+    + '<p class="team-name">View All</p>'
+    + '<p class="team-role">Members \u2192</p>'
+    + '</a>';
+
+  var fEl = document.getElementById('carousel-faculty');
+  var sEl = document.getElementById('carousel-students');
+  if (fEl) fEl.innerHTML = faculty.map(makeCard).join('');
+  if (sEl) sEl.innerHTML = shown.map(makeCard).join('') + seeMoreCard;
+})();
+</script>
 
 <script src="../script.js" defer></script>
 

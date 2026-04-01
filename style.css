@@ -64,7 +64,7 @@ body::before {
 .nav-logo-sub  { font-family: var(--ff-mono); font-size: 0.56rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-subtle); margin-top: 3px; }
 .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; margin-left: auto; }
 .nav-links a {
-  font-size: 0.80rem; letter-spacing: 0.04em; color: var(--text-muted);
+  font-size: 0.875rem; letter-spacing: 0.04em; color: var(--text-muted);
   text-decoration: none; transition: color 0.2s; position: relative;
 }
 .nav-links a::after {
@@ -469,7 +469,6 @@ a.location-pill:hover { opacity: 0.80; transform: translateY(-2px); }
 .ri-content {
   padding: 4rem 5vw;
   display: flex; flex-direction: column; justify-content: center;
-  background: var(--bg);
 }
 
 .ri-number {
@@ -535,8 +534,8 @@ footer.footer-flex {
 .footer-col h4 { font-family: var(--ff-mono); font-size: 0.69rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 1rem; }
 .footer-col ul { list-style: none; }
 .footer-col li { margin-bottom: 0.55rem; }
-.footer-col a { font-size: 0.83rem; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
-.footer-col a:hover { color: var(--teal); }
+.footer-col a { font-size: 0.83rem; color: var(--text-muted); text-decoration: none; border-bottom: 1px solid transparent; padding-bottom: 1px; transition: color 0.2s, border-color 0.2s; }
+.footer-col a:hover { color: var(--accent); border-color: var(--accent); }
 .footer-bottom { position: relative; z-index: 2; background: #F2EEE5; border-top: 1px solid var(--border); padding: 1.5rem 5vw; display: flex; justify-content: space-between; align-items: center; }
 .footer-bottom p { font-family: var(--ff-mono); font-size: 0.76rem; letter-spacing: 0.05em; color: var(--text-subtle); }
 

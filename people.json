@@ -4,7 +4,7 @@
       "id": "gilles-brassard",
       "photo": "profile_filler.jpeg",
       "supervisedBy": null,
-      "supervises": ["samuel-ducharme", "remi-ligez"],
+      "supervises": ["samuel-ducharme", "remi-ligez", "muxue-guo"],
       "formerStudents": [
   { "name": "Claude Crépeau", "role": "master's 1997" },
   { "name": "Anne Broadbent", "role": "PhD 2004" },
@@ -78,7 +78,7 @@
       "id": "louis-salvail",
       "photo": "louis_ SALVAIL.jpeg",
       "supervisedBy": null,
-      "supervises": [],
+      "supervises": ["mohammed-barhoush", "louis-charles-thibodeau", "florian-le-mouel", "khaireddine-medhioub"],
       "formerStudents": [],
       "teaching": [
         {
@@ -148,7 +148,7 @@
       "id": "frederic-dupuis",
       "photo": "profile_filler.jpeg",
       "supervisedBy": null,
-      "supervises": [],
+      "supervises": ["gabriele-di-matteo", "paul-alexis-rodriguez", "felix-beaudoin"],
       "formerStudents": [],
       "teaching": [
         {
@@ -218,7 +218,7 @@
       "id": "gena-hahn",
       "photo": "profile_filler.jpeg",
       "supervisedBy": null,
-      "supervises": [],
+      "supervises": ["antony-leclerc"],
       "formerStudents": [],
       "teaching": [
         {
@@ -353,7 +353,7 @@
       "id": "dmitry-sokolov",
       "photo": "profile_filler.jpeg",
       "supervisedBy": null,
-      "supervises": [],
+      "supervises": ["etienne-bouchard"],
       "formerStudents": [],
       "teaching": [
         {
@@ -621,7 +621,7 @@
     {
       "id": "linhui-fu",
       "photo": "profile_filler.jpeg",
-      "supervisedBy": null,
+      "supervisedBy": ["philippe-lamontagne"],
       "supervises": [],
       "formerStudents": [],
       "teaching": [],
@@ -771,6 +771,813 @@
           "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum",
           "Excepteur sint occaecat cupidatat non proident sunt in culpa officia",
           "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium"
+        ]
+      }
+    },
+    {
+      "id": "devashish-tupkary",
+      "photo": "profile_filler.jpeg",
+      "supervisedBy": null,
+      "supervises": [],
+      "formerStudents": [],
+      "teaching": [
+      ],
+      "en": {
+        "eyebrow": "Postdoc",
+        "nameFirst": "Devashish",
+        "nameLast": "Tupkary",
+        "rank": "Postdoctoral Researcher · DIRO, Université de Montréal",
+        "researchAreaTags": ["Cryptography", "Quantum Protocols"],
+        "email": "devashish.tupkary@umontreal.ca",
+        "links": [
+          { "label": "Personal Website", "url": "https://diro.umontreal.ca/repertoire-departement/professeurs/fiche/in/in27374/sg/Louis%20Salvail/" }
+        ],
+        "bio": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        ],
+        "researchInterests": [
+          "Quantum cryptography and quantum key distribution",
+          "Two-party and multi-party quantum protocols"
+        ]
+      },
+      "fr": {
+        "eyebrow": "Postdoc",
+        "nameFirst": "Devashish",
+        "nameLast": "Tupkary",
+        "rank": "Chercheur Postdoctoral · DIRO, Université de Montréal",
+        "researchAreaTags": ["Cryptographie", "Protocoles quantiques"],
+        "email": "devashish.tupkary@umontreal.ca",
+        "links": [
+          { "label": "Site web personnel", "url": "https://diro.umontreal.ca/repertoire-departement/professeurs/fiche/in/in27374/sg/Louis%20Salvail/" }
+        ],
+        "bio": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        ],
+        "researchInterests": [
+          "Cryptographie quantique et distribution de clés quantiques",
+          "Protocoles quantiques à deux parties et multipartites"
+        ]
+      }
+    },
+    {
+      "id": "pierre-mckenzie",
+      "photo": "profile_filler.jpeg",
+      "supervisedBy": null,
+      "supervises": ["jean-claude-desrosiers"],
+      "formerStudents": [],
+      "teaching": [],
+      "en": {
+        "eyebrow": "Former Faculty",
+        "nameFirst": "Pierre",
+        "nameLast": "McKenzie",
+        "rank": "Professor Emeritus · DIRO, Université de Montréal",
+        "researchAreaTags": ["Complexity Theory", "Circuit Complexity", "Algebraic Computation"],
+        "email": "mckenzie@iro.umontreal.ca",
+        "links": [
+          { "label": "Personal Website", "url": "#" }
+        ],
+        "bio": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        ],
+        "researchInterests": [
+          "Computational complexity theory and complexity classes",
+          "Boolean circuit complexity and lower bounds",
+          "Algebraic methods in computational complexity",
+          "NC complexity class and parallel computation",
+          "Monotone circuit complexity",
+          "Bounded-width branching programs and space complexity"
+        ]
+      },
+      "fr": {
+        "eyebrow": "Ancien corps professoral",
+        "nameFirst": "Pierre",
+        "nameLast": "McKenzie",
+        "rank": "Professeur émérite · DIRO, Université de Montréal",
+        "researchAreaTags": ["Théorie de la complexité", "Complexité des circuits", "Calcul algébrique"],
+        "email": "mckenzie@iro.umontreal.ca",
+        "links": [
+          { "label": "Site web personnel", "url": "#" }
+        ],
+        "bio": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        ],
+        "researchInterests": [
+          "Théorie de la complexité computationnelle et classes de complexité",
+          "Complexité des circuits booléens et bornes inférieures",
+          "Méthodes algébriques en complexité computationnelle",
+          "Classe de complexité NC et calcul parallèle",
+          "Complexité des circuits monotones",
+          "Programmes de branchement de largeur bornée et complexité en espace"
+        ]
+      }
+    },
+    {
+      "id": "philippe-lamontagne",
+      "photo": "profile_filler.jpeg",
+      "supervisedBy": null,
+      "supervises": ["alexey-norkin", "linhui-fu", "ding-wen-li"],
+      "formerStudents": [],
+      "teaching": [],
+      "en": {
+        "eyebrow": "Faculty",
+        "nameFirst": "Philippe",
+        "nameLast": "Lamontagne",
+        "rank": "Adjunct Professor · DIRO, Université de Montréal",
+        "researchAreaTags": ["Quantum Cryptography", "Secure Computation", "Post-Quantum Cryptography"],
+        "email": "lamontagne@iro.umontreal.ca",
+        "links": [
+          { "label": "Personal Website", "url": "#" }
+        ],
+        "bio": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        ],
+        "researchInterests": [
+          "Quantum-secure cryptographic protocols",
+          "Oblivious transfer and secure multiparty computation",
+          "Post-quantum cryptography and lattice-based constructions",
+          "Randomness extraction and privacy amplification",
+          "Security reductions and composable security",
+          "Quantum information-theoretic security"
+        ]
+      },
+      "fr": {
+        "eyebrow": "Corps professoral",
+        "nameFirst": "Philippe",
+        "nameLast": "Lamontagne",
+        "rank": "Professeur adjoint · DIRO, Université de Montréal",
+        "researchAreaTags": ["Cryptographie quantique", "Calcul sécurisé", "Cryptographie post-quantique"],
+        "email": "lamontagne@iro.umontreal.ca",
+        "links": [
+          { "label": "Site web personnel", "url": "#" }
+        ],
+        "bio": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        ],
+        "researchInterests": [
+          "Protocoles cryptographiques à sécurité quantique",
+          "Transfert inconscient et calcul multipartite sécurisé",
+          "Cryptographie post-quantique et constructions basées sur les réseaux",
+          "Extraction d'aléatoire et amplification de la confidentialité",
+          "Réductions de sécurité et sécurité composable",
+          "Sécurité quantique basée sur la théorie de l'information"
+        ]
+      }
+    },
+    {
+      "id": "michel-boyer",
+      "photo": "profile_filler.jpeg",
+      "supervisedBy": null,
+      "supervises": [],
+      "formerStudents": [],
+      "teaching": [],
+      "en": {
+        "eyebrow": "Faculty",
+        "nameFirst": "Michel",
+        "nameLast": "Boyer",
+        "rank": "Full Professor · DIRO, Université de Montréal",
+        "researchAreaTags": ["Quantum Computing", "Quantum Algorithms", "Quantum Cryptography"],
+        "email": "boyer@iro.umontreal.ca",
+        "links": [
+          { "label": "Personal Website", "url": "#" }
+        ],
+        "bio": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        ],
+        "researchInterests": [
+          "Quantum algorithms and computational advantages",
+          "Quantum cryptography and quantum key distribution",
+          "Entanglement-based communication protocols",
+          "Quantum search and amplitude amplification",
+          "Quantum error correction and fault tolerance",
+          "Computational aspects of quantum information"
+        ]
+      },
+      "fr": {
+        "eyebrow": "Corps professoral",
+        "nameFirst": "Michel",
+        "nameLast": "Boyer",
+        "rank": "Professeur titulaire · DIRO, Université de Montréal",
+        "researchAreaTags": ["Calcul quantique", "Algorithmes quantiques", "Cryptographie quantique"],
+        "email": "boyer@iro.umontreal.ca",
+        "links": [
+          { "label": "Site web personnel", "url": "#" }
+        ],
+        "bio": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        ],
+        "researchInterests": [
+          "Algorithmes quantiques et avantages computationnels",
+          "Cryptographie quantique et distribution de clés quantiques",
+          "Protocoles de communication basés sur l'intrication",
+          "Recherche quantique et amplification d'amplitude",
+          "Correction d'erreurs quantiques et tolérance aux pannes",
+          "Aspects computationnels de l'information quantique"
+        ]
+      }
+    },
+    {
+      "id": "muxue-guo",
+      "photo": null,
+      "supervisedBy": ["gilles-brassard"],
+      "supervises": [],
+      "formerStudents": [],
+      "teaching": [],
+      "en": {
+        "eyebrow": "PhD Student",
+        "nameFirst": "Muxue",
+        "nameLast": "Guo",
+        "rank": "PhD Student · DIRO, Université de Montréal",
+        "researchAreaTags": ["Research Area 1", "Research Area 2"],
+        "email": "guo@iro.umontreal.ca",
+        "links": [{ "label": "Personal Website", "url": "#" }],
+        "bio": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        ],
+        "researchInterests": [
+          "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod",
+          "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
+          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum",
+          "Excepteur sint occaecat cupidatat non proident sunt in culpa officia"
+        ]
+      },
+      "fr": {
+        "eyebrow": "Doctorant(e)",
+        "nameFirst": "Muxue",
+        "nameLast": "Guo",
+        "rank": "Doctorant(e) · DIRO, Université de Montréal",
+        "researchAreaTags": ["Domaine de recherche 1", "Domaine de recherche 2"],
+        "email": "guo@iro.umontreal.ca",
+        "links": [{ "label": "Site web personnel", "url": "#" }],
+        "bio": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        ],
+        "researchInterests": [
+          "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod",
+          "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
+          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum",
+          "Excepteur sint occaecat cupidatat non proident sunt in culpa officia"
+        ]
+      }
+    },
+    {
+      "id": "mohammed-barhoush",
+      "photo": "profile_filler.jpeg",
+      "supervisedBy": ["louis-salvail"],
+      "supervises": [],
+      "formerStudents": [],
+      "teaching": [],
+      "en": {
+        "eyebrow": "PhD Student",
+        "nameFirst": "Mohammed",
+        "nameLast": "Barhoush",
+        "rank": "PhD Student · DIRO, Université de Montréal",
+        "researchAreaTags": ["Research Area 1", "Research Area 2"],
+        "email": "barhoush@iro.umontreal.ca",
+        "links": [{ "label": "Personal Website", "url": "#" }],
+        "bio": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        ],
+        "researchInterests": [
+          "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod",
+          "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
+          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum",
+          "Excepteur sint occaecat cupidatat non proident sunt in culpa officia"
+        ]
+      },
+      "fr": {
+        "eyebrow": "Doctorant(e)",
+        "nameFirst": "Mohammed",
+        "nameLast": "Barhoush",
+        "rank": "Doctorant(e) · DIRO, Université de Montréal",
+        "researchAreaTags": ["Domaine de recherche 1", "Domaine de recherche 2"],
+        "email": "barhoush@iro.umontreal.ca",
+        "links": [{ "label": "Site web personnel", "url": "#" }],
+        "bio": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        ],
+        "researchInterests": [
+          "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod",
+          "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
+          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum",
+          "Excepteur sint occaecat cupidatat non proident sunt in culpa officia"
+        ]
+      }
+    },
+    {
+      "id": "louis-charles-thibodeau",
+      "photo": "profile_filler.jpeg",
+      "supervisedBy": ["louis-salvail"],
+      "supervises": [],
+      "formerStudents": [],
+      "teaching": [],
+      "en": {
+        "eyebrow": "PhD Student",
+        "nameFirst": "Louis-Charles",
+        "nameLast": "Thibodeau",
+        "rank": "PhD Student · DIRO, Université de Montréal",
+        "researchAreaTags": ["Research Area 1", "Research Area 2"],
+        "email": "thibodeau@iro.umontreal.ca",
+        "links": [{ "label": "Personal Website", "url": "#" }],
+        "bio": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        ],
+        "researchInterests": [
+          "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod",
+          "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
+          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum",
+          "Excepteur sint occaecat cupidatat non proident sunt in culpa officia"
+        ]
+      },
+      "fr": {
+        "eyebrow": "Doctorant(e)",
+        "nameFirst": "Louis-Charles",
+        "nameLast": "Thibodeau",
+        "rank": "Doctorant(e) · DIRO, Université de Montréal",
+        "researchAreaTags": ["Domaine de recherche 1", "Domaine de recherche 2"],
+        "email": "thibodeau@iro.umontreal.ca",
+        "links": [{ "label": "Site web personnel", "url": "#" }],
+        "bio": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        ],
+        "researchInterests": [
+          "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod",
+          "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
+          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum",
+          "Excepteur sint occaecat cupidatat non proident sunt in culpa officia"
+        ]
+      }
+    },
+    {
+      "id": "florian-le-mouel",
+      "photo": "profile_filler.jpeg",
+      "supervisedBy": ["louis-salvail"],
+      "supervises": [],
+      "formerStudents": [],
+      "teaching": [],
+      "en": {
+        "eyebrow": "PhD Student",
+        "nameFirst": "Florian",
+        "nameLast": "Le Mouël",
+        "rank": "PhD Student · DIRO, Université de Montréal",
+        "researchAreaTags": ["Research Area 1", "Research Area 2"],
+        "email": "le-mouel@iro.umontreal.ca",
+        "links": [{ "label": "Personal Website", "url": "#" }],
+        "bio": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        ],
+        "researchInterests": [
+          "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod",
+          "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
+          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum",
+          "Excepteur sint occaecat cupidatat non proident sunt in culpa officia"
+        ]
+      },
+      "fr": {
+        "eyebrow": "Doctorant(e)",
+        "nameFirst": "Florian",
+        "nameLast": "Le Mouël",
+        "rank": "Doctorant(e) · DIRO, Université de Montréal",
+        "researchAreaTags": ["Domaine de recherche 1", "Domaine de recherche 2"],
+        "email": "le-mouel@iro.umontreal.ca",
+        "links": [{ "label": "Site web personnel", "url": "#" }],
+        "bio": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        ],
+        "researchInterests": [
+          "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod",
+          "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
+          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum",
+          "Excepteur sint occaecat cupidatat non proident sunt in culpa officia"
+        ]
+      }
+    },
+    {
+      "id": "khaireddine-medhioub",
+      "photo": "profile_filler.jpeg",
+      "supervisedBy": ["louis-salvail"],
+      "supervises": [],
+      "formerStudents": [],
+      "teaching": [],
+      "en": {
+        "eyebrow": "PhD Student",
+        "nameFirst": "Khaireddine",
+        "nameLast": "Medhioub",
+        "rank": "PhD Student · DIRO, Université de Montréal",
+        "researchAreaTags": ["Research Area 1", "Research Area 2"],
+        "email": "medhioub@iro.umontreal.ca",
+        "links": [{ "label": "Personal Website", "url": "#" }],
+        "bio": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        ],
+        "researchInterests": [
+          "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod",
+          "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
+          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum",
+          "Excepteur sint occaecat cupidatat non proident sunt in culpa officia"
+        ]
+      },
+      "fr": {
+        "eyebrow": "Doctorant(e)",
+        "nameFirst": "Khaireddine",
+        "nameLast": "Medhioub",
+        "rank": "Doctorant(e) · DIRO, Université de Montréal",
+        "researchAreaTags": ["Domaine de recherche 1", "Domaine de recherche 2"],
+        "email": "medhioub@iro.umontreal.ca",
+        "links": [{ "label": "Site web personnel", "url": "#" }],
+        "bio": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        ],
+        "researchInterests": [
+          "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod",
+          "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
+          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum",
+          "Excepteur sint occaecat cupidatat non proident sunt in culpa officia"
+        ]
+      }
+    },
+    {
+      "id": "gabriele-di-matteo",
+      "photo": "profile_filler.jpeg",
+      "supervisedBy": ["frederic-dupuis"],
+      "supervises": [],
+      "formerStudents": [],
+      "teaching": [],
+      "en": {
+        "eyebrow": "PhD Student",
+        "nameFirst": "Gabriele",
+        "nameLast": "Di Matteo",
+        "rank": "PhD Student · DIRO, Université de Montréal",
+        "researchAreaTags": ["Research Area 1", "Research Area 2"],
+        "email": "di-matteo@iro.umontreal.ca",
+        "links": [{ "label": "Personal Website", "url": "#" }],
+        "bio": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        ],
+        "researchInterests": [
+          "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod",
+          "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
+          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum",
+          "Excepteur sint occaecat cupidatat non proident sunt in culpa officia"
+        ]
+      },
+      "fr": {
+        "eyebrow": "Doctorant(e)",
+        "nameFirst": "Gabriele",
+        "nameLast": "Di Matteo",
+        "rank": "Doctorant(e) · DIRO, Université de Montréal",
+        "researchAreaTags": ["Domaine de recherche 1", "Domaine de recherche 2"],
+        "email": "di-matteo@iro.umontreal.ca",
+        "links": [{ "label": "Site web personnel", "url": "#" }],
+        "bio": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        ],
+        "researchInterests": [
+          "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod",
+          "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
+          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum",
+          "Excepteur sint occaecat cupidatat non proident sunt in culpa officia"
+        ]
+      }
+    },
+    {
+      "id": "paul-alexis-rodriguez",
+      "photo": "profile_filler.jpeg",
+      "supervisedBy": ["frederic-dupuis"],
+      "supervises": [],
+      "formerStudents": [],
+      "teaching": [],
+      "en": {
+        "eyebrow": "PhD Student",
+        "nameFirst": "Paul-Alexis",
+        "nameLast": "Rodriguez",
+        "rank": "PhD Student · DIRO, Université de Montréal",
+        "researchAreaTags": ["Research Area 1", "Research Area 2"],
+        "email": "rodriguez@iro.umontreal.ca",
+        "links": [{ "label": "Personal Website", "url": "#" }],
+        "bio": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        ],
+        "researchInterests": [
+          "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod",
+          "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
+          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum",
+          "Excepteur sint occaecat cupidatat non proident sunt in culpa officia"
+        ]
+      },
+      "fr": {
+        "eyebrow": "Doctorant(e)",
+        "nameFirst": "Paul-Alexis",
+        "nameLast": "Rodriguez",
+        "rank": "Doctorant(e) · DIRO, Université de Montréal",
+        "researchAreaTags": ["Domaine de recherche 1", "Domaine de recherche 2"],
+        "email": "rodriguez@iro.umontreal.ca",
+        "links": [{ "label": "Site web personnel", "url": "#" }],
+        "bio": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        ],
+        "researchInterests": [
+          "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod",
+          "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
+          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum",
+          "Excepteur sint occaecat cupidatat non proident sunt in culpa officia"
+        ]
+      }
+    },
+    {
+      "id": "alexey-norkin",
+      "photo": "profile_filler.jpeg",
+      "supervisedBy": ["philippe-lamontagne"],
+      "supervises": [],
+      "formerStudents": [],
+      "teaching": [],
+      "en": {
+        "eyebrow": "PhD Student",
+        "nameFirst": "Alexey",
+        "nameLast": "Norkin",
+        "rank": "PhD Student · DIRO, Université de Montréal",
+        "researchAreaTags": ["Research Area 1", "Research Area 2"],
+        "email": "norkin@iro.umontreal.ca",
+        "links": [{ "label": "Personal Website", "url": "#" }],
+        "bio": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        ],
+        "researchInterests": [
+          "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod",
+          "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
+          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum",
+          "Excepteur sint occaecat cupidatat non proident sunt in culpa officia"
+        ]
+      },
+      "fr": {
+        "eyebrow": "Doctorant(e)",
+        "nameFirst": "Alexey",
+        "nameLast": "Norkin",
+        "rank": "Doctorant(e) · DIRO, Université de Montréal",
+        "researchAreaTags": ["Domaine de recherche 1", "Domaine de recherche 2"],
+        "email": "norkin@iro.umontreal.ca",
+        "links": [{ "label": "Site web personnel", "url": "#" }],
+        "bio": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        ],
+        "researchInterests": [
+          "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod",
+          "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
+          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum",
+          "Excepteur sint occaecat cupidatat non proident sunt in culpa officia"
+        ]
+      }
+    },
+    {
+      "id": "ding-wen-li",
+      "photo": "profile_filler.jpeg",
+      "supervisedBy": ["philippe-lamontagne"],
+      "supervises": [],
+      "formerStudents": [],
+      "teaching": [],
+      "en": {
+        "eyebrow": "Masters Student",
+        "nameFirst": "Ding Wen",
+        "nameLast": "Li",
+        "rank": "Masters Student · DIRO, Université de Montréal",
+        "researchAreaTags": ["Research Area 1", "Research Area 2"],
+        "email": "li@iro.umontreal.ca",
+        "links": [{ "label": "Personal Website", "url": "#" }],
+        "bio": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        ],
+        "researchInterests": [
+          "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod",
+          "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
+          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum",
+          "Excepteur sint occaecat cupidatat non proident sunt in culpa officia"
+        ]
+      },
+      "fr": {
+        "eyebrow": "Étudiant(e) à la maîtrise",
+        "nameFirst": "Ding Wen",
+        "nameLast": "Li",
+        "rank": "Étudiant(e) à la maîtrise · DIRO, Université de Montréal",
+        "researchAreaTags": ["Domaine de recherche 1", "Domaine de recherche 2"],
+        "email": "li@iro.umontreal.ca",
+        "links": [{ "label": "Site web personnel", "url": "#" }],
+        "bio": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        ],
+        "researchInterests": [
+          "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod",
+          "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
+          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum",
+          "Excepteur sint occaecat cupidatat non proident sunt in culpa officia"
+        ]
+      }
+    },
+    {
+      "id": "antony-leclerc",
+      "photo": "profile_filler.jpeg",
+      "supervisedBy": ["gena-hahn"],
+      "supervises": [],
+      "formerStudents": [],
+      "teaching": [],
+      "en": {
+        "eyebrow": "Masters Student",
+        "nameFirst": "Antony",
+        "nameLast": "Leclerc",
+        "rank": "Masters Student · DIRO, Université de Montréal",
+        "researchAreaTags": ["Research Area 1", "Research Area 2"],
+        "email": "leclerc@iro.umontreal.ca",
+        "links": [{ "label": "Personal Website", "url": "#" }],
+        "bio": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        ],
+        "researchInterests": [
+          "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod",
+          "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
+          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum",
+          "Excepteur sint occaecat cupidatat non proident sunt in culpa officia"
+        ]
+      },
+      "fr": {
+        "eyebrow": "Étudiant(e) à la maîtrise",
+        "nameFirst": "Antony",
+        "nameLast": "Leclerc",
+        "rank": "Étudiant(e) à la maîtrise · DIRO, Université de Montréal",
+        "researchAreaTags": ["Domaine de recherche 1", "Domaine de recherche 2"],
+        "email": "leclerc@iro.umontreal.ca",
+        "links": [{ "label": "Site web personnel", "url": "#" }],
+        "bio": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        ],
+        "researchInterests": [
+          "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod",
+          "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
+          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum",
+          "Excepteur sint occaecat cupidatat non proident sunt in culpa officia"
+        ]
+      }
+    },
+    {
+      "id": "etienne-bouchard",
+      "photo": "profile_filler.jpeg",
+      "supervisedBy": ["dmitry-sokolov"],
+      "supervises": [],
+      "formerStudents": [],
+      "teaching": [],
+      "en": {
+        "eyebrow": "Masters Student",
+        "nameFirst": "Étienne",
+        "nameLast": "Bouchard",
+        "rank": "Masters Student · DIRO, Université de Montréal",
+        "researchAreaTags": ["Research Area 1", "Research Area 2"],
+        "email": "bouchard@iro.umontreal.ca",
+        "links": [{ "label": "Personal Website", "url": "#" }],
+        "bio": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        ],
+        "researchInterests": [
+          "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod",
+          "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
+          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum",
+          "Excepteur sint occaecat cupidatat non proident sunt in culpa officia"
+        ]
+      },
+      "fr": {
+        "eyebrow": "Étudiant(e) à la maîtrise",
+        "nameFirst": "Étienne",
+        "nameLast": "Bouchard",
+        "rank": "Étudiant(e) à la maîtrise · DIRO, Université de Montréal",
+        "researchAreaTags": ["Domaine de recherche 1", "Domaine de recherche 2"],
+        "email": "bouchard@iro.umontreal.ca",
+        "links": [{ "label": "Site web personnel", "url": "#" }],
+        "bio": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        ],
+        "researchInterests": [
+          "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod",
+          "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
+          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum",
+          "Excepteur sint occaecat cupidatat non proident sunt in culpa officia"
+        ]
+      }
+    },
+    {
+      "id": "felix-beaudoin",
+      "photo": "profile_filler.jpeg",
+      "supervisedBy": ["frederic-dupuis"],
+      "supervises": [],
+      "formerStudents": [],
+      "teaching": [],
+      "en": {
+        "eyebrow": "Masters Student",
+        "nameFirst": "Félix",
+        "nameLast": "Beaudoin",
+        "rank": "Masters Student · DIRO, Université de Montréal",
+        "researchAreaTags": ["Research Area 1", "Research Area 2"],
+        "email": "beaudoin@iro.umontreal.ca",
+        "links": [{ "label": "Personal Website", "url": "#" }],
+        "bio": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        ],
+        "researchInterests": [
+          "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod",
+          "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
+          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum",
+          "Excepteur sint occaecat cupidatat non proident sunt in culpa officia"
+        ]
+      },
+      "fr": {
+        "eyebrow": "Étudiant(e) à la maîtrise",
+        "nameFirst": "Félix",
+        "nameLast": "Beaudoin",
+        "rank": "Étudiant(e) à la maîtrise · DIRO, Université de Montréal",
+        "researchAreaTags": ["Domaine de recherche 1", "Domaine de recherche 2"],
+        "email": "beaudoin@iro.umontreal.ca",
+        "links": [{ "label": "Site web personnel", "url": "#" }],
+        "bio": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        ],
+        "researchInterests": [
+          "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod",
+          "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
+          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum",
+          "Excepteur sint occaecat cupidatat non proident sunt in culpa officia"
+        ]
+      }
+    },
+    {
+      "id": "jean-claude-desrosiers",
+      "photo": "profile_filler.jpeg",
+      "supervisedBy": ["pierre-mckenzie"],
+      "supervises": [],
+      "formerStudents": [],
+      "teaching": [],
+      "en": {
+        "eyebrow": "Masters Student",
+        "nameFirst": "Jean-Claude",
+        "nameLast": "Desrosiers",
+        "rank": "Masters Student · DIRO, Université de Montréal",
+        "researchAreaTags": ["Research Area 1", "Research Area 2"],
+        "email": "desrosiers@iro.umontreal.ca",
+        "links": [{ "label": "Personal Website", "url": "#" }],
+        "bio": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        ],
+        "researchInterests": [
+          "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod",
+          "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
+          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum",
+          "Excepteur sint occaecat cupidatat non proident sunt in culpa officia"
+        ]
+      },
+      "fr": {
+        "eyebrow": "Étudiant(e) à la maîtrise",
+        "nameFirst": "Jean-Claude",
+        "nameLast": "Desrosiers",
+        "rank": "Étudiant(e) à la maîtrise · DIRO, Université de Montréal",
+        "researchAreaTags": ["Domaine de recherche 1", "Domaine de recherche 2"],
+        "email": "desrosiers@iro.umontreal.ca",
+        "links": [{ "label": "Site web personnel", "url": "#" }],
+        "bio": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        ],
+        "researchInterests": [
+          "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod",
+          "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
+          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum",
+          "Excepteur sint occaecat cupidatat non proident sunt in culpa officia"
         ]
       }
     }

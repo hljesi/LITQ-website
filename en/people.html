@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>People — LITQ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .people-page-wrap { max-width: 1080px; margin: 0 auto; padding: 7rem 5vw 6rem; position: relative; z-index: 1; }
+    .people-page-header { margin-bottom: 4rem; }
+    .people-cat { margin-bottom: 4rem; }
+    .people-cat-grid { display: flex; flex-wrap: wrap; gap: 1.4rem; }
+    .people-cat-rule { border: none; border-top: 1px solid var(--border); margin-bottom: 1.8rem; }
+    #people-loading { display: flex; align-items: center; justify-content: center; min-height: 40vh; font-family: var(--ff-mono); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-subtle); }
+  </style>
+</head>
+<body>
+
+<nav id="nav" class="always-solid">
+  <a href="index.html" class="nav-logo">
+    <span class="nav-logo-name">LITQ</span>
+    <span class="nav-logo-sub">Université de Montréal</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="people.html" class="active">People</a></li>
+    <li><a href="index.html#publications">Publications</a></li>
+    <li><a href="index.html#positions">Join</a></li>
+  </ul>
+  <a href="../fr/people.html" class="lang-toggle">FR</a>
+  <button class="nav-burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<main style="position:relative; overflow:hidden;">
+  <div aria-hidden="true" style="position:absolute; top:-5%; right:-25%; width:75%; max-width:1000px; pointer-events:none; z-index:0; user-select:none; transform:rotate(-90deg);">
+    <img src="../brand_assets/tilde-ellipse-purple7.png" alt="" style="width:100%; opacity:0.14; mix-blend-mode:multiply;">
+  </div>
+  <div aria-hidden="true" style="position:absolute; bottom:5%; left:-20%; width:80%; max-width:900px; pointer-events:none; z-index:0; user-select:none; transform:rotate(20deg);">
+    <img src="../brand_assets/tilde-ellipse-green8.png" alt="" style="width:100%; opacity:0.11; mix-blend-mode:multiply;">
+  </div>
+
+  <div class="people-page-wrap">
+    <div class="people-page-header">
+      <div class="sec-eyebrow reveal">The Team</div>
+      <h1 class="sec-title reveal" style="margin-bottom:0.5rem;">All <em>Members</em></h1>
+      <div class="accent-rule reveal"></div>
+    </div>
+    <div id="people-loading">Loading…</div>
+    <div id="people-root"></div>
+  </div>
+</main>
+
+<footer class="footer-flex">
+  <div>
+    <div class="footer-logo">LITQ</div>
+    <p class="footer-desc">Laboratory for Theoretical and Quantum Informatics — Université de Montréal.</p>
+  </div>
+  <div class="footer-links" style="flex: 1; justify-content: space-evenly;">
+    <div class="footer-col">
+      <h4>Research</h4>
+      <ul>
+        <li><a href="research.html#algorithms">Quantum Algorithmics</a></li>
+        <li><a href="research.html#info">Quantum Info. Theory</a></li>
+        <li><a href="research.html#complexity">Complexity Theory</a></li>
+        <li><a href="research.html#crypto">Cryptography</a></li>
+        <li><a href="research.html#optimization">Higher-Order Maps &amp; Causality</a></li>
+        <li><a href="research.html#graphs">Graph Theory</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Lab</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="index.html#publications">Publications</a></li>
+        <li><a href="index.html#positions">Open Positions</a></li>
+        <li><a href="index.html#location">Location</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <p>© 2026 LITQ — Université de Montréal. All rights reserved.</p>
+  <p>Département d'Informatique et de Recherche Opérationnelle</p>
+</div>
+
+<script src="../people.js"></script>
+<script>
+(function () {
+  var LANG = 'en';
+
+  /* Category display order — only rendered if at least one person matches */
+  var CATS = [
+    { key: 'Faculty',         label: 'Faculty' },
+    { key: 'Former Faculty',  label: 'Former Faculty' },
+    { key: 'Postdoc',         label: 'Postdoctoral Researchers' },
+    { key: 'PhD Student',     label: 'PhD Students' },
+    { key: 'Masters Student', label: 'Masters Students' },
+  ];
+
+  function sortBySurname(arr) {
+    return arr.slice().sort(function (a, b) {
+      var aL = (a[LANG] || a.en).nameLast;
+      var bL = (b[LANG] || b.en).nameLast;
+      return aL.localeCompare(bL, undefined, { sensitivity: 'base' });
+    });
+  }
+
+  function makeCard(p) {
+    var l = p[LANG] || p.en;
+    var rankShort = l.rank ? l.rank.split('\u00b7')[0].trim() : l.eyebrow;
+    var area = (l.researchAreaTags || []).slice(0, 2).join(' \u00b7 ');
+    return '<a class="team-card" href="profile.html?id=' + p.id + '" style="text-decoration:none;">'
+      + '<div class="team-photo"><img src="../profile_icons/' + p.photo + '" alt="' + l.nameFirst + ' ' + l.nameLast + '" loading="lazy"></div>'
+      + '<p class="team-name">' + l.nameFirst + ' ' + l.nameLast + '</p>'
+      + '<p class="team-role">' + rankShort + '</p>'
+      + '<p class="team-area">' + area + '</p>'
+      + '</a>';
+  }
+
+  function render() {
+    var data = window.PEOPLE_DATA;
+    var loading = document.getElementById('people-loading');
+    var root = document.getElementById('people-root');
+
+    if (!data || !data.people) {
+      loading.textContent = 'Failed to load team data.';
+      return;
+    }
+
+    loading.style.display = 'none';
+
+    /* Group people by eyebrow */
+    var groups = {};
+    data.people.forEach(function (p) {
+      var key = (p[LANG] || p.en).eyebrow;
+      if (!groups[key]) groups[key] = [];
+      groups[key].push(p);
+    });
+
+    /* Collect any eyebrow keys not in CATS so they still render */
+    var knownKeys = CATS.map(function (c) { return c.key; });
+    Object.keys(groups).forEach(function (key) {
+      if (knownKeys.indexOf(key) === -1) {
+        CATS.push({ key: key, label: key });
+      }
+    });
+
+    var html = '';
+    CATS.forEach(function (cat, idx) {
+      var members = groups[cat.key];
+      if (!members || members.length === 0) return;
+      var sorted = sortBySurname(members);
+      html += '<div class="people-cat reveal' + (idx > 0 ? ' reveal-d1' : '') + '">'
+        + '<hr class="people-cat-rule">'
+        + '<p class="people-section-title">' + cat.label + '</p>'
+        + '<div class="people-cat-grid">' + sorted.map(makeCard).join('') + '</div>'
+        + '</div>';
+    });
+
+    root.innerHTML = html;
+
+    /* Trigger reveal for newly added elements */
+    var ro = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); ro.unobserve(e.target); }
+      });
+    }, { threshold: 0.06, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal:not(.in)').forEach(function (el) { ro.observe(el); });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', render);
+  } else {
+    render();
+  }
+})();
+</script>
+<script src="../script.js" defer></script>
+</body>
+</html>
