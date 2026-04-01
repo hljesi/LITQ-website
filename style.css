@@ -138,7 +138,7 @@ body::before {
 @media (max-width: 768px) { .hero-inner { max-width: 100%; } }
 
 .hero-tag {
-  font-family: var(--ff-mono); font-size: 0.68rem; letter-spacing: 0.22em;
+  font-family: var(--ff-mono); font-size: 0.80rem; letter-spacing: 0.22em;
   text-transform: uppercase; color: var(--teal);
   display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.8rem;
   opacity: 0; animation: fadeUp 0.7s ease forwards 0.15s;
@@ -252,7 +252,7 @@ body::before {
 #people, #positions { overflow: hidden; }
 
 .sec-eyebrow {
-  font-family: var(--ff-mono); font-size: 0.65rem; letter-spacing: 0.22em;
+  font-family: var(--ff-mono); font-size: 0.78rem; letter-spacing: 0.22em;
   text-transform: uppercase; color: var(--teal);
   display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.2rem;
 }
@@ -303,7 +303,7 @@ body::before {
 @media (max-width: 768px) { .research-teaser-inner { grid-template-columns: 1fr; gap: 3rem; } }
 
 /* ── PEOPLE ───────────────────────── */
-.people-section-title { font-family: var(--ff-mono); font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 1.8rem; }
+.people-section-title { font-family: var(--ff-mono); font-size: 0.74rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 1.8rem; }
 .team-carousel-wrap { position: relative; margin-bottom: 3rem; }
 .team-carousel-track-outer { overflow: hidden; }
 .team-grid { display: flex; gap: 1.4rem; transition: transform 0.45s cubic-bezier(0.16,1,0.3,1); will-change: transform; }
@@ -312,9 +312,9 @@ body::before {
 .team-photo img { width: 100%; height: 100%; object-fit: cover; filter: saturate(80%); transition: filter 0.4s, transform 0.6s cubic-bezier(0.16,1,0.3,1); }
 .team-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(247,243,235,0.5) 0%, transparent 50%); }
 .team-card:hover .team-photo img { filter: saturate(110%); transform: scale(1.06); }
-.team-name { font-family: var(--ff-display); font-size: 1.05rem; font-weight: 500; color: var(--text); margin-bottom: 0.25rem; }
-.team-role { font-family: var(--ff-mono); font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); }
-.team-area { font-size: 0.78rem; color: var(--teal); margin-top: 0.2rem; }
+.team-name { font-family: var(--ff-display); font-size: 1.18rem; font-weight: 500; color: var(--text); margin-bottom: 0.25rem; }
+.team-role { font-family: var(--ff-mono); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); }
+.team-area { font-size: 0.88rem; color: var(--teal); margin-top: 0.2rem; }
 .carousel-btn { display: none; position: absolute; top: calc(50% - 1.8rem); width: 2.4rem; height: 2.4rem; border-radius: 50%; background: var(--bg); border: 1px solid var(--border-teal); color: var(--teal); font-size: 1.1rem; cursor: pointer; align-items: center; justify-content: center; z-index: 5; box-shadow: 0 2px 12px rgba(15,118,110,0.15); transition: background 0.2s, transform 0.2s; }
 .carousel-btn:hover { background: var(--surface); transform: scale(1.08); }
 .carousel-btn:active { transform: scale(0.95); }
@@ -326,10 +326,10 @@ body::before {
 .pub-item { display: grid; grid-template-columns: 3.5rem 1fr auto; gap: 1.5rem 2rem; align-items: start; padding: 2rem 0; border-bottom: 1px solid var(--border); }
 .pub-item:first-child { border-top: 1px solid var(--border); }
 .pub-year { font-family: var(--ff-mono); font-size: 0.7rem; color: var(--text-subtle); padding-top: 4px; }
-.pub-title { font-family: var(--ff-display); font-size: 1.12rem; font-weight: 400; color: var(--text); line-height: 1.4; margin-bottom: 0.5rem; }
-.pub-meta { font-size: 0.82rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
-.pub-venue { font-family: var(--ff-mono); font-size: 0.65rem; letter-spacing: 0.08em; padding: 0.2rem 0.55rem; border: 1px solid var(--border-teal); background: var(--teal-dim); color: var(--teal); }
-.pub-link { font-family: var(--ff-mono); font-size: 0.68rem; letter-spacing: 0.06em; padding: 0.35rem 0.8rem; border: 1px solid rgba(28,16,9,0.14); color: var(--text-muted); text-decoration: none; white-space: nowrap; transition: border-color 0.2s, color 0.2s; align-self: center; }
+.pub-title { font-family: var(--ff-display); font-size: 1.25rem; font-weight: 400; color: var(--text); line-height: 1.4; margin-bottom: 0.5rem; }
+.pub-meta { font-size: 0.92rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
+.pub-venue { display: none; }
+.pub-link { font-family: var(--ff-mono); font-size: 0.80rem; letter-spacing: 0.06em; padding: 0.35rem 0.8rem; border: 1px solid rgba(28,16,9,0.14); color: var(--text-muted); text-decoration: none; white-space: nowrap; transition: border-color 0.2s, color 0.2s; align-self: center; }
 .pub-link:hover { border-color: var(--teal); color: var(--teal); }
 
 /* ── OPEN POSITIONS ───────────────── */
@@ -364,7 +364,7 @@ body::before {
   padding: 1.8rem; border: 1px solid var(--border-teal); background: #F2EEE5;
 }
 .location-card-label {
-  font-family: var(--ff-mono); font-size: 0.60rem; letter-spacing: 0.18em;
+  font-family: var(--ff-mono); font-size: 0.74rem; letter-spacing: 0.18em;
   text-transform: uppercase; color: var(--teal); margin-bottom: 0.9rem;
   display: flex; align-items: center; gap: 0.6rem;
 }
@@ -395,7 +395,7 @@ a.location-pill:hover { opacity: 0.80; transform: translateY(-2px); }
 .page-header-inner, .page-header-eyebrow, .page-header h1, .page-header-body, .page-header-deco { position: relative; z-index: 1; }
 .page-header-inner { max-width: 680px; }
 .page-header-eyebrow {
-  font-family: var(--ff-mono); font-size: 0.65rem; letter-spacing: 0.24em;
+  font-family: var(--ff-mono); font-size: 0.78rem; letter-spacing: 0.24em;
   text-transform: uppercase; color: var(--teal);
   display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;
   opacity: 0; animation: fadeUp 0.6s ease forwards 0.1s;
@@ -473,7 +473,7 @@ a.location-pill:hover { opacity: 0.80; transform: translateY(-2px); }
 }
 
 .ri-number {
-  font-family: var(--ff-mono); font-size: 0.58rem; letter-spacing: 0.20em;
+  font-family: var(--ff-mono); font-size: 0.70rem; letter-spacing: 0.20em;
   text-transform: uppercase; color: var(--text-subtle); margin-bottom: 0.5rem;
 }
 
@@ -492,7 +492,7 @@ a.location-pill:hover { opacity: 0.80; transform: translateY(-2px); }
 .ri-rule--teal   { background: linear-gradient(90deg, var(--teal), transparent); }
 
 .ri-body {
-  font-size: 0.90rem; color: var(--text-muted);
+  font-size: 1.02rem; color: var(--text-muted);
   line-height: 1.72; margin-bottom: 1rem;
   max-width: none;
 }
@@ -500,12 +500,12 @@ a.location-pill:hover { opacity: 0.80; transform: translateY(-2px); }
 /* arXiv refs — inline pills with "Refs" label */
 .ri-refs { display: flex; align-items: center; flex-wrap: wrap; gap: 0.45rem; }
 .ri-refs-label {
-  font-family: var(--ff-mono); font-size: 0.56rem; letter-spacing: 0.18em;
+  font-family: var(--ff-mono); font-size: 0.68rem; letter-spacing: 0.18em;
   text-transform: uppercase; color: var(--text-subtle); margin-right: 0.2rem;
   flex-shrink: 0;
 }
 .ri-ref {
-  font-family: var(--ff-mono); font-size: 0.60rem; letter-spacing: 0.06em;
+  font-family: var(--ff-mono); font-size: 0.72rem; letter-spacing: 0.06em;
   padding: 0.28rem 0.65rem; border: 1px solid;
   text-decoration: none;
   transition: opacity 0.2s, transform 0.2s cubic-bezier(0.16,1,0.3,1);
@@ -520,10 +520,10 @@ footer { position: relative; z-index: 2; background: #F2EEE5; border-top: 1px so
 .footer-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.75; max-width: 280px; }
 .footer-affil { display: flex; gap: 0.5rem; align-items: center; margin-top: 1.5rem; }
 .footer-affil-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); opacity: 0.6; }
-.footer-affil span { font-family: var(--ff-mono); font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-subtle); }
-.footer-contact h4 { font-family: var(--ff-mono); font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 1.2rem; }
-.footer-contact p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 0.5rem; }
-.footer-contact a { color: var(--teal); text-decoration: none; font-size: 0.85rem; }
+.footer-affil span { font-family: var(--ff-mono); font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-subtle); }
+.footer-contact h4 { font-family: var(--ff-mono); font-size: 0.74rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 1.2rem; }
+.footer-contact p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 0.5rem; }
+.footer-contact a { color: var(--teal); text-decoration: none; font-size: 0.95rem; }
 .footer-contact a:hover { text-decoration: underline; }
 .footer-map img { width: 100%; height: auto; display: block; border-radius: 6px; border: 1px solid var(--border); opacity: 0.88; }
 /* Research page footer variant (flex layout) */
@@ -532,13 +532,13 @@ footer.footer-flex {
   flex-wrap: wrap; gap: 2rem; padding: 4rem 5vw 2.5rem;
 }
 .footer-links { display: flex; gap: 3rem; }
-.footer-col h4 { font-family: var(--ff-mono); font-size: 0.60rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 1rem; }
+.footer-col h4 { font-family: var(--ff-mono); font-size: 0.69rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 1rem; }
 .footer-col ul { list-style: none; }
 .footer-col li { margin-bottom: 0.55rem; }
 .footer-col a { font-size: 0.83rem; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
 .footer-col a:hover { color: var(--teal); }
 .footer-bottom { position: relative; z-index: 2; background: #F2EEE5; border-top: 1px solid var(--border); padding: 1.5rem 5vw; display: flex; justify-content: space-between; align-items: center; }
-.footer-bottom p { font-family: var(--ff-mono); font-size: 0.62rem; letter-spacing: 0.05em; color: var(--text-subtle); }
+.footer-bottom p { font-family: var(--ff-mono); font-size: 0.76rem; letter-spacing: 0.05em; color: var(--text-subtle); }
 
 /* ── KEYFRAMES ────────────────────── */
 @keyframes fadeUp { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
