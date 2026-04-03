@@ -66,7 +66,7 @@
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="research.html">Research</a></li>
-    <li><a href="index.html#people" class="active">People</a></li>
+    <li><a href="people.html" class="active">People</a></li>
     <li><a href="index.html#publications">Publications</a></li>
     <li><a href="index.html#positions">Join</a></li>
   </ul>
@@ -107,7 +107,7 @@
       <h4>Lab</h4>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#people">People</a></li>
+        <li><a href="people.html">People</a></li>
         <li><a href="index.html#publications">Publications</a></li>
         <li><a href="index.html#positions">Open Positions</a></li>
         <li><a href="index.html#location">Location</a></li>
@@ -135,7 +135,7 @@
   }
 
   function renderProfile(person, l, allPeople) {
-    const photoSrc = '../profile_icons/' + person.photo;
+    var photoSrc = '../profile_icons/' + person.photo;
 
     // Links HTML — email obfuscated: address split into parts, assembled only on click
     var ep = l.email.split('@');
@@ -236,17 +236,27 @@
         + '</div>';
     }
 
-    return '<a href="index.html#people" class="btn-back">← Back to Team</a>'
+    if (person.photo === null) {
+      var nullIndex = allPeople.filter(function(p, i) {
+        return p.photo === null && i < allPeople.indexOf(person);
+      }).length;
+      var color = ['6D28D9', '0F766E'][nullIndex % 2];
+      var initials = l.nameFirst.charAt(0) + '.' + l.nameLast.charAt(0) + '.';
+      photoSrc = 'https://placehold.co/400x400/EDE8DF/' + color + '?text=' + initials;
+    }
+    var photoContent = '<img src="' + photoSrc + '" alt="' + l.nameFirst + ' ' + l.nameLast + '">';
+
+    return '<a href="people.html#' + person.id + '" class="btn-back">← Back to Team</a>'
       + '<div class="profile-header" style="margin-top: 3rem;">'
       + '<div class="profile-photo-wrap reveal">'
-      + '<img src="' + photoSrc + '" alt="' + l.nameFirst + ' ' + l.nameLast + '">'
+      + photoContent
       + '</div>'
       + '<div class="profile-meta">'
       + '<div class="sec-eyebrow reveal">' + l.eyebrow + '</div>'
       + '<h1 class="profile-name reveal">' + l.nameFirst + '<br><em>' + l.nameLast + '</em></h1>'
       + '<p class="profile-rank reveal">' + l.rank + '</p>'
       + '<div class="profile-tags-wrap reveal reveal-d1">'
-      + '<p class="profile-tags-label">Research Areas</p>'
+      + '<p class="profile-tags-label">Areas</p>'
       + '<div class="profile-tags">' + tagsHtml + '</div>'
       + '</div>'
       + '<div class="profile-links reveal reveal-d2">' + linksHtml + '</div>'

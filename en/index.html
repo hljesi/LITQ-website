@@ -278,12 +278,24 @@
     });
   }
 
+  var NULL_COLORS = ['6D28D9', '0F766E'];
+  var nullPhotoIndex = 0;
+
   function makeCard(p) {
     var l = p.en || p.fr;
     var rankShort = l.rank ? l.rank.split('\u00b7')[0].trim() : l.eyebrow;
     var area = (l.researchAreaTags || []).slice(0, 2).join(' \u00b7 ');
+    var photoSrc;
+    if (p.photo === null) {
+      var initials = l.nameFirst.charAt(0) + '.' + l.nameLast.charAt(0) + '.';
+      var color = NULL_COLORS[nullPhotoIndex % 2];
+      nullPhotoIndex++;
+      photoSrc = 'https://placehold.co/400x400/EDE8DF/' + color + '?text=' + initials;
+    } else {
+      photoSrc = '../profile_icons/' + p.photo;
+    }
     return '<a class="team-card" href="profile.html?id=' + p.id + '" style="text-decoration:none;">'
-      + '<div class="team-photo"><img src="../profile_icons/' + p.photo + '" alt="' + l.nameFirst + ' ' + l.nameLast + '" loading="lazy"></div>'
+      + '<div class="team-photo"><img src="' + photoSrc + '" alt="' + l.nameFirst + ' ' + l.nameLast + '" loading="lazy"></div>'
       + '<p class="team-name">' + l.nameFirst + ' ' + l.nameLast + '</p>'
       + '<p class="team-role">' + rankShort + '</p>'
       + '<p class="team-area">' + area + '</p>'
@@ -298,7 +310,7 @@
     return (p.en || p.fr).eyebrow !== 'Faculty';
   }));
 
-  var MAX = 8;
+  var MAX = 7;
   var shown = students.slice(0, MAX);
   var remaining = students.length - shown.length;
 
@@ -308,7 +320,7 @@
     + '<span class="team-card-more-label">' + (remaining > 0 ? 'more\u00a0members' : 'view\u00a0all\u00a0members') + '</span>'
     + '</div>'
     + '<p class="team-name">View All</p>'
-    + '<p class="team-role">Members \u2192</p>'
+    + '<p class="team-role">\u2192</p>'
     + '</a>';
 
   var fEl = document.getElementById('carousel-faculty');

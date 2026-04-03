@@ -724,7 +724,7 @@ window.PEOPLE_DATA = {
     },
     {
       "id": "daniel-bilsborrow",
-      "photo": "profile_filler.jpeg",
+      "photo": null,
       "supervisedBy": ["hler-kristjansson"],
       "supervises": [],
       "formerStudents": [],

@@ -135,7 +135,7 @@
   }
 
   function renderProfile(person, l, allPeople) {
-    const photoSrc = '../profile_icons/' + person.photo;
+    var photoSrc = '../profile_icons/' + person.photo;
 
     // Links HTML — email obfuscated: address split into parts, assembled only on click
     var ep = l.email.split('@');
@@ -236,10 +236,20 @@
         + '</div>';
     }
 
+    if (person.photo === null) {
+      var nullIndex = allPeople.filter(function(p, i) {
+        return p.photo === null && i < allPeople.indexOf(person);
+      }).length;
+      var color = ['6D28D9', '0F766E'][nullIndex % 2];
+      var initials = l.nameFirst.charAt(0) + '.' + l.nameLast.charAt(0) + '.';
+      photoSrc = 'https://placehold.co/400x400/EDE8DF/' + color + '?text=' + initials;
+    }
+    var photoContent = '<img src="' + photoSrc + '" alt="' + l.nameFirst + ' ' + l.nameLast + '">';
+
     return '<a href="index.html#people" class="btn-back">← Retour à l\'équipe</a>'
       + '<div class="profile-header" style="margin-top: 3rem;">'
       + '<div class="profile-photo-wrap reveal">'
-      + '<img src="' + photoSrc + '" alt="' + l.nameFirst + ' ' + l.nameLast + '">'
+      + photoContent
       + '</div>'
       + '<div class="profile-meta">'
       + '<div class="sec-eyebrow reveal">' + l.eyebrow + '</div>'

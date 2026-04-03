@@ -13,7 +13,10 @@
     .people-page-wrap { max-width: 1080px; margin: 0 auto; padding: 7rem 5vw 6rem; position: relative; z-index: 1; }
     .people-page-header { margin-bottom: 4rem; }
     .people-cat { margin-bottom: 4rem; }
-    .people-cat-grid { display: flex; flex-wrap: wrap; gap: 1.4rem; }
+    .people-cat-grid { display: grid; grid-template-columns: repeat(5, 170px); gap: 1.6rem; }
+    @media (max-width: 1020px) { .people-cat-grid { grid-template-columns: repeat(4, 170px); } }
+    @media (max-width: 840px)  { .people-cat-grid { grid-template-columns: repeat(3, 170px); } }
+    @media (max-width: 620px)  { .people-cat-grid { grid-template-columns: repeat(2, 170px); } }
     .people-cat-rule { border: none; border-top: 1px solid var(--border); margin-bottom: 1.8rem; }
     #people-loading { display: flex; align-items: center; justify-content: center; min-height: 40vh; font-family: var(--ff-mono); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-subtle); }
   </style>
@@ -38,10 +41,13 @@
 
 <main style="position:relative; overflow:hidden;">
   <div aria-hidden="true" style="position:absolute; top:-5%; right:-25%; width:75%; max-width:1000px; pointer-events:none; z-index:0; user-select:none; transform:rotate(-90deg);">
-    <img src="../brand_assets/tilde-ellipse-purple7.png" alt="" style="width:100%; opacity:0.14; mix-blend-mode:multiply;">
+    <img src="../brand_assets/tilde-ellipse-purple7.png" alt="" style="width:100%; opacity:0.15; mix-blend-mode:multiply;">
   </div>
-  <div aria-hidden="true" style="position:absolute; bottom:5%; left:-20%; width:80%; max-width:900px; pointer-events:none; z-index:0; user-select:none; transform:rotate(20deg);">
-    <img src="../brand_assets/tilde-ellipse-green8.png" alt="" style="width:100%; opacity:0.11; mix-blend-mode:multiply;">
+  <div aria-hidden="true" style="position:absolute; top:27%; left:10%; width:100%; max-width:1100px; pointer-events:none; z-index:0; user-select:none; transform:rotate(0deg);">
+    <img src="../brand_assets/tilde-ellipse-purple3.png" alt="" style="width:100%; opacity:0.15; mix-blend-mode:multiply;">
+  </div>
+  <div aria-hidden="true" style="position:absolute; bottom:5%; right:-2%; width:120%; max-width:1200px; pointer-events:none; z-index:0; user-select:none; transform:rotate(270deg);">
+    <img src="../brand_assets/tilde-ellipse-green6.png" alt="" style="width:100%; opacity:0.15; mix-blend-mode:multiply;">
   </div>
 
   <div class="people-page-wrap">
@@ -96,11 +102,10 @@
 
   /* Category display order — only rendered if at least one person matches */
   var CATS = [
-    { key: 'Faculty',         label: 'Faculty' },
-    { key: 'Former Faculty',  label: 'Former Faculty' },
-    { key: 'Postdoc',         label: 'Postdoctoral Researchers' },
-    { key: 'PhD Student',     label: 'PhD Students' },
-    { key: 'Masters Student', label: 'Masters Students' },
+    { keys: ['Faculty'],                          label: 'Faculty' },
+    { keys: ['Postdoc'],                          label: 'Postdoctoral Researchers' },
+    { keys: ['PhD Student', 'Masters Student'],   label: 'PhD Students & Masters Students' },
+    { keys: ['Former Faculty'],                   label: 'Former Faculty' },
   ];
 
   function sortBySurname(arr) {
@@ -111,12 +116,24 @@
     });
   }
 
+  var NULL_COLORS = ['6D28D9', '0F766E'];
+  var nullPhotoIndex = 0;
+
   function makeCard(p) {
     var l = p[LANG] || p.en;
     var rankShort = l.rank ? l.rank.split('\u00b7')[0].trim() : l.eyebrow;
     var area = (l.researchAreaTags || []).slice(0, 2).join(' \u00b7 ');
-    return '<a class="team-card" href="profile.html?id=' + p.id + '" style="text-decoration:none;">'
-      + '<div class="team-photo"><img src="../profile_icons/' + p.photo + '" alt="' + l.nameFirst + ' ' + l.nameLast + '" loading="lazy"></div>'
+    var photoSrc;
+    if (p.photo === null) {
+      var initials = l.nameFirst.charAt(0) + '.' + l.nameLast.charAt(0) + '.';
+      var color = NULL_COLORS[nullPhotoIndex % 2];
+      nullPhotoIndex++;
+      photoSrc = 'https://placehold.co/400x400/EDE8DF/' + color + '?text=' + initials;
+    } else {
+      photoSrc = '../profile_icons/' + p.photo;
+    }
+    return '<a id="' + p.id + '" class="team-card" href="profile.html?id=' + p.id + '" style="text-decoration:none;">'
+      + '<div class="team-photo"><img src="' + photoSrc + '" alt="' + l.nameFirst + ' ' + l.nameLast + '" loading="lazy"></div>'
       + '<p class="team-name">' + l.nameFirst + ' ' + l.nameLast + '</p>'
       + '<p class="team-role">' + rankShort + '</p>'
       + '<p class="team-area">' + area + '</p>'
@@ -144,16 +161,16 @@
     });
 
     /* Collect any eyebrow keys not in CATS so they still render */
-    var knownKeys = CATS.map(function (c) { return c.key; });
+    var knownKeys = CATS.reduce(function (acc, c) { return acc.concat(c.keys); }, []);
     Object.keys(groups).forEach(function (key) {
       if (knownKeys.indexOf(key) === -1) {
-        CATS.push({ key: key, label: key });
+        CATS.push({ keys: [key], label: key });
       }
     });
 
     var html = '';
     CATS.forEach(function (cat, idx) {
-      var members = groups[cat.key];
+      var members = cat.keys.reduce(function (acc, k) { return groups[k] ? acc.concat(groups[k]) : acc; }, []);
       if (!members || members.length === 0) return;
       var sorted = sortBySurname(members);
       html += '<div class="people-cat reveal' + (idx > 0 ? ' reveal-d1' : '') + '">'
