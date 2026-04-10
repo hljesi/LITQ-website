@@ -66,8 +66,8 @@
   <ul class="nav-links">
     <li><a href="index.html">Accueil</a></li>
     <li><a href="research.html">Recherche</a></li>
-    <li><a href="index.html#people" class="active">Équipe</a></li>
-    <li><a href="index.html#publications">Publications</a></li>
+    <li><a href="people.html" class="active">Équipe</a></li>
+    <li><a href="publications.html">Publications</a></li>
     <li><a href="index.html#positions">Rejoindre</a></li>
   </ul>
   <a id="lang-toggle" href="../en/profile.html" class="lang-toggle">EN</a>
@@ -78,8 +78,8 @@
   <div aria-hidden="true" style="position:absolute; top:-10%; right:-30%; width:80%; max-width:1080px; pointer-events:none; z-index:0; user-select:none;transform: rotate(-90deg);">
     <img src="../brand_assets/tilde-ellipse-purple7.png" alt="" style="width:100%; opacity:0.17; mix-blend-mode:multiply;">
   </div>
-  <div aria-hidden="true" style="position:absolute; top:45%; right:-8%; width:75%; max-width:920px; pointer-events:none; z-index:0; user-select:none;transform: rotate(0deg)">
-    <img src="../brand_assets/tilde-ellipse-purple8.png" alt="" style="width:100%; opacity:0.13; mix-blend-mode:multiply;">
+  <div aria-hidden="true" style="position:absolute; top:37%; right:-28%; width:120%; max-width:1520px; pointer-events:none; z-index:0; user-select:none;transform: rotate(190deg);">
+    <img src="../brand_assets/tilde-ellipse-green8.png" alt="" style="width:100%; opacity:0.13; mix-blend-mode:multiply;">
   </div>
   <div class="profile-wrap" id="profile-root">
     <div id="profile-loading">Chargement…</div>
@@ -96,10 +96,10 @@
       <h4>Recherche</h4>
       <ul>
         <li><a href="research.html#algorithms">Algorithmique quantique</a></li>
-        <li><a href="research.html#info">Théorie de l'information quantique</a></li>
+        <li><a href="research.html#info">Théorie de l'info. quantique</a></li>
         <li><a href="research.html#complexity">Théorie de la complexité</a></li>
         <li><a href="research.html#crypto">Cryptographie</a></li>
-        <li><a href="research.html#optimization">Opérations d'ordre supérieur &amp; Causalité</a></li>
+        <li><a href="research.html#optimization">Applications sup. &amp; Causalité</a></li>
         <li><a href="research.html#graphs">Théorie des graphes</a></li>
       </ul>
     </div>
@@ -107,8 +107,8 @@
       <h4>Laboratoire</h4>
       <ul>
         <li><a href="index.html">Accueil</a></li>
-        <li><a href="index.html#people">Équipe</a></li>
-        <li><a href="index.html#publications">Publications</a></li>
+        <li><a href="people.html">Équipe</a></li>
+        <li><a href="publications.html">Publications</a></li>
         <li><a href="index.html#positions">Postes ouverts</a></li>
         <li><a href="index.html#location">Localisation</a></li>
       </ul>
@@ -137,7 +137,6 @@
   function renderProfile(person, l, allPeople) {
     var photoSrc = '../profile_icons/' + person.photo;
 
-    // Links HTML — email obfuscated: address split into parts, assembled only on click
     var ep = l.email.split('@');
     const linksHtml = [
       '<a href="#" class="profile-link profile-link--email" data-eu="' + ep[0] + '" data-ed="' + ep[1] + '" onclick="this.href=\'mailto:\'+this.dataset.eu+\'@\'+this.dataset.ed;return true;">Courriel</a>'
@@ -147,18 +146,13 @@
       return '<a href="#" class="profile-link">' + lk.label + ' →</a>';
     })).join('\n');
 
-    // Research area tags
     const tagsHtml = l.researchAreaTags.map(function(t) {
       return '<span class="profile-tag">' + t + '</span>';
     }).join('');
 
-    // Bio paragraphs
     const bioHtml = l.bio.map(function(p) { return '<p>' + p + '</p>'; }).join('');
-
-    // Research interests
     const interestsHtml = l.researchInterests.map(function(i) { return '<li>' + i + '</li>'; }).join('');
 
-    // Supervisor section — direct supervisedBy OR reverse lookup from faculty supervises arrays
     var supervisorHtml = '';
     var supervisorPerson = null;
     if (person.supervisedBy) {
@@ -170,7 +164,7 @@
     if (supervisorPerson) {
       var supL = supervisorPerson[LANG] || supervisorPerson.en;
       supervisorHtml = '<div class="profile-section reveal">'
-        + '<div class="profile-section-label">Superviseur</div>'
+        + '<div class="profile-section-label">Directeur·rice de thèse</div>'
         + '<a href="profile.html?id=' + supervisorPerson.id + '" class="supervisor-link">'
         + supL.nameFirst + ' ' + supL.nameLast
         + '<span class="supervisor-link-rank">' + supL.rank + '</span>'
@@ -178,7 +172,6 @@
         + '</div>';
     }
 
-    // Current students section
     var supervisesHtml = '';
     if (person.supervises && person.supervises.length > 0) {
       var students = person.supervises.map(function(id) {
@@ -186,7 +179,7 @@
       }).filter(Boolean);
       if (students.length > 0) {
         supervisesHtml = '<div class="profile-section reveal">'
-          + '<div class="profile-section-label">Étudiants actuels</div>'
+          + '<div class="profile-section-label">Étudiant·e·s actuel·le·s</div>'
           + '<ul class="supervises-list">'
           + students.map(function(s) {
             var sL = s[LANG] || s.en;
@@ -200,11 +193,10 @@
       }
     }
 
-    // Former students section
     var formerStudentsHtml = '';
     if (person.formerStudents && person.formerStudents.length > 0) {
       formerStudentsHtml = '<div class="profile-section reveal">'
-        + '<div class="profile-section-label">Anciens étudiants</div>'
+        + '<div class="profile-section-label">Anciens étudiant·e·s</div>'
         + '<ul class="supervises-list">'
         + person.formerStudents.map(function(fs) {
           var linked = fs.id ? allPeople.find(function(p) { return p.id === fs.id; }) : null;
@@ -218,14 +210,13 @@
         + '</div>';
     }
 
-    // Teaching section
     var teachingHtml = '';
     if (person.teaching && person.teaching.length > 0) {
       teachingHtml = '<div class="profile-section reveal reveal-d1">'
         + '<div class="profile-section-label">Enseignement</div>'
         + '<ul class="teaching-list">'
         + person.teaching.map(function(c) {
-          var cL = c[LANG] || c.fr;
+          var cL = c[LANG] || c.en;
           return '<li class="teaching-item">'
             + '<span class="teaching-code">' + c.code + '</span>'
             + '<span class="teaching-name">' + cL.name + '</span>'
@@ -246,7 +237,7 @@
     }
     var photoContent = '<img src="' + photoSrc + '" alt="' + l.nameFirst + ' ' + l.nameLast + '">';
 
-    return '<a href="index.html#people" class="btn-back">← Retour à l\'équipe</a>'
+    return '<a href="people.html#' + person.id + '" class="btn-back">← Retour à l\'équipe</a>'
       + '<div class="profile-header" style="margin-top: 3rem;">'
       + '<div class="profile-photo-wrap reveal">'
       + photoContent
@@ -256,7 +247,7 @@
       + '<h1 class="profile-name reveal">' + l.nameFirst + '<br><em>' + l.nameLast + '</em></h1>'
       + '<p class="profile-rank reveal">' + l.rank + '</p>'
       + '<div class="profile-tags-wrap reveal reveal-d1">'
-      + '<p class="profile-tags-label">Domaines de recherche</p>'
+      + '<p class="profile-tags-label">Domaines</p>'
       + '<div class="profile-tags">' + tagsHtml + '</div>'
       + '</div>'
       + '<div class="profile-links reveal reveal-d2">' + linksHtml + '</div>'
@@ -299,7 +290,6 @@
 
       const l = person[LANG] || person.en;
 
-      // Update page title and lang toggle
       document.title = l.nameFirst + ' ' + l.nameLast + ' — LITQ';
       document.getElementById('lang-toggle').href = '../en/profile.html?id=' + id;
 
@@ -308,7 +298,7 @@
 
     } catch (e) {
       console.error('[LITQ Profile]', e);
-      root.innerHTML = '<p style="padding:4rem 0;font-family:var(--ff-mono);color:var(--text-subtle);">Échec du chargement du profil. Consultez la console du navigateur.</p>';
+      root.innerHTML = '<p style="padding:4rem 0;font-family:var(--ff-mono);color:var(--text-subtle);">Impossible de charger le profil. Consultez la console du navigateur pour plus de détails.</p>';
     }
   }
 

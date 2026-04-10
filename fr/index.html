@@ -9,6 +9,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
+  <style>
+    .team-card--more .team-photo-more { aspect-ratio: 1/1; background: var(--surface); border: 1.5px dashed var(--border-teal); display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 0.7rem; transition: background 0.3s, border-color 0.25s; gap: 0.4rem; }
+    .team-card--more:hover .team-photo-more { background: var(--teal-dim); border-color: var(--teal); border-style: solid; }
+    .team-card-more-count { font-family: var(--ff-display); font-size: 2.1rem; font-weight: 300; color: var(--teal); line-height: 1; }
+    .team-card-more-label { font-family: var(--ff-mono); font-size: 0.60rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-subtle); text-align: center; padding: 0 0.6rem; }
+    .team-card--more .team-name { color: var(--teal) !important; }
+  </style>
 </head>
 <body>
 
@@ -21,8 +28,8 @@
   <ul class="nav-links">
     <li><a href="#home">Accueil</a></li>
     <li><a href="research.html">Recherche</a></li>
-    <li><a href="#people">Équipe</a></li>
-    <li><a href="#publications">Publications</a></li>
+    <li><a href="people.html">Équipe</a></li>
+    <li><a href="publications.html">Publications</a></li>
     <li><a href="#positions">Rejoindre</a></li>
   </ul>
   <a href="../en/index.html" class="lang-toggle">EN</a>
@@ -33,22 +40,19 @@
 
 <!-- ══════════ HERO ══════════ -->
 <section class="hero" id="home">
-  <!-- Gaussian wave packet background canvas -->
   <canvas id="wave-canvas"></canvas>
-  <!-- Gradient overlay: clear on left for text, transparent on right for waves -->
   <div class="hero-wave-overlay"></div>
-
   <div class="hero-inner">
     <div class="hero-tag">Quantique · Théorie · Calcul</div>
     <h1 class="hero-h1">
-      <span class="hero-line"><span class="hero-line-inner">Laboratoire d'informatique</span></span>
-      <span class="hero-line"><span class="hero-line-inner"><em class="hero-italic">Théorique</em> &amp;</span></span>
-      <span class="hero-line"><span class="hero-line-inner">Quantique</span></span>
+      <span class="hero-line"><span class="hero-line-inner">Laboratoire</span></span>
+      <span class="hero-line"><span class="hero-line-inner">d'<em class="hero-italic">informatique</em></span></span>
+      <span class="hero-line"><span class="hero-line-inner">théorique et quantique</span></span>
     </h1>
     <p class="hero-body">
       Nous étudions les fondements mathématiques de l'informatique et développons des algorithmes,
-      des résultats en complexité et des protocoles cryptographiques pour les technologies quantiques.
-      Basés au DIRO, Université de Montréal.
+      des résultats de complexité et des protocoles cryptographiques pour les technologies quantiques.
+      Basé au DIRO, Université de Montréal.
     </p>
     <div class="hero-actions">
       <a href="research.html" class="btn-pri">Explorer la recherche →</a>
@@ -67,7 +71,7 @@
       <p class="reveal">
         Bienvenue sur le site du Laboratoire d'informatique théorique et quantique (LITQ) du Département
         d'informatique et de recherche opérationnelle (DIRO) de l'Université de Montréal. Notre laboratoire
-        compte six professeurs et est très actif tant en recherche qu'en enseignement.
+        compte plusieurs professeurs et est très actif tant en recherche qu'en enseignement.
       </p>
       <p class="reveal reveal-d1">
         Nous travaillons sur divers aspects liés aux fondements de l'informatique et de la physique.
@@ -75,12 +79,10 @@
         le calcul quantique et la théorie des graphes.
       </p>
       <p class="reveal reveal-d2">
-        Le LITQ est toujours à la recherche d'étudiants dynamiques à tous les niveaux et
-        accueille volontiers les visiteurs.
+        Le LITQ est toujours à la recherche d'étudiant(e)s dynamiques à tous les niveaux
+        et accueille chaleureusement les visiteurs.
       </p>
     </div>
-
-    <!-- Group photo -->
     <div class="about-img-wrap reveal reveal-d1">
       <img src="../images/quorumuottawa_2024.png" alt="Groupe LITQ au Quorum Ottawa 2024">
     </div>
@@ -90,107 +92,49 @@
 <!-- ══════════ PEOPLE ══════════ -->
 <section class="section" id="people">
   <div class="section-mesh" aria-hidden="true">
-    <!-- purple2: flower/stamen — large, top-right, upright -->
     <img src="../brand_assets/tilde-ellipse-purple4.png" alt=""
          style="width:95%; max-width:960px; top:-15%; right:-15%;" />
-    <!-- green2: twin-lobe pair — bottom-left -->
     <img src="../brand_assets/tilde-ellipse-green6.png" alt=""
          style="width:65%; max-width:640px; bottom:-5%; left:5%; opacity:0.19;" />
   </div>
   <div class="sec-eyebrow sec-eyebrow--purple reveal">L'équipe</div>
-  <h2 class="sec-title reveal">Rencontrez nos <em>chercheurs</em></h2>
+  <h2 class="sec-title reveal">Rencontrer nos <em>chercheurs</em></h2>
   <p class="people-section-title reveal">Corps professoral</p>
   <div class="team-carousel-wrap reveal">
     <button class="carousel-btn carousel-btn--prev" aria-label="Précédent">&#8592;</button>
     <div class="team-carousel-track-outer">
-      <div class="team-grid" id="carousel-faculty">
-        <a class="team-card" href="profile.html?id=gilles-brassard" style="text-decoration:none;">
-          <div class="team-photo"><img src="../profile_icons/profile_filler.jpeg" alt="Prof. Gilles Brassard"></div>
-          <p class="team-name">Prof. Gilles Brassard</p><p class="team-role">Professeur titulaire</p><p class="team-area">Cryptographie quantique · QKD</p>
-        </a>
-        <a class="team-card" href="profile.html?id=frederic-dupuis" style="text-decoration:none;">
-          <div class="team-photo"><img src="../profile_icons/profile_filler.jpeg" alt="Prof. Frédéric Dupuis"></div>
-          <p class="team-name">Prof. Frédéric Dupuis</p><p class="team-role">Professeur agrégé</p><p class="team-area">Théorie de l'information quantique</p>
-        </a>
-        <a class="team-card" href="profile.html?id=gena-hahn" style="text-decoration:none;">
-          <div class="team-photo"><img src="../profile_icons/profile_filler.jpeg" alt="Prof. Gena Hahn"></div>
-          <p class="team-name">Prof. Gena Hahn</p><p class="team-role">Professeur titulaire</p><p class="team-area">Théorie des graphes · Combinatoire</p>
-        </a>
-        <a class="team-card" href="profile.html?id=hler-kristjansson" style="text-decoration:none;">
-          <div class="team-photo"><img src="../profile_icons/profile_filler.jpeg" alt="Prof. Hlér Kristjánsson"></div>
-          <p class="team-name">Prof. Hlér Kristjánsson</p><p class="team-role">Professeur adjoint</p><p class="team-area">Opérations quantiques d'ordre supérieur</p>
-        </a>
-        <a class="team-card" href="profile.html?id=louis-salvail" style="text-decoration:none;">
-          <div class="team-photo"><img src="../profile_icons/louis_ SALVAIL.jpeg" alt="Prof. Louis Salvail"></div>
-          <p class="team-name">Prof. Louis Salvail</p><p class="team-role">Professeur titulaire</p><p class="team-area">Cryptographie · Complexité</p>
-        </a>
-        <a class="team-card" href="profile.html?id=dmitry-sokolov" style="text-decoration:none;">
-          <div class="team-photo"><img src="../profile_icons/profile_filler.jpeg" alt="Prof. Dmitry Sokolov"></div>
-          <p class="team-name">Prof. Dmitry Sokolov</p><p class="team-role">Professeur adjoint</p><p class="team-area">Théorie de la complexité · Preuves</p>
-        </a>
-      </div>
+      <div class="team-grid" id="carousel-faculty"></div>
     </div>
     <button class="carousel-btn carousel-btn--next" aria-label="Suivant">&#8594;</button>
   </div>
-  <p class="people-section-title reveal" style="margin-top:2rem;">Étudiants au doctorat &amp; Postdoctorants</p>
+  <p class="people-section-title reveal" style="margin-top:2rem;">Étudiant(e)s &amp; Postdocs</p>
   <div class="team-carousel-wrap reveal">
     <button class="carousel-btn carousel-btn--prev" aria-label="Précédent">&#8592;</button>
     <div class="team-carousel-track-outer">
-      <div class="team-grid" id="carousel-students">
-        <a class="team-card" href="profile.html?id=daniel-bilsborrow" style="text-decoration:none;">
-          <div class="team-photo"><img src="../profile_icons/profile_filler.jpeg" alt="Daniel Bilsborrow"></div>
-          <p class="team-name">Daniel Bilsborrow</p><p class="team-role">Étudiant au doctorat</p><p class="team-area">Domaine de recherche</p>
-        </a>
-        <a class="team-card" href="profile.html?id=marek-arsenault" style="text-decoration:none;">
-          <div class="team-photo"><img src="../profile_icons/profile_filler.jpeg" alt="Marek Arsenault"></div>
-          <p class="team-name">Marek Arsenault</p><p class="team-role">Étudiant à la maîtrise</p><p class="team-area">Domaine de recherche</p>
-        </a>
-        <a class="team-card" href="profile.html?id=taha-skiredj" style="text-decoration:none;">
-          <div class="team-photo"><img src="../profile_icons/profile_filler.jpeg" alt="Taha Skiredj"></div>
-          <p class="team-name">Taha Skiredj</p><p class="team-role">Étudiant à la maîtrise</p><p class="team-area">Domaine de recherche</p>
-        </a>
-        <a class="team-card" href="profile.html?id=samuel-ducharme" style="text-decoration:none;">
-          <div class="team-photo"><img src="../profile_icons/profile_filler.jpeg" alt="Samuel Ducharme"></div>
-          <p class="team-name">Samuel Ducharme</p><p class="team-role">Étudiant au doctorat</p><p class="team-area">Domaine de recherche</p>
-        </a>
-        <a class="team-card" href="profile.html?id=charlie-pilon-senterre" style="text-decoration:none;">
-          <div class="team-photo"><img src="../profile_icons/profile_filler.jpeg" alt="Charlie Pilon-Senterre"></div>
-          <p class="team-name">Charlie Pilon-Senterre</p><p class="team-role">Étudiant au doctorat</p><p class="team-area">Domaine de recherche</p>
-        </a>
-        <a class="team-card" href="profile.html?id=linhui-fu" style="text-decoration:none;">
-          <div class="team-photo"><img src="../profile_icons/profile_filler.jpeg" alt="Linhui Fu"></div>
-          <p class="team-name">Linhui Fu</p><p class="team-role">Étudiant au doctorat</p><p class="team-area">Domaine de recherche</p>
-        </a>
-        <a class="team-card" href="profile.html?id=remi-ligez" style="text-decoration:none;">
-          <div class="team-photo"><img src="../profile_icons/profile_filler.jpeg" alt="Rémi Ligez"></div>
-          <p class="team-name">Rémi Ligez</p><p class="team-role">Étudiant au doctorat</p><p class="team-area">Domaine de recherche</p>
-        </a>
-      </div>
+      <div class="team-grid" id="carousel-students"></div>
     </div>
     <button class="carousel-btn carousel-btn--next" aria-label="Suivant">&#8594;</button>
   </div>
   <div class="reveal" style="text-align:center;margin-top:3rem;">
-    <a href="#" class="btn-sec">Voir tous les membres →</a>
+    <a href="people.html" class="btn-sec">Voir tous les membres →</a>
   </div>
 </section>
 
 <!-- ══════════ PUBLICATIONS ══════════ -->
 <section class="section section--alt" id="publications">
-  <div class="sec-eyebrow reveal">Publications choisies</div>
-  <h2 class="sec-title reveal">Recherche <em>récente</em></h2>
+  <div class="sec-eyebrow reveal">Publications sélectionnées</div>
+  <h2 class="sec-title reveal">Recherches <em>récentes</em></h2>
   <div class="reveal" id="pub-list"></div>
   <div class="reveal" style="text-align:center;margin-top:3.5rem;">
-    <a href="https://arxiv.org/search/?searchtype=author&query=Brassard+OR+Dupuis+OR+Salvail+OR+Kristjansson+OR+Sokolov" id="pub-view-all" class="btn-sec" target="_blank" rel="noopener">Voir toutes les publications sur arXiv →</a>
+    <a href="publications.html" class="btn-sec">Voir plus de publications →</a>
   </div>
 </section>
 
 <!-- ══════════ OPEN POSITIONS ══════════ -->
 <section class="section" id="positions" style="padding-bottom:4rem;">
   <div class="section-mesh" aria-hidden="true">
-    <!-- green3: heart-leaf — large, centre-left, upright -->
     <img src="../brand_assets/tilde-ellipse-green3.png" alt=""
          style="width:65%; max-width:740px; top:0%; left:-8%; transform:translateY(-50%); transform: rotate(-90deg);" />
-    <!-- purple4: 4-pointed star — top-right, dramatic -->
     <img src="../brand_assets/tilde-ellipse-purple6.png" alt=""
          style="width:70%; max-width:1000px; top:20%; right:-5%; opacity:0.17;" />
   </div>
@@ -201,30 +145,25 @@
       <div class="accent-rule reveal"></div>
       <div style="background:var(--bg);padding:1.5rem 1.8rem;display:flex;flex-direction:column;gap:1.2rem;">
         <p class="reveal" style="margin-bottom:0;">
-          Le LITQ accueille les candidatures d'étudiants à la maîtrise et au doctorat intéressés par
-          l'informatique théorique ou l'information quantique. Les futurs étudiants à la maîtrise sont
-          généralement encouragés à s'inscrire au programme d'informatique ou de physique de l'Université
-          de Montréal avant de contacter les professeurs pour le mémoire de maîtrise. Les candidats au
-          doctorat peuvent trouver des postes annoncés ici ou contacter un membre du corps professoral en
-          décrivant brièvement leurs intérêts de recherche et en joignant leur CV et leurs relevés de notes.
+          Le LITQ accueille les candidatures d'étudiant(e)s prospectifs à la maîtrise et au doctorat
+          intéressé(e)s par l'informatique théorique ou l'information quantique. Les candidat(e)s à la maîtrise
+          sont généralement encouragé(e)s à s'inscrire au programme d'informatique ou de physique de
+          l'Université de Montréal avant de contacter les professeurs. Les candidat(e)s au doctorat peuvent
+          trouver des postes annoncés ici ou contacter un membre du corps professoral en décrivant brièvement
+          leurs intérêts de recherche, et en joignant leur CV et leurs relevés de notes.
         </p>
         <p class="reveal reveal-d1" style="margin-bottom:0;">
-          Les candidats au doctorat doivent avoir une formation en mathématiques,
-          en informatique ou en physique. Tous les postes sont assortis d'un financement.
+          Les candidat(e)s au doctorat doivent avoir une formation en mathématiques,
+          en informatique ou en physique. Tous les postes sont accompagnés d'un financement.
         </p>
       </div>
     </div>
     <div class="reveal reveal-d1" style="align-self:center;">
       <p style="font-family:var(--ff-mono);font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-subtle);margin-bottom:1.2rem;">Postes ouverts</p>
-        <!-- ACTIVE POSITION — comment out the block below when no positions are open -->
         <a class="position-item" href="phd-quantum-algorithms.html" style="text-decoration:none;">
           <span class="position-label">Poste de doctorat — Modèle</span>
           <span class="position-detail position-open">● Ouvert</span>
         </a>
-        <!-- NO POSITIONS — uncomment the block below when no positions are open -->
-        <!-- <div class="position-item" style="justify-content:center; color:var(--text-subtle); font-family:var(--ff-mono); font-size:0.75rem; letter-spacing:0.08em; padding:1.8rem 1.5rem;">
-          Aucune opportunité de doctorat disponible pour le moment.
-        </div> -->
       </div>
     </div>
   </div>
@@ -233,7 +172,7 @@
 <!-- ══════════ LOCATION ══════════ -->
 <section class="section section--alt" id="location">
   <div class="sec-eyebrow reveal">Nous trouver</div>
-  <h2 class="sec-title reveal">Situés à <em class="teal">Montréal</em></h2>
+  <h2 class="sec-title reveal">Situé à <em class="teal">Montréal</em></h2>
   <div class="location-grid">
     <div class="location-cards">
       <div class="location-card reveal">
@@ -260,7 +199,6 @@
         </div>
       </div>
     </div>
-
     <div class="location-photo-wrap reveal reveal-d1">
       <img src="../brand_assets/ParcFleursDeMacadam_01carolineperronphotographies.webp"
            alt="Montréal — Parc des Fleurs de Macadam" loading="lazy">
@@ -273,15 +211,13 @@
 <footer>
   <div>
     <div class="footer-logo">LITQ</div>
-    <p class="footer-desc">Laboratoire d'informatique théorique et quantique à l'Université de Montréal — faisant progresser les fondements mathématiques du calcul et de l'information quantiques.</p>
+    <p class="footer-desc">Laboratoire d'informatique théorique et quantique de l'Université de Montréal — faisant progresser les fondements mathématiques du calcul et de l'information quantiques.</p>
     <div class="footer-affil"><div class="footer-affil-dot"></div><span>DIRO — Université de Montréal</span></div>
     <div class="footer-affil"><div class="footer-affil-dot"></div><span>Membre de Quantique Québec</span></div>
   </div>
   <div class="footer-contact">
     <h4>Nous contacter</h4>
-    <p><a href="mailto:litq@iro.umontreal.ca">litq@iro.umontreal.ca</a></p>
-    <p><a href="tel:+15143436111">+1 (514) 343-6111</a></p>
-    <p style="margin-top:1rem; font-size:0.78rem; line-height:1.7; color:var(--text-muted);">
+    <p style="margin-top:0; font-size:0.95rem; line-height:1.7; color:var(--text-muted);">
       Département d'Informatique et de<br>Recherche Opérationnelle (DIRO)<br>
       Université de Montréal<br>
       Pavillon André-Aisenstadt<br>
@@ -298,17 +234,76 @@
   <p>Département d'Informatique et de Recherche Opérationnelle</p>
 </div>
 
+<script src="../people.js"></script>
+<script>
+(function () {
+  var data = window.PEOPLE_DATA;
+  if (!data || !data.people) return;
+
+  function sortBySurname(arr) {
+    return arr.slice().sort(function (a, b) {
+      var aL = (a.fr || a.en).nameLast;
+      var bL = (b.fr || b.en).nameLast;
+      return aL.localeCompare(bL, undefined, { sensitivity: 'base' });
+    });
+  }
+
+  var NULL_COLORS = ['6D28D9', '0F766E'];
+  var nullPhotoIndex = 0;
+
+  function makeCard(p) {
+    var l = p.fr || p.en;
+    var rankShort = l.rank ? l.rank.split('\u00b7')[0].trim() : l.eyebrow;
+    var area = (l.researchAreaTags || []).slice(0, 2).join(' \u00b7 ');
+    var photoSrc;
+    if (p.photo === null) {
+      var initials = l.nameFirst.charAt(0) + '.' + l.nameLast.charAt(0) + '.';
+      var color = NULL_COLORS[nullPhotoIndex % 2];
+      nullPhotoIndex++;
+      photoSrc = 'https://placehold.co/400x400/EDE8DF/' + color + '?text=' + initials;
+    } else {
+      photoSrc = '../profile_icons/' + p.photo;
+    }
+    return '<a class="team-card" href="profile.html?id=' + p.id + '" style="text-decoration:none;">'
+      + '<div class="team-photo"><img src="' + photoSrc + '" alt="' + l.nameFirst + ' ' + l.nameLast + '" loading="lazy"></div>'
+      + '<p class="team-name">' + l.nameFirst + ' ' + l.nameLast + '</p>'
+      + '<p class="team-role">' + rankShort + '</p>'
+      + '<p class="team-area">' + area + '</p>'
+      + '</a>';
+  }
+
+  var faculty = sortBySurname(data.people.filter(function (p) {
+    return (p.fr || p.en).eyebrow === 'Corps professoral';
+  }));
+
+  var students = sortBySurname(data.people.filter(function (p) {
+    return (p.fr || p.en).eyebrow !== 'Corps professoral';
+  }));
+
+  var MAX = 7;
+  var shown = students.slice(0, MAX);
+  var remaining = students.length - shown.length;
+
+  var seeMoreCard = '<a href="people.html" class="team-card team-card--more" style="text-decoration:none;">'
+    + '<div class="team-photo-more">'
+    + (remaining > 0 ? '<span class="team-card-more-count">+' + remaining + '</span>' : '')
+    + '<span class="team-card-more-label">' + (remaining > 0 ? 'autres\u00a0membres' : 'voir\u00a0tous\u00a0les\u00a0membres') + '</span>'
+    + '</div>'
+    + '<p class="team-name">Voir tout</p>'
+    + '<p class="team-role">\u2192</p>'
+    + '</a>';
+
+  var fEl = document.getElementById('carousel-faculty');
+  var sEl = document.getElementById('carousel-students');
+  if (fEl) fEl.innerHTML = faculty.map(makeCard).join('');
+  if (sEl) sEl.innerHTML = shown.map(makeCard).join('') + seeMoreCard;
+})();
+</script>
+
 <script src="../script.js" defer></script>
 
-<!-- ══════════ OPENALEX PUBLICATIONS EN DIRECT ══════════
-     Interroge l'API gratuite OpenAlex à chaque chargement de page.
-     Remplace la liste statique par les 5 articles les plus récents
-     des membres du corps professoral du LITQ.
-     ══════════════════════════════════════════════════════════════ -->
 <script>
 (async function () {
-
-  /* ── 1. Afficher l'état de chargement ── */
   const pubList = document.getElementById('pub-list');
   if (!pubList) return;
 
@@ -317,94 +312,72 @@
     'font-size:0.68rem;letter-spacing:0.18em;color:var(--text-subtle);text-transform:uppercase;">' +
     'Chargement des publications\u2026</div>';
 
-  /* ── 2. Identifiants OpenAlex des professeurs ── */
   const FACULTY = [
-    { id: 'A5110284072', name: 'G. Brassard'    }, // Prof. Gilles Brassard
-    { id: 'A5066085467', name: 'F. Dupuis'       }, // Prof. Frédéric Dupuis
-    { id: 'A5059511887', name: 'L. Salvail'      }, // Prof. Louis Salvail
-    { id: 'A5049102572', name: 'H. Kristjánsson' }, // Prof. Hlér Kristjánsson
-    { id: 'A5110941674', name: 'G. Hahn'         }, // Prof. Gena Hahn
-    { id: 'A5017300573', name: 'D. Sokolov'      }, // Prof. Dmitry Sokolov
+    { id: 'A5110284072', name: 'G. Brassard'    },
+    { id: 'A5066085467', name: 'F. Dupuis'       },
+    { id: 'A5059511887', name: 'L. Salvail'      },
+    { id: 'A5049102572', name: 'H. Kristjánsson' },
+    { id: 'A5110941674', name: 'G. Hahn'         },
+    { id: 'A5017300573', name: 'D. Sokolov'      },
+    { id: 'A5103523901', name: 'M. Boyer'        },
+    { id: 'A5044037051', name: 'P. Lamontagne'   },
   ];
 
-  /* ── 3. Utilitaire : échapper HTML ── */
   function esc(s) {
-    return String(s)
-      .replace(/&/g,'&amp;').replace(/</g,'&lt;')
-      .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   }
 
   try {
     const authorFilter = FACULTY.map(function (f) { return f.id; }).join('|');
     const fields = 'id,title,publication_year,publication_date,authorships,primary_location,open_access';
-    const url =
-      'https://api.openalex.org/works' +
-      '?filter=authorships.author.id:' + authorFilter +
-      '&sort=publication_date:desc' +
-      '&per_page=20' +
-      '&select=' + fields +
-      '&mailto=litq@iro.umontreal.ca';
+    const url = 'https://api.openalex.org/works'
+      + '?filter=authorships.author.id:' + authorFilter
+      + '&sort=publication_date:desc&per_page=20&select=' + fields
+      + '&mailto=litq@iro.umontreal.ca';
 
     const resp = await fetch(url);
     if (!resp.ok) throw new Error('HTTP ' + resp.status);
     const data = await resp.json();
 
-    const seen   = new Set();
+    const seen = new Set();
     const papers = [];
 
     (data.results || []).forEach(function (work) {
       const openAlexId = work.id || '';
       if (!openAlexId || seen.has(openAlexId)) return;
       seen.add(openAlexId);
-
       const title = (work.title || '').trim().replace(/\s+/g, ' ');
       if (!title) return;
-
       const year = work.publication_year || '—';
-      const date = work.publication_date ? new Date(work.publication_date) : new Date(0);
-
-      /* Author display: show all authors shortened to "F. Last" */
       const allAuthors = (work.authorships || []).map(function (a) {
         const parts = (a.author && a.author.display_name || '').trim().split(' ');
         if (parts.length < 2) return parts[0] || '';
         return parts[0][0] + '. ' + parts[parts.length - 1];
       }).filter(Boolean);
-      const authorDisplay = allAuthors.join(', ');
-
-      const oa        = work.open_access || {};
-      const loc       = work.primary_location || {};
-      const arxivUrl  = oa.oa_url && oa.oa_url.includes('arxiv.org') ? oa.oa_url : null;
-      const doiUrl    = loc.landing_page_url || null;
+      const oa = work.open_access || {};
+      const loc = work.primary_location || {};
+      const arxivUrl = oa.oa_url && oa.oa_url.includes('arxiv.org') ? oa.oa_url : null;
+      const doiUrl = loc.landing_page_url || null;
       const paperLink = arxivUrl || doiUrl || ('https://openalex.org/' + openAlexId.replace('https://openalex.org/', ''));
-
-      const source  = loc.source;
-      const venue   = (source && source.display_name) ? source.display_name
-                    : (arxivUrl ? 'arXiv' : '');
-
-      papers.push({ title, authorDisplay, venue, year, date, paperLink });
+      const source = loc.source;
+      const venue = (source && source.display_name) ? source.display_name : (arxivUrl ? 'arXiv' : '');
+      papers.push({ title, authorDisplay: allAuthors.join(', '), venue, year, paperLink });
     });
 
     if (papers.length === 0) { showError(); return; }
 
     pubList.innerHTML = papers.slice(0, 5).map(function (p) {
-      return '<div class="pub-item" style="opacity:0;transform:translateY(14px);' +
-             'transition:opacity 0.5s ease,transform 0.5s cubic-bezier(0.16,1,0.3,1);">' +
-               '<span class="pub-year">' + esc(p.year) + '</span>' +
-               '<div>' +
-                 '<p class="pub-title">' + esc(p.title) + '</p>' +
-                 '<p class="pub-meta">'  + esc(p.authorDisplay) +
-                   (p.venue ? ' <span class="pub-venue">' + esc(p.venue) + '</span>' : '') +
-                 '</p>' +
-               '</div>' +
-               '<a href="' + esc(p.paperLink) + '" class="pub-link" target="_blank" rel="noopener">PDF →</a>' +
-             '</div>';
+      return '<div class="pub-item" style="opacity:0;transform:translateY(14px);transition:opacity 0.5s ease,transform 0.5s cubic-bezier(0.16,1,0.3,1);">'
+        + '<span class="pub-year">' + esc(p.year) + '</span>'
+        + '<div><p class="pub-title">' + esc(p.title) + '</p>'
+        + '<p class="pub-meta">' + esc(p.authorDisplay)
+        + (p.venue ? ' <span class="pub-venue">' + esc(p.venue) + '</span>' : '') + '</p></div>'
+        + '<a href="' + esc(p.paperLink) + '" class="pub-link" target="_blank" rel="noopener">PDF →</a>'
+        + '</div>';
     }).join('');
 
     pubList.querySelectorAll('.pub-item').forEach(function (el, i) {
-      setTimeout(function () {
-        el.style.opacity   = '1';
-        el.style.transform = 'none';
-      }, i * 90);
+      setTimeout(function () { el.style.opacity = '1'; el.style.transform = 'none'; }, i * 90);
     });
 
   } catch (err) {
@@ -413,35 +386,11 @@
   }
 
   function showError() {
-    pubList.innerHTML =
-      '<div style="' +
-        'border:1px solid var(--border);' +
-        'padding:3rem 2rem;' +
-        'text-align:center;' +
-      '">' +
-        '<p style="' +
-          'font-family:var(--ff-display);' +
-          'font-style:italic;' +
-          'font-size:1.35rem;' +
-          'font-weight:300;' +
-          'color:var(--text);' +
-          'letter-spacing:-0.01em;' +
-          'margin-bottom:0.75rem;' +
-        '">Impossible de récupérer les publications pour le moment.</p>' +
-        '<p style="' +
-          'font-family:var(--ff-mono);' +
-          'font-size:0.62rem;' +
-          'letter-spacing:0.16em;' +
-          'text-transform:uppercase;' +
-          'color:var(--text-subtle);' +
-        '">Veuillez réessayer plus tard ou consulter directement sur ' +
-          '<a href="https://arxiv.org/search/?searchtype=author&query=Brassard+OR+Dupuis+OR+Salvail+OR+Kristjansson+OR+Sokolov" ' +
-             'style="color:var(--teal);border-bottom:1px solid var(--border-teal);text-decoration:none;" ' +
-             'target="_blank" rel="noopener">arXiv</a>' +
-        '</p>' +
-      '</div>';
+    pubList.innerHTML = '<div style="border:1px solid var(--border);padding:3rem 2rem;text-align:center;">'
+      + '<p style="font-family:var(--ff-display);font-style:italic;font-size:1.35rem;font-weight:300;color:var(--text);letter-spacing:-0.01em;margin-bottom:0.75rem;">Impossible de charger les publications.</p>'
+      + '<p style="font-family:var(--ff-mono);font-size:0.62rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-subtle);">Veuillez réessayer plus tard ou consulter directement '
+      + '<a href="https://arxiv.org/search/?searchtype=author&query=Brassard+OR+Dupuis+OR+Salvail+OR+Kristjansson+OR+Sokolov+OR+Hahn+OR+Boyer+OR+Lamontagne" style="color:var(--teal);border-bottom:1px solid var(--border-teal);text-decoration:none;" target="_blank" rel="noopener">arXiv</a></p></div>';
   }
-
 })();
 </script>
 </body>

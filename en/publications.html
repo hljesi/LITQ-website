@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publications — LITQ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* ── FILTER BAR ── */
+    .pub-filter-bar {
+      display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;
+      margin-bottom: 2.8rem;
+    }
+    .pub-filter-btn {
+      font-family: var(--ff-mono); font-size: 0.62rem; letter-spacing: 0.14em;
+      text-transform: uppercase; padding: 0.4rem 0.9rem;
+      border: 1px solid var(--border); background: transparent;
+      color: var(--text-muted); cursor: pointer;
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+    }
+    .pub-filter-btn:hover { border-color: var(--teal); color: var(--teal); }
+    .pub-filter-btn.active { border-color: var(--teal); color: var(--teal); background: var(--teal-dim); }
+    .pub-filter-label {
+      font-family: var(--ff-mono); font-size: 0.60rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--text-subtle); margin-right: 0.4rem;
+    }
+
+    /* ── PUBLICATION LIST (extended) ── */
+    .pub-list-full { max-width: 860px; }
+    .pub-item-full {
+      display: grid;
+      grid-template-columns: 3.5rem 1fr auto;
+      gap: 1.5rem 2rem;
+      align-items: start;
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--border);
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.16,1,0.3,1);
+    }
+    .pub-item-full:first-child { border-top: 1px solid var(--border); }
+    .pub-item-full.visible { opacity: 1; transform: none; }
+    .pub-year { font-family: var(--ff-mono); font-size: 0.7rem; color: var(--text-subtle); padding-top: 4px; }
+    .pub-title { font-family: var(--ff-display); font-size: 1.25rem; font-weight: 400; color: var(--text); line-height: 1.4; margin-bottom: 0.5rem; }
+    .pub-meta { font-size: 0.92rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
+    .pub-venue-tag {
+      display: inline-block;
+      font-family: var(--ff-mono); font-size: 0.58rem; letter-spacing: 0.12em;
+      text-transform: uppercase; padding: 0.15rem 0.55rem;
+      border: 1px solid var(--border-teal); color: var(--teal); background: var(--teal-dim);
+    }
+    .pub-link { font-family: var(--ff-mono); font-size: 0.80rem; letter-spacing: 0.06em; padding: 0.35rem 0.8rem; border: 1px solid rgba(28,16,9,0.14); color: var(--text-muted); text-decoration: none; white-space: nowrap; transition: border-color 0.2s, color 0.2s; align-self: center; }
+    .pub-link:hover { border-color: var(--teal); color: var(--teal); }
+
+    /* ── AUTHOR HIGHLIGHT ── */
+    .pub-author-highlight { color: var(--accent); font-weight: 500; }
+
+    /* ── LOADING / EMPTY STATE ── */
+    .pub-state {
+      text-align: center; padding: 4rem 2rem;
+      font-family: var(--ff-mono); font-size: 0.68rem;
+      letter-spacing: 0.18em; color: var(--text-subtle); text-transform: uppercase;
+    }
+    .pub-count-badge {
+      font-family: var(--ff-mono); font-size: 0.60rem; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--text-subtle); margin-bottom: 2rem;
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .pub-count-badge::before { content: ''; display: block; width: 18px; height: 1px; background: var(--text-subtle); opacity: 0.5; }
+
+    /* ── PAGINATION ── */
+    .pub-pagination {
+      display: flex; align-items: center; gap: 0.8rem; margin-top: 3rem;
+      flex-wrap: wrap;
+    }
+    .pub-pagination-info {
+      font-family: var(--ff-mono); font-size: 0.60rem; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--text-subtle); margin-right: auto;
+    }
+    .pub-page-btn {
+      font-family: var(--ff-mono); font-size: 0.62rem; letter-spacing: 0.1em;
+      text-transform: uppercase; padding: 0.45rem 1rem;
+      border: 1px solid var(--border); background: transparent;
+      color: var(--text-muted); cursor: pointer;
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+    }
+    .pub-page-btn:hover:not(:disabled) { border-color: var(--teal); color: var(--teal); }
+    .pub-page-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+
+    @media (max-width: 640px) {
+      .pub-item-full { grid-template-columns: 2.5rem 1fr; }
+      .pub-link { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════ NAV ══════════ -->
+<nav id="nav" class="always-solid">
+  <a href="index.html" class="nav-logo">
+    <span class="nav-logo-name">LITQ</span>
+    <span class="nav-logo-sub">Université de Montréal</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="people.html">People</a></li>
+    <li><a href="publications.html" class="active">Publications</a></li>
+    <li><a href="index.html#positions">Join</a></li>
+  </ul>
+  <a href="../fr/publications.html" class="lang-toggle">FR</a>
+  <button class="nav-burger" id="burger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ══════════ PAGE HEADER ══════════ -->
+<header class="page-header">
+  <div class="page-header-mesh" aria-hidden="true">
+    <img src="../brand_assets/tilde-ellipse-green5.png" alt=""
+         style="width: 65vw; max-width: 860px; min-width: 600px;; right: -10%; top: -20%; opacity: 0.20;" />
+  </div>
+  <div class="page-header-inner">
+    <div class="page-header-eyebrow">LITQ · Publications</div>
+    <h1 style="font-size: clamp(2.2rem, 4.5vw, 3.8rem);">Our <em>Publications</em></h1>
+    <p class="page-header-body">
+      A live feed of recent work by LITQ faculty.
+    </p>
+  </div>
+  <div class="page-header-deco">⟩⟨</div>
+</header>
+
+<!-- ══════════ PUBLICATIONS MAIN ══════════ -->
+<section class="section" id="publications" style="padding-top: 5rem; overflow: hidden; position: relative;">
+  <!-- Purple6 tilde decoration — lower right -->
+  <div aria-hidden="true" style="position:absolute; bottom:-2%; right:-10%; width:120%; max-width:800px; pointer-events:none; z-index:0; user-select:none; transform:rotate(-90deg)">
+    <img src="../brand_assets/tilde-ellipse-purple6.png" alt="" style="width:100%; opacity:0.18; mix-blend-mode:multiply;">
+  </div>
+  <div class="pub-list-full" style="position:relative; z-index:1;">
+
+    <!-- Filter bar -->
+    <div class="pub-filter-bar" id="filter-bar" style="display:none;">
+      <span class="pub-filter-label">Filter by</span>
+      <button class="pub-filter-btn active" data-filter="all">All</button>
+    </div>
+
+    <!-- Count badge removed -->
+
+    <!-- Results container -->
+    <div id="pub-list-full"></div>
+
+    <!-- Pagination -->
+    <div class="pub-pagination" id="pub-pagination" style="display:none;">
+      <span class="pub-pagination-info" id="pagination-info"></span>
+      <button class="pub-page-btn" id="btn-prev" disabled>← Prev</button>
+      <button class="pub-page-btn" id="btn-next">Next →</button>
+    </div>
+  </div>
+
+  <!-- ArXiv CTA at the bottom -->
+  <div style="margin-top: 5rem; padding-top: 3rem; border-top: 1px solid var(--border); text-align: center;">
+    <a href="https://arxiv.org/search/?searchtype=author&query=Brassard+OR+Dupuis+OR+Salvail+OR+Kristjansson+OR+Sokolov+OR+Hahn+OR+Boyer+OR+Lamontagne"
+       class="btn-sec" target="_blank" rel="noopener">
+      View All Publications on arXiv →
+    </a>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="footer-flex">
+  <div>
+    <div class="footer-logo">LITQ</div>
+    <p class="footer-desc">Laboratory for Theoretical and Quantum Informatics — Université de Montréal.</p>
+  </div>
+  <div class="footer-links" style="flex: 1; justify-content: space-evenly;">
+    <div class="footer-col">
+      <h4>Research</h4>
+      <ul>
+        <li><a href="research.html#algorithms">Quantum Algorithmics</a></li>
+        <li><a href="research.html#info">Quantum Info. Theory</a></li>
+        <li><a href="research.html#complexity">Complexity Theory</a></li>
+        <li><a href="research.html#crypto">Cryptography</a></li>
+        <li><a href="research.html#optimization">Higher-Order Maps &amp; Causality</a></li>
+        <li><a href="research.html#graphs">Graph Theory</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Lab</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="index.html#positions">Open Positions</a></li>
+        <li><a href="index.html#location">Location</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <p>© 2026 LITQ — Université de Montréal.</p>
+  <p>Département d'Informatique et de Recherche Opérationnelle</p>
+</div>
+
+<script src="../script.js" defer></script>
+
+<script>
+(async function () {
+
+  const pubContainer = document.getElementById('pub-list-full');
+  const pagination   = document.getElementById('pub-pagination');
+  const paginationInfo = document.getElementById('pagination-info');
+  const btnPrev      = document.getElementById('btn-prev');
+  const btnNext      = document.getElementById('btn-next');
+
+  const PER_PAGE = 20;
+  let allPapers  = [];
+  let currentPage = 1;
+
+  /* ── Faculty OpenAlex IDs ── */
+  const FACULTY = [
+    { id: 'A5110284072', name: 'G. Brassard'    },
+    { id: 'A5066085467', name: 'F. Dupuis'       },
+    { id: 'A5059511887', name: 'L. Salvail'      },
+    { id: 'A5049102572', name: 'H. Kristjánsson' },
+    { id: 'A5110941674', name: 'G. Hahn'         },
+    { id: 'A5017300573', name: 'D. Sokolov'      },
+    { id: 'A5103523901', name: 'M. Boyer'        },
+    { id: 'A5044037051', name: 'P. Lamontagne'   },
+  ];
+
+  function esc(s) {
+    return String(s)
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+      .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  function renderAuthors(authorships) {
+    return esc((authorships || []).map(function (a) {
+      const parts = (a.author && a.author.display_name || '').trim().split(' ');
+      if (parts.length < 2) return parts[0] || '';
+      return parts[0][0] + '. ' + parts[parts.length - 1];
+    }).filter(Boolean).join(', '));
+  }
+
+  function renderPage(page, scroll) {
+    const start  = (page - 1) * PER_PAGE;
+    const slice  = allPapers.slice(start, start + PER_PAGE);
+    const total  = allPapers.length;
+    const pages  = Math.ceil(total / PER_PAGE);
+
+    pubContainer.innerHTML = slice.map(function (p) {
+      return '<div class="pub-item-full">'
+        + '<span class="pub-year">' + esc(p.year) + '</span>'
+        + '<div>'
+        + '<p class="pub-title">' + esc(p.title) + '</p>'
+        + '<p class="pub-meta">'
+        +   renderAuthors(p.authorships)
+        + '</p>'
+        + '</div>'
+        + '<a href="' + esc(p.paperLink) + '" class="pub-link" target="_blank" rel="noopener">PDF →</a>'
+        + '</div>';
+    }).join('');
+
+    /* Staggered fade-in */
+    pubContainer.querySelectorAll('.pub-item-full').forEach(function (el, i) {
+      setTimeout(function () { el.classList.add('visible'); }, i * 55);
+    });
+
+    /* Pagination state */
+    paginationInfo.textContent = 'Page ' + page + ' of ' + pages;
+    btnPrev.disabled = page <= 1;
+    btnNext.disabled = page >= pages;
+    if (pages > 1) { pagination.style.display = 'flex'; }
+
+    currentPage = page;
+    if (scroll) { window.scrollTo({ top: document.getElementById('publications').offsetTop - 80, behavior: 'smooth' }); }
+  }
+
+  /* Loading */
+  pubContainer.innerHTML = '<div class="pub-state">Loading publications…</div>';
+
+  try {
+    const authorFilter = FACULTY.map(function (f) { return f.id; }).join('|');
+    const fields = 'id,title,publication_year,publication_date,authorships,primary_location,open_access';
+
+    /* Fetch up to 200 results across two pages */
+    async function fetchPage(cursor) {
+      const url = 'https://api.openalex.org/works'
+        + '?filter=authorships.author.id:' + authorFilter
+        + '&sort=publication_date:desc'
+        + '&per_page=100'
+        + '&select=' + fields
+        + (cursor ? '&cursor=' + cursor : '')
+        + '&mailto=litq@iro.umontreal.ca';
+      const resp = await fetch(url);
+      if (!resp.ok) throw new Error('HTTP ' + resp.status);
+      return resp.json();
+    }
+
+    const seen   = new Set();
+    const papers = [];
+
+    function processResults(results) {
+      (results || []).forEach(function (work) {
+        const openAlexId = work.id || '';
+        if (!openAlexId || seen.has(openAlexId)) return;
+        seen.add(openAlexId);
+
+        const title = (work.title || '').trim().replace(/\s+/g, ' ');
+        if (!title) return;
+
+        const year = work.publication_year || '—';
+        const oa   = work.open_access || {};
+        const loc  = work.primary_location || {};
+
+        const arxivUrl  = oa.oa_url && oa.oa_url.includes('arxiv.org') ? oa.oa_url : null;
+        const doiUrl    = loc.landing_page_url || null;
+        const paperLink = arxivUrl || doiUrl || ('https://openalex.org/' + openAlexId.replace('https://openalex.org/', ''));
+
+        const source = loc.source;
+        const venue  = (source && source.display_name) ? source.display_name
+                     : (arxivUrl ? 'arXiv' : '');
+
+        papers.push({ title, authorships: work.authorships, venue, year, paperLink });
+      });
+    }
+
+    /* First page */
+    const page1 = await fetchPage(null);
+    processResults(page1.results);
+
+    /* Second page if available */
+    const nextCursor = page1.meta && page1.meta.next_cursor;
+    if (nextCursor && papers.length >= 50) {
+      try {
+        const page2 = await fetchPage(encodeURIComponent(nextCursor));
+        processResults(page2.results);
+      } catch (e) { /* ignore second page errors */ }
+    }
+
+    if (papers.length === 0) { showError(); return; }
+
+    allPapers = papers;
+
+    renderPage(1);
+
+    btnPrev.addEventListener('click', function () { if (currentPage > 1) renderPage(currentPage - 1, true); });
+    btnNext.addEventListener('click', function () { if (currentPage < Math.ceil(allPapers.length / PER_PAGE)) renderPage(currentPage + 1, true); });
+
+  } catch (err) {
+    console.warn('[LITQ OpenAlex]', err);
+    showError();
+  }
+
+  function showError() {
+    pubContainer.innerHTML =
+      '<div style="border:1px solid var(--border);padding:3rem 2rem;text-align:center;">'
+      + '<p style="font-family:var(--ff-display);font-style:italic;font-size:1.35rem;font-weight:300;color:var(--text);letter-spacing:-0.01em;margin-bottom:0.75rem;">Could not fetch publications right now.</p>'
+      + '<p style="font-family:var(--ff-mono);font-size:0.62rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-subtle);">Please try again later or browse directly on '
+      + '<a href="https://arxiv.org/search/?searchtype=author&query=Brassard+OR+Dupuis+OR+Salvail+OR+Kristjansson+OR+Sokolov+OR+Hahn+OR+Boyer+OR+Lamontagne" style="color:var(--teal);border-bottom:1px solid var(--border-teal);text-decoration:none;" target="_blank" rel="noopener">arXiv</a>'
+      + '</p></div>';
+  }
+
+})();
+</script>
+</body>
+</html>

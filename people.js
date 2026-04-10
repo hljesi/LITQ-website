@@ -1581,6 +1581,18 @@ window.PEOPLE_DATA = {
         ]
       }
     }
+  ],
+  "pastPostdocs": [
+    { "name": "Julien Cazeau",          "years": "2019–2021",    "note": "Now at CNRS, Paris" },
+    { "name": "Srinivasan Arunachalam", "years": "2020–2022", "supervisor": "Gilles Brassard",    "note": "Now at IBM Research, New York" },
+    { "name": "Aniket Kate",            "years": "2018–2020", "supervisor": "Louis Salvail",      "note": "Now at Purdue University" }
+  ],
+  "pastStudents": [
+    { "name": "Marie-Claire Fontaine",  "degree": "PhD",  "year": "2022", "supervisor": "Louis Salvail",      "note": "Now at Université de Sherbrooke" },
+    { "name": "Thomas Beaumont",        "degree": "MSc",  "year": "2021", "supervisor": "Hlér Kristjánsson",  "note": "Now at Polytechnique Montréal" },
+    { "name": "Samuel Ducharme",        "degree": "MSc",  "year": "2024", "supervisor": "Gilles Brassard",    "note": "" },
+    { "name": "Laura Giordano",         "degree": "PhD",  "year": "2023", "supervisor": "Gilles Brassard",    "note": "Now at ETH Zürich" },
+    { "name": "Marc-Antoine Plante",    "degree": "MSc",  "year": "2020", "supervisor": "Frédéric Dupuis",    "note": "" }
   ]
 }
 ;
