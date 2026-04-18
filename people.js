@@ -32,22 +32,22 @@ window.PEOPLE_DATA = {
         "nameFirst": "Gilles",
         "nameLast": "Brassard",
         "rank": "Full Professor · DIRO, Université de Montréal",
-        "researchAreaTags": ["Quantum Cryptography", "QKD", "Quantum Computing"],
+        "researchAreaTags": ["Quantum Cryptography", "Quantum Foundations"],
         "email": "brassard@iro.umontreal.ca",
         "links": [
-          { "label": "Personal Website", "url": "#" }
+          { "label": "Personal Website", "url": "https://www.iro.umontreal.ca/~brassard/web/en/" }
         ],
         "bio": [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+          "Gilles Brassard is a Full Professor at the Université de Montréal, where he has been a faculty member since 1979, and holds the Canada Research Chair in Quantum Information Science. Together with Charles H. Bennett, he co-invented quantum cryptography and the BB84 quantum key distribution protocol, and was awarded the 2023 ACM Turing Award for their foundational contributions to quantum information science.",
+          "Brassard has also made fundamental contributions to quantum teleportation, entanglement distillation, amplitude amplification, and quantum pseudo-telepathy, shaping the mathematical foundations of the field."
         ],
         "researchInterests": [
-          "Quantum key distribution and quantum cryptographic protocols",
-          "Quantum teleportation and entanglement-based communication",
-          "Foundations of quantum information theory",
-          "Quantum algorithms and computational complexity",
-          "Classical and quantum randomness amplification",
-          "Security proofs for cryptographic primitives"
+          "Quantum cryptography and quantum key distribution",
+          "Quantum teleportation and entanglement",
+          "Amplitude amplification and quantum counting",
+          "Quantum pseudo-telepathy",
+          "Entanglement distillation",
+          "Foundations of quantum information"
         ]
       },
       "fr": {
@@ -55,10 +55,10 @@ window.PEOPLE_DATA = {
         "nameFirst": "Gilles",
         "nameLast": "Brassard",
         "rank": "Professeur titulaire · DIRO, Université de Montréal",
-        "researchAreaTags": ["Cryptographie quantique", "QKD", "Calcul quantique"],
+        "researchAreaTags": ["Cryptographie quantique", "Fondements quantiques"],
         "email": "brassard@iro.umontreal.ca",
         "links": [
-          { "label": "Site web personnel", "url": "#" }
+          { "label": "Site web personnel", "url": "https://www.iro.umontreal.ca/~brassard/web/en/" }
         ],
         "bio": [
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
@@ -102,7 +102,7 @@ window.PEOPLE_DATA = {
         "nameFirst": "Louis",
         "nameLast": "Salvail",
         "rank": "Full Professor · DIRO, Université de Montréal",
-        "researchAreaTags": ["Cryptography", "Complexity Theory", "Quantum Protocols"],
+        "researchAreaTags": ["Quantum Cryptography"],
         "email": "salvail@iro.umontreal.ca",
         "links": [
           { "label": "Personal Website", "url": "https://diro.umontreal.ca/repertoire-departement/professeurs/fiche/in/in27374/sg/Louis%20Salvail/" }
@@ -172,7 +172,7 @@ window.PEOPLE_DATA = {
         "nameFirst": "Frédéric",
         "nameLast": "Dupuis",
         "rank": "Associate Professor · DIRO, Université de Montréal",
-        "researchAreaTags": ["Quantum Information", "Information Theory", "Entropy"],
+        "researchAreaTags": ["Quantum Cryptography", "Information Theory"],
         "email": "dupuis@iro.umontreal.ca",
         "links": [
           { "label": "Personal Website", "url": "#" }
@@ -286,7 +286,7 @@ window.PEOPLE_DATA = {
     },
     {
       "id": "hler-kristjansson",
-      "photo": "profile_filler.jpeg",
+      "photo": "https://hlerkristjansson.com/dvxles9Y4r-748.webp",
       "supervisedBy": null,
       "supervises": ["marek-arsenault", "daniel-bilsborrow", "taha-skiredj"],
       "formerStudents": [],
@@ -307,22 +307,24 @@ window.PEOPLE_DATA = {
         "nameFirst": "Hlér",
         "nameLast": "Kristjánsson",
         "rank": "Assistant Professor · DIRO, Université de Montréal",
-        "researchAreaTags": ["Quantum Causality", "Higher-Order Maps", "Quantum Foundations"],
+        "researchAreaTags": ["Quantum Algorithms", "Quantum Foundations"],
         "email": "kristjansson@iro.umontreal.ca",
         "links": [
-          { "label": "Personal Website", "url": "#" }
+          { "label": "Personal Website", "url": "https://hlerkristjansson.com" }
         ],
         "bio": [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+          "Hlér Kristjánsson is an Assistant Professor in Computer Science at Université de Montréal and an associate member of Mila – Québec AI Institute. He completed his PhD in Computer Science at Oxford in 2022 under Professors Giulio Chiribella and Jonathan Barrett, and has held postdoctoral positions at the University of Tokyo and Perimeter Institute.",
+          "His research sits at the intersection of quantum computing and quantum foundations, with a focus on causality in quantum theory, higher-order quantum computation, and quantum algorithms."
         ],
         "researchInterests": [
-          "Quantum causal structures and indefinite causal order",
-          "Higher-order quantum processes and process matrices",
-          "Operational frameworks for quantum foundations",
-          "Quantum switch and its computational advantages",
-          "Resource theories for quantum communication",
-          "Categorical and diagrammatic methods in quantum theory"
+          "Quantum computing and quantum foundations",
+          "Causality in quantum theory and indefinite causal order",
+          "Higher-order quantum computation",
+          "Quantum algorithms",
+          "Simulation of physical systems",
+          "Quantum machine learning",
+          "Delegated quantum computation",
+          "Quantum communication"
         ]
       },
       "fr": {
@@ -330,10 +332,10 @@ window.PEOPLE_DATA = {
         "nameFirst": "Hlér",
         "nameLast": "Kristjánsson",
         "rank": "Professeur adjoint · DIRO, Université de Montréal",
-        "researchAreaTags": ["Causalité quantique", "Opérations d'ordre supérieur", "Fondements quantiques"],
+        "researchAreaTags": ["Algorithmes quantiques", "Fondements quantiques"],
         "email": "kristjansson@iro.umontreal.ca",
         "links": [
-          { "label": "Site web personnel", "url": "#" }
+          { "label": "Site web personnel", "url": "https://hlerkristjansson.com" }
         ],
         "bio": [
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
@@ -351,7 +353,7 @@ window.PEOPLE_DATA = {
     },
     {
       "id": "dmitry-sokolov",
-      "photo": "profile_filler.jpeg",
+      "photo": "https://simons.berkeley.edu/sites/default/files/styles/post_card_lg_2x/public/photo_3.png.jpg?h=9f61c796&itok=jAjFyL85",
       "supervisedBy": null,
       "supervises": ["etienne-bouchard"],
       "formerStudents": [],
@@ -372,22 +374,20 @@ window.PEOPLE_DATA = {
         "nameFirst": "Dmitry",
         "nameLast": "Sokolov",
         "rank": "Assistant Professor · DIRO, Université de Montréal",
-        "researchAreaTags": ["Complexity Theory", "Proof Complexity", "Algorithms"],
+        "researchAreaTags": ["Complexity Theory"],
         "email": "sokolov@iro.umontreal.ca",
         "links": [
-          { "label": "Personal Website", "url": "#" }
+          { "label": "Personal Website", "url": "https://simons.berkeley.edu/people/dmitry-sokolov" }
         ],
         "bio": [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+          "Dmitry Sokolov is an Assistant Professor at DIRO, Université de Montréal. He previously held research positions at St. Petersburg State University and the St. Petersburg Department of Steklov Institute of Mathematics, and completed postdoctoral fellowships at KTH Royal Institute of Technology, Lund University, and the University of Copenhagen with Jakob Nordström.",
+          "His research lies at the heart of theoretical computer science, with a focus on the mathematical foundations of computational hardness."
         ],
         "researchInterests": [
-          "Proof complexity and lower bounds for propositional proofs",
-          "Computational complexity and circuit lower bounds",
-          "Resolution and cutting planes proof systems",
-          "Communication complexity and its applications",
-          "Algebraic methods in computational complexity",
-          "Pseudorandomness and derandomization"
+          "Computational complexity",
+          "Proof complexity",
+          "Communication complexity",
+          "Discrete mathematics"
         ]
       },
       "fr": {
@@ -395,10 +395,10 @@ window.PEOPLE_DATA = {
         "nameFirst": "Dmitry",
         "nameLast": "Sokolov",
         "rank": "Professeur adjoint · DIRO, Université de Montréal",
-        "researchAreaTags": ["Théorie de la complexité", "Complexité des preuves", "Algorithmes"],
+        "researchAreaTags": ["Théorie de la complexité"],
         "email": "sokolov@iro.umontreal.ca",
         "links": [
-          { "label": "Site web personnel", "url": "#" }
+          { "label": "Site web personnel", "url": "https://simons.berkeley.edu/people/dmitry-sokolov" }
         ],
         "bio": [
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
@@ -887,7 +887,7 @@ window.PEOPLE_DATA = {
         "nameFirst": "Philippe",
         "nameLast": "Lamontagne",
         "rank": "Adjunct Professor · DIRO, Université de Montréal",
-        "researchAreaTags": ["Quantum Cryptography", "Secure Computation", "Post-Quantum Cryptography"],
+        "researchAreaTags": ["Quantum Cryptography"],
         "email": "lamontagne@iro.umontreal.ca",
         "links": [
           { "label": "Personal Website", "url": "#" }
@@ -926,60 +926,6 @@ window.PEOPLE_DATA = {
           "Extraction d'aléatoire et amplification de la confidentialité",
           "Réductions de sécurité et sécurité composable",
           "Sécurité quantique basée sur la théorie de l'information"
-        ]
-      }
-    },
-    {
-      "id": "michel-boyer",
-      "photo": "profile_filler.jpeg",
-      "supervisedBy": null,
-      "supervises": [],
-      "formerStudents": [],
-      "teaching": [],
-      "en": {
-        "eyebrow": "Faculty",
-        "nameFirst": "Michel",
-        "nameLast": "Boyer",
-        "rank": "Full Professor · DIRO, Université de Montréal",
-        "researchAreaTags": ["Quantum Computing", "Quantum Algorithms", "Quantum Cryptography"],
-        "email": "boyer@iro.umontreal.ca",
-        "links": [
-          { "label": "Personal Website", "url": "#" }
-        ],
-        "bio": [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
-        ],
-        "researchInterests": [
-          "Quantum algorithms and computational advantages",
-          "Quantum cryptography and quantum key distribution",
-          "Entanglement-based communication protocols",
-          "Quantum search and amplitude amplification",
-          "Quantum error correction and fault tolerance",
-          "Computational aspects of quantum information"
-        ]
-      },
-      "fr": {
-        "eyebrow": "Corps professoral",
-        "nameFirst": "Michel",
-        "nameLast": "Boyer",
-        "rank": "Professeur titulaire · DIRO, Université de Montréal",
-        "researchAreaTags": ["Calcul quantique", "Algorithmes quantiques", "Cryptographie quantique"],
-        "email": "boyer@iro.umontreal.ca",
-        "links": [
-          { "label": "Site web personnel", "url": "#" }
-        ],
-        "bio": [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
-        ],
-        "researchInterests": [
-          "Algorithmes quantiques et avantages computationnels",
-          "Cryptographie quantique et distribution de clés quantiques",
-          "Protocoles de communication basés sur l'intrication",
-          "Recherche quantique et amplification d'amplitude",
-          "Correction d'erreurs quantiques et tolérance aux pannes",
-          "Aspects computationnels de l'information quantique"
         ]
       }
     },

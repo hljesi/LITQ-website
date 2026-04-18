@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open Positions — LITQ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<!-- ══════════ NAV ══════════ -->
+<nav id="nav" class="always-solid">
+  <a href="index.html" class="nav-logo">
+    <span class="nav-logo-name">LITQ</span>
+    <span class="nav-logo-sub">Université de Montréal</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="people.html">People</a></li>
+    <li><a href="publications.html">Publications</a></li>
+    <li><a href="positions.html" class="active">Join</a></li>
+  </ul>
+  <a href="../fr/index.html" class="lang-toggle">FR</a>
+  <button class="nav-burger" id="burger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ══════════ PAGE HEADER ══════════ -->
+<header class="page-header">
+  <div class="page-header-mesh" aria-hidden="true">
+    <img src="../brand_assets/tilde-ellipse-green3.png" alt=""
+         style="width: 65vw; max-width: 860px; min-width: 600px; right: -10%; top: -20%; opacity: 0.20;" />
+  </div>
+  <div class="page-header-inner">
+    <div class="page-header-eyebrow">LITQ · Join</div>
+    <h1>Open <em>Positions</em></h1>
+    <p class="page-header-body">
+      LITQ is always looking for dynamic and motivated students at all levels and is very happy to welcome visitors.
+    </p>
+  </div>
+  <div class="page-header-deco">→</div>
+</header>
+
+<!-- ══════════ POSITIONS CONTENT ══════════ -->
+<main style="max-width:900px; margin:0 auto; padding:5rem 5vw 6rem; position:relative; z-index:1;">
+
+  <section style="margin-bottom:4rem;">
+    <div class="sec-eyebrow reveal">How to Apply</div>
+    <h2 class="sec-title reveal">Information about <em class="teal">open positions</em></h2>
+    <div class="accent-rule reveal"></div>
+    <div style="background:var(--surface);padding:1.5rem 1.8rem;display:flex;flex-direction:column;gap:1.2rem;margin-top:2rem;border:1px solid var(--border);">
+      <p class="reveal" style="margin-bottom:0;">
+        LITQ welcomes applications for prospective Masters and PhD students interested in
+        theoretical computer science or quantum information. Prospective masters students typically are encouraged to
+        join the computer science or physics program at Université de Montréal before contacting
+        professors for the masters thesis. PhD applicants can find advertised positions here or contact
+        a faculty member briefly outlining your research interests, and including your CV and transcripts.
+      </p>
+      <p class="reveal reveal-d1" style="margin-bottom:0;">
+        Prospective PhD students should have a background in mathematics,
+        computer science, or physics. All positions come with funding attached.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-eyebrow reveal">Current Openings</div>
+    <h2 class="sec-title reveal">Available <em class="teal">Positions</em></h2>
+    <div class="accent-rule reveal"></div>
+    <div style="margin-top:2rem;">
+
+      <!-- ACTIVE POSITION — comment out the block below when no positions are open -->
+      <a class="position-item" href="phd-quantum-algorithms.html" style="text-decoration:none;">
+        <span class="position-label">PhD Position — Template</span>
+        <span class="position-detail position-open">● Open</span>
+      </a>
+
+      <!-- NO POSITIONS — uncomment the block below when no positions are open -->
+      <!-- <div class="position-item" style="justify-content:center; color:var(--text-subtle); font-family:var(--ff-mono); font-size:0.75rem; letter-spacing:0.08em; padding:1.8rem 1.5rem;">
+        No PhD opportunities currently available.
+      </div> -->
+
+      <!-- <div class="position-item">
+        <span class="position-label">PhD Fellowship — Quantum Complexity</span>
+        <span class="position-detail position-open">● Open</span>
+      </div>
+      <div class="position-item">
+        <span class="position-label">Postdoctoral Fellowship</span>
+        <span class="position-detail position-open">● Open</span>
+      </div>
+      <div class="position-item">
+        <span class="position-label">MSc Research Position</span>
+        <span class="position-detail position-open">● Open</span>
+      </div>
+      <div class="position-item">
+        <span class="position-label">Undergraduate Research (NSERC USRA)</span>
+        <span class="position-detail position-closed">● Summer 2026</span>
+      </div> -->
+    </div>
+  </section>
+
+</main>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="footer-flex">
+  <div>
+    <div class="footer-logo">LITQ</div>
+    <p class="footer-desc">Laboratory for Theoretical and Quantum Informatics — Université de Montréal.</p>
+  </div>
+  <div class="footer-links" style="flex: 1; justify-content: space-evenly;">
+    <div class="footer-col">
+      <h4>Research</h4>
+      <ul>
+        <li><a href="research.html#algorithms">Quantum Algorithmics</a></li>
+        <li><a href="research.html#info">Quantum Info. Theory</a></li>
+        <li><a href="research.html#complexity">Complexity Theory</a></li>
+        <li><a href="research.html#crypto">Cryptography</a></li>
+        <li><a href="research.html#optimization">Higher-Order Maps &amp; Causality</a></li>
+        <li><a href="research.html#graphs">Graph Theory</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Lab</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="positions.html">Open Positions</a></li>
+        <li><a href="index.html#location">Location</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <p>© 2026 LITQ — Université de Montréal. All rights reserved.</p>
+  <p>Département d'Informatique et de Recherche Opérationnelle</p>
+</div>
+
+<script src="../script.js" defer></script>
+</body>
+</html>

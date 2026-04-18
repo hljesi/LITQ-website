@@ -7,7 +7,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
   <style>
     .people-page-wrap { max-width: 1080px; margin: 0 auto; padding: 7rem 5vw 6rem; position: relative; z-index: 1; }
@@ -46,7 +46,7 @@
     <li><a href="research.html">Research</a></li>
     <li><a href="people.html" class="active">People</a></li>
     <li><a href="publications.html">Publications</a></li>
-    <li><a href="index.html#positions">Join</a></li>
+    <li><a href="positions.html">Join</a></li>
   </ul>
   <a href="../fr/people.html" class="lang-toggle">FR</a>
   <button class="nav-burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -98,7 +98,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="people.html">People</a></li>
         <li><a href="publications.html">Publications</a></li>
-        <li><a href="index.html#positions">Open Positions</a></li>
+        <li><a href="positions.html">Open Positions</a></li>
         <li><a href="index.html#location">Location</a></li>
       </ul>
     </div>
@@ -144,7 +144,7 @@
       nullPhotoIndex++;
       photoSrc = 'https://placehold.co/400x400/EDE8DF/' + color + '?text=' + initials;
     } else {
-      photoSrc = '../profile_icons/' + p.photo;
+      photoSrc = p.photo.startsWith('http') ? p.photo : '../profile_icons/' + p.photo;
     }
     return '<a id="' + p.id + '" class="team-card" href="profile.html?id=' + p.id + '" style="text-decoration:none;">'
       + '<div class="team-photo"><img src="' + photoSrc + '" alt="' + l.nameFirst + ' ' + l.nameLast + '" loading="lazy"></div>'
