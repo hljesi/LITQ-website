@@ -38,16 +38,14 @@ window.PEOPLE_DATA = {
           { "label": "Personal Website", "url": "https://www.iro.umontreal.ca/~brassard/web/en/" }
         ],
         "bio": [
-          "Gilles Brassard is a Full Professor at the Université de Montréal, where he has been a faculty member since 1979, and holds the Canada Research Chair in Quantum Information Science. Together with Charles H. Bennett, he co-invented quantum cryptography and the BB84 quantum key distribution protocol, and was awarded the 2023 ACM Turing Award for their foundational contributions to quantum information science.",
-          "Brassard has also made fundamental contributions to quantum teleportation, entanglement distillation, amplitude amplification, and quantum pseudo-telepathy, shaping the mathematical foundations of the field."
+          "Gilles Brassard is a Full Professor at the Université de Montréal, where he has been a faculty member since 1979, and holds the Canada Research Chair in Quantum Information Science. Together with Charles H. Bennett, he co-invented quantum cryptography with the BB84 quantum key distribution protocol.",
+          "Brassard has made groundbreaking contributions to quantum information and computation, including the discovery of quantum teleportation, entanglement distillation, amplitude amplification, and quantum pseudo-telepathy, shaping the mathematical foundations of the field."
         ],
         "researchInterests": [
           "Quantum cryptography and quantum key distribution",
-          "Quantum teleportation and entanglement",
-          "Amplitude amplification and quantum counting",
-          "Quantum pseudo-telepathy",
-          "Entanglement distillation",
-          "Foundations of quantum information"
+          "Quantum algorithms",
+          "Quantum information",
+          "Foundations of quantum mechanics"
         ]
       },
       "fr": {
@@ -61,22 +59,20 @@ window.PEOPLE_DATA = {
           { "label": "Site web personnel", "url": "https://www.iro.umontreal.ca/~brassard/web/en/" }
         ],
         "bio": [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+          "Gilles Brassard est Professeur titulaire à l'Université de Montréal, où il est membre du corps professoral depuis 1979, et titulaire de la Chaire de recherche du Canada en science de l'information quantique. Avec Charles H. Bennett, il a co-inventé la cryptographie quantique avec le protocole de distribution de clés quantiques BB84.",
+          "Brassard a apporté des contributions majeures à l'information et au calcul quantiques, notamment la découverte de la téléportation quantique, la distillation d'intrication, l'amplification d'amplitude et la pseudo-télépathie quantique, façonnant ainsi les fondements mathématiques du domaine."
         ],
         "researchInterests": [
-          "Distribution de clés quantiques et protocoles cryptographiques quantiques",
-          "Téléportation quantique et communication basée sur l'intrication",
-          "Fondements de la théorie de l'information quantique",
-          "Algorithmes quantiques et complexité computationnelle",
-          "Amplification de l'aléatoire classique et quantique",
-          "Preuves de sécurité pour les primitives cryptographiques"
+          "Cryptographie quantique et distribution de clés quantiques",
+          "Algorithmes quantiques",
+          "Information quantique",
+          "Fondements de la mécanique quantique"
         ]
       }
     },
     {
       "id": "louis-salvail",
-      "photo": "louis_ SALVAIL.jpeg",
+      "photo": "louis_salvail.jpeg",
       "supervisedBy": null,
       "supervises": ["mohammed-barhoush", "louis-charles-thibodeau", "florian-le-mouel", "khaireddine-medhioub"],
       "formerStudents": [],
@@ -286,7 +282,8 @@ window.PEOPLE_DATA = {
     },
     {
       "id": "hler-kristjansson",
-      "photo": "https://hlerkristjansson.com/dvxles9Y4r-748.webp",
+      "accentFirst": true,
+      "photo": "hler.jpg",
       "supervisedBy": null,
       "supervises": ["marek-arsenault", "daniel-bilsborrow", "taha-skiredj"],
       "formerStudents": [],
@@ -313,18 +310,16 @@ window.PEOPLE_DATA = {
           { "label": "Personal Website", "url": "https://hlerkristjansson.com" }
         ],
         "bio": [
-          "Hlér Kristjánsson is an Assistant Professor in Computer Science at Université de Montréal and an associate member of Mila – Québec AI Institute. He completed his PhD in Computer Science at Oxford in 2022 under Professors Giulio Chiribella and Jonathan Barrett, and has held postdoctoral positions at the University of Tokyo and Perimeter Institute.",
-          "His research sits at the intersection of quantum computing and quantum foundations, with a focus on causality in quantum theory, higher-order quantum computation, and quantum algorithms."
+          "Hlér Kristjánsson is an Assistant Professor in Computer Science and a Research Chair of Institut Courtois at Université de Montréal, and an associate member of Mila – Québec AI Institute. He completed his PhD in Computer Science at the University Oxford in 2022 under Prof Giulio Chiribella and Prof Jonathan Barrett, and has held postdoctoral positions at the University of Tokyo and Perimeter Institute.",
+          "His research sits at the intersection of quantum computing and quantum foundations, with a focus on causality in quantum theory, higher-order quantum computation, and quantum algorithms for the simulation of physical systems."
         ],
         "researchInterests": [
-          "Quantum computing and quantum foundations",
+          "Quantum algorithms",
           "Causality in quantum theory and indefinite causal order",
           "Higher-order quantum computation",
-          "Quantum algorithms",
-          "Simulation of physical systems",
-          "Quantum machine learning",
-          "Delegated quantum computation",
-          "Quantum communication"
+          "Quantum simulation of physical systems",
+          "Intersection of quantum computing and machine learning",
+          "Quantum Shannon theory"
         ]
       },
       "fr": {
@@ -338,22 +333,22 @@ window.PEOPLE_DATA = {
           { "label": "Site web personnel", "url": "https://hlerkristjansson.com" }
         ],
         "bio": [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+          "Hlér Kristjánsson est Professeur adjoint en informatique et Chaire de recherche de l'Institut Courtois à l'Université de Montréal, et membre associé de Mila – Institut québécois d'intelligence artificielle. Il a obtenu son doctorat en informatique à l'Université d'Oxford en 2022 sous la direction du Prof. Giulio Chiribella et du Prof. Jonathan Barrett, et a occupé des postes postdoctoraux à l'Université de Tokyo et à l'Institut Périmètre.",
+          "Ses recherches se situent à l'intersection de l'informatique quantique et des fondements quantiques, avec un accent sur la causalité en théorie quantique, le calcul quantique d'ordre supérieur et les algorithmes quantiques pour la simulation de systèmes physiques."
         ],
         "researchInterests": [
-          "Structures causales quantiques et ordre causal indéfini",
-          "Processus quantiques d'ordre supérieur et matrices de processus",
-          "Cadres opérationnels pour les fondements quantiques",
-          "Commutateur quantique et ses avantages computationnels",
-          "Théories des ressources pour la communication quantique",
-          "Méthodes catégoriques et diagrammatiques en théorie quantique"
+          "Algorithmes quantiques",
+          "Causalité en théorie quantique et ordre causal indéfini",
+          "Calcul quantique d'ordre supérieur",
+          "Simulation quantique de systèmes physiques",
+          "Intersection de l'informatique quantique et de l'apprentissage automatique",
+          "Théorie de l'information quantique de Shannon"
         ]
       }
     },
     {
       "id": "dmitry-sokolov",
-      "photo": "https://simons.berkeley.edu/sites/default/files/styles/post_card_lg_2x/public/photo_3.png.jpg?h=9f61c796&itok=jAjFyL85",
+      "photo": "profile_filler.jpeg",
       "supervisedBy": null,
       "supervises": ["etienne-bouchard"],
       "formerStudents": [],

@@ -244,7 +244,7 @@
       + '</div>'
       + '<div class="profile-meta">'
       + '<div class="sec-eyebrow reveal">' + l.eyebrow + '</div>'
-      + '<h1 class="profile-name reveal">' + l.nameFirst + '<br><em>' + l.nameLast + '</em></h1>'
+      + '<h1 class="profile-name reveal">' + (person.accentFirst ? '<em>' + l.nameFirst + '</em>' : l.nameFirst) + '<br>' + (person.accentFirst ? l.nameLast : '<em>' + l.nameLast + '</em>') + '</h1>'
       + '<p class="profile-rank reveal">' + l.rank + '</p>'
       + '<div class="profile-tags-wrap reveal reveal-d1">'
       + '<p class="profile-tags-label">Areas</p>'
