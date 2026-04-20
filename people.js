@@ -2,7 +2,7 @@ window.PEOPLE_DATA = {
   "people": [
     {
       "id": "gilles-brassard",
-      "photo": "profile_filler.jpeg",
+      "photo": null,
       "supervisedBy": null,
       "supervises": ["samuel-ducharme", "remi-ligez", "muxue-guo"],
       "formerStudents": [
@@ -142,7 +142,7 @@ window.PEOPLE_DATA = {
     },
     {
       "id": "frederic-dupuis",
-      "photo": "profile_filler.jpeg",
+      "photo": null,
       "supervisedBy": null,
       "supervises": ["gabriele-di-matteo", "paul-alexis-rodriguez", "felix-beaudoin"],
       "formerStudents": [],
@@ -212,7 +212,7 @@ window.PEOPLE_DATA = {
     },
     {
       "id": "gena-hahn",
-      "photo": "profile_filler.jpeg",
+      "photo": null,
       "supervisedBy": null,
       "supervises": ["antony-leclerc"],
       "formerStudents": [],
@@ -348,7 +348,7 @@ window.PEOPLE_DATA = {
     },
     {
       "id": "dmitry-sokolov",
-      "photo": "profile_filler.jpeg",
+      "photo": null,
       "supervisedBy": null,
       "supervises": ["etienne-bouchard"],
       "formerStudents": [],
@@ -461,7 +461,7 @@ window.PEOPLE_DATA = {
     },
     {
       "id": "taha-skiredj",
-      "photo": "profile_filler.jpeg",
+      "photo": null,
       "supervisedBy": null,
       "supervises": [],
       "formerStudents": [],
@@ -511,7 +511,7 @@ window.PEOPLE_DATA = {
     },
     {
       "id": "samuel-ducharme",
-      "photo": "profile_filler.jpeg",
+      "photo": null,
       "supervisedBy": null,
       "supervises": [],
       "formerStudents": [],
@@ -563,7 +563,7 @@ window.PEOPLE_DATA = {
     },
     {
       "id": "charlie-pilon-senterre",
-      "photo": "profile_filler.jpeg",
+      "photo": null,
       "supervisedBy": ["louis-salvail"],
       "supervises": [],
       "formerStudents": [],
@@ -615,7 +615,7 @@ window.PEOPLE_DATA = {
     },
     {
       "id": "linhui-fu",
-      "photo": "profile_filler.jpeg",
+      "photo": null,
       "supervisedBy": ["philippe-lamontagne"],
       "supervises": [],
       "formerStudents": [],
@@ -667,7 +667,7 @@ window.PEOPLE_DATA = {
     },
     {
       "id": "remi-ligez",
-      "photo": "profile_filler.jpeg",
+      "photo": null,
       "supervisedBy": null,
       "supervises": [],
       "formerStudents": [],
@@ -771,7 +771,7 @@ window.PEOPLE_DATA = {
     },
     {
       "id": "devashish-tupkary",
-      "photo": "profile_filler.jpeg",
+      "photo": null,
       "supervisedBy": null,
       "supervises": [],
       "formerStudents": [],
@@ -818,7 +818,7 @@ window.PEOPLE_DATA = {
     },
     {
       "id": "pierre-mckenzie",
-      "photo": "profile_filler.jpeg",
+      "photo": null,
       "supervisedBy": null,
       "supervises": ["jean-claude-desrosiers"],
       "formerStudents": [],
@@ -872,7 +872,7 @@ window.PEOPLE_DATA = {
     },
     {
       "id": "philippe-lamontagne",
-      "photo": "profile_filler.jpeg",
+      "photo": null,
       "supervisedBy": null,
       "supervises": ["alexey-norkin", "linhui-fu", "ding-wen-li"],
       "formerStudents": [],
@@ -972,7 +972,7 @@ window.PEOPLE_DATA = {
     },
     {
       "id": "mohammed-barhoush",
-      "photo": "profile_filler.jpeg",
+      "photo": null,
       "supervisedBy": ["louis-salvail"],
       "supervises": [],
       "formerStudents": [],
@@ -1018,7 +1018,7 @@ window.PEOPLE_DATA = {
     },
     {
       "id": "louis-charles-thibodeau",
-      "photo": "profile_filler.jpeg",
+      "photo": null,
       "supervisedBy": ["louis-salvail"],
       "supervises": [],
       "formerStudents": [],
@@ -1064,7 +1064,7 @@ window.PEOPLE_DATA = {
     },
     {
       "id": "florian-le-mouel",
-      "photo": "profile_filler.jpeg",
+      "photo": null,
       "supervisedBy": ["louis-salvail"],
       "supervises": [],
       "formerStudents": [],
@@ -1110,7 +1110,7 @@ window.PEOPLE_DATA = {
     },
     {
       "id": "khaireddine-medhioub",
-      "photo": "profile_filler.jpeg",
+      "photo": null,
       "supervisedBy": ["louis-salvail"],
       "supervises": [],
       "formerStudents": [],
@@ -1156,7 +1156,7 @@ window.PEOPLE_DATA = {
     },
     {
       "id": "gabriele-di-matteo",
-      "photo": "profile_filler.jpeg",
+      "photo": null,
       "supervisedBy": ["frederic-dupuis"],
       "supervises": [],
       "formerStudents": [],
@@ -1202,7 +1202,7 @@ window.PEOPLE_DATA = {
     },
     {
       "id": "paul-alexis-rodriguez",
-      "photo": "profile_filler.jpeg",
+      "photo": null,
       "supervisedBy": ["frederic-dupuis"],
       "supervises": [],
       "formerStudents": [],
@@ -1248,7 +1248,7 @@ window.PEOPLE_DATA = {
     },
     {
       "id": "alexey-norkin",
-      "photo": "profile_filler.jpeg",
+      "photo": null,
       "supervisedBy": ["philippe-lamontagne"],
       "supervises": [],
       "formerStudents": [],
@@ -1294,7 +1294,7 @@ window.PEOPLE_DATA = {
     },
     {
       "id": "ding-wen-li",
-      "photo": "profile_filler.jpeg",
+      "photo": null,
       "supervisedBy": ["philippe-lamontagne"],
       "supervises": [],
       "formerStudents": [],
@@ -1340,7 +1340,7 @@ window.PEOPLE_DATA = {
     },
     {
       "id": "antony-leclerc",
-      "photo": "profile_filler.jpeg",
+      "photo": null,
       "supervisedBy": ["gena-hahn"],
       "supervises": [],
       "formerStudents": [],
@@ -1386,7 +1386,7 @@ window.PEOPLE_DATA = {
     },
     {
       "id": "etienne-bouchard",
-      "photo": "profile_filler.jpeg",
+      "photo": null,
       "supervisedBy": ["dmitry-sokolov"],
       "supervises": [],
       "formerStudents": [],
@@ -1432,7 +1432,7 @@ window.PEOPLE_DATA = {
     },
     {
       "id": "felix-beaudoin",
-      "photo": "profile_filler.jpeg",
+      "photo": null,
       "supervisedBy": ["frederic-dupuis"],
       "supervises": [],
       "formerStudents": [],
@@ -1478,7 +1478,7 @@ window.PEOPLE_DATA = {
     },
     {
       "id": "jean-claude-desrosiers",
-      "photo": "profile_filler.jpeg",
+      "photo": null,
       "supervisedBy": ["pierre-mckenzie"],
       "supervises": [],
       "formerStudents": [],
