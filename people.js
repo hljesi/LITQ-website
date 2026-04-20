@@ -12,36 +12,25 @@ window.PEOPLE_DATA = {
       ],
       teaching: [
         {
-          code: "BANANA",
+          code: "IFT 6155",
           en: {
-            name: "Advanced Topics in Quantum Information",
-            detail: "Graduate · DIRO",
+            name: "Informatique quantique",
+            detail: "Graduate · DIRO . Fall 2025/Fall 2026",
           },
           fr: {
-            name: "Sujets avancés en information quantique",
-            detail: "Cycles supérieurs · DIRO",
+            name: "Informatique quantique",
+            detail: "Cycles supérieurs · DIRO . Automne 2025/Automne 2026",
           },
         },
         {
-          code: "IFT 3100",
+          code: "IFT 3155",
           en: {
-            name: "Introduction to Theoretical Computer Science",
-            detail: "Undergraduate · DIRO",
+            name: "Informatique quantique",
+            detail: "Undergraduate · DIRO . Fall 2025/Fall 2026",
           },
           fr: {
-            name: "Introduction à l'informatique théorique",
-            detail: "Premier cycle · DIRO",
-          },
-        },
-        {
-          code: "IFT 6270",
-          en: {
-            name: "Quantum Protocols and Complexity",
-            detail: "Graduate · DIRO",
-          },
-          fr: {
-            name: "Protocoles quantiques et complexité",
-            detail: "Cycles supérieurs · DIRO",
+            name: "Informatique quantique",
+            detail: "Premier cycle · DIRO . Automne 2025/Automne 2026",
           },
         },
       ],
@@ -107,30 +96,36 @@ window.PEOPLE_DATA = {
       formerStudents: [],
       teaching: [
         {
-          code: "IFT 6561",
-          en: { name: "Cryptography", detail: "Graduate · DIRO" },
-          fr: { name: "Cryptographie", detail: "Cycles supérieurs · DIRO" },
-        },
-        {
-          code: "IFT 3001",
+          code: "IFT 6180",
           en: {
-            name: "Design and Analysis of Algorithms",
-            detail: "Undergraduate · DIRO",
+            name: "Cryptologie : théorie et applications",
+            detail: "Graduate · DIRO · Winter 2026/Winter 2027",
           },
           fr: {
-            name: "Conception et analyse d'algorithmes",
-            detail: "Premier cycle · DIRO",
+            name: "Cryptologie : théorie et applications",
+            detail: "Cycles supérieurs · DIRO · Hiver 2026/Hiver 2027",
           },
         },
         {
-          code: "IFT 6269",
+          code: "IFT 2105",
           en: {
-            name: "Introduction to Quantum Computing",
-            detail: "Graduate · DIRO",
+            name: "Introduction à l'informatique théorique",
+            detail: "Undergraduate · DIRO . Fall 2025/Fall 2026",
           },
           fr: {
-            name: "Introduction au calcul quantique",
-            detail: "Cycles supérieurs · DIRO",
+            name: "Introduction à l'informatique théorique",
+            detail: "Premier cycle · DIRO . Automne 2025/Automne 2026",
+          },
+        },
+        {
+          code: "IFT 1065",
+          en: {
+            name: "Structures discrètes en informatique",
+            detail: "Undergraduate · DIRO . Winter 2027",
+          },
+          fr: {
+            name: "Structures discrètes en informatique",
+            detail: "Premier cycle · DIRO . Hiver 2027",
           },
         },
       ],
@@ -203,33 +198,47 @@ window.PEOPLE_DATA = {
       formerStudents: [],
       teaching: [
         {
-          code: "IFT 6580",
-          en: { name: "Quantum Information Theory", detail: "Graduate · DIRO" },
+          code: "IFT 6161",
+          en: {
+            name: "Théorie de l’information",
+            detail: "Graduate · DIRO · Winter 2026",
+          },
           fr: {
-            name: "Théorie de l'information quantique",
-            detail: "Cycles supérieurs · DIRO",
+            name: "Théorie de l’information",
+            detail: "Cycles supérieurs · DIRO · Hiver 2026",
           },
         },
         {
           code: "IFT 2125",
           en: {
-            name: "Introduction to Algorithms",
-            detail: "Undergraduate · DIRO",
+            name: "Introduction à l'algorithmique",
+            detail: "Undergraduate · DIRO · Fall 2025/Fall 2026",
           },
           fr: {
-            name: "Introduction aux algorithmes",
-            detail: "Premier cycle · DIRO",
+            name: "Introduction à l'algorithmique",
+            detail: "Premier cycle · DIRO · Automne 2025/Automne 2026",
           },
         },
         {
-          code: "IFT 6760",
+          code: "IFT 6001",
           en: {
-            name: "Entropy Methods in Computer Science",
-            detail: "Graduate · DIRO",
+            name: "Formation préparatoire en algorithmique",
+            detail: "Graduate · DIRO · Fall 2025",
           },
           fr: {
-            name: "Méthodes entropiques en informatique",
-            detail: "Cycles supérieurs · DIRO",
+            name: "Formation préparatoire en algorithmique",
+            detail: "Cycles supérieurs · DIRO · Automne 2025",
+          },
+        },
+        {
+          code: "IFT 2105",
+          en: {
+            name: "Introduction à l'informatique théorique",
+            detail: "Undergraduate · DIRO · Fall 2025",
+          },
+          fr: {
+            name: "Introduction à l'informatique théorique",
+            detail: "Premier cycle · DIRO · Automne 2025",
           },
         },
       ],
@@ -290,25 +299,12 @@ window.PEOPLE_DATA = {
         {
           code: "IFT 6110",
           en: {
-            name: "Graph Theory and Applications",
-            detail: "Graduate · DIRO",
+            name: "Graphes et réseaux",
+            detail: "Graduate · DIRO · Winter 2026",
           },
           fr: {
-            name: "Théorie des graphes et applications",
-            detail: "Cycles supérieurs · DIRO",
-          },
-        },
-        {
-          code: "IFT 2030",
-          en: { name: "Discrete Structures", detail: "Undergraduate · DIRO" },
-          fr: { name: "Structures discrètes", detail: "Premier cycle · DIRO" },
-        },
-        {
-          code: "IFT 6520",
-          en: { name: "Combinatorial Algorithms", detail: "Graduate · DIRO" },
-          fr: {
-            name: "Algorithmes combinatoires",
-            detail: "Cycles supérieurs · DIRO",
+            name: "Graphes et réseaux",
+            detail: "Cycles supérieurs · DIRO · Hiver 2026",
           },
         },
       ],
@@ -372,25 +368,25 @@ window.PEOPLE_DATA = {
       formerStudents: [],
       teaching: [
         {
-          code: "IFT 6640",
+          code: "IFT 6760c",
           en: {
-            name: "Foundations of Quantum Theory",
-            detail: "Graduate · DIRO",
+            name: "Séminaire en apprentissage automatique : Quantum computation, foundations and machine learning",
+            detail: "Graduate · DIRO · Fall 2025/Fall 2026",
           },
           fr: {
-            name: "Fondements de la théorie quantique",
-            detail: "Cycles supérieurs · DIRO",
+            name: "Séminaire en apprentissage automatique : Quantum computation, foundations and machine learning",
+            detail: "Cycles supérieurs · DIRO · Automne 2025/Automne 2026",
           },
         },
         {
-          code: "IFT 3200",
+          code: "IFT 6195",
           en: {
-            name: "Introduction to Quantum Information",
-            detail: "Undergraduate · DIRO",
+            name: "Sujets en informatique quantique",
+            detail: "Graduate · DIRO · Summer 2027",
           },
           fr: {
-            name: "Introduction à l'information quantique",
-            detail: "Premier cycle · DIRO",
+            name: "Sujets en informatique quantique",
+            detail: "Cycles supérieurs · DIRO · Été 2027",
           },
         },
       ],
@@ -449,25 +445,14 @@ window.PEOPLE_DATA = {
       formerStudents: [],
       teaching: [
         {
-          code: "IFT 6550",
+          code: "IFT XXXX",
           en: {
-            name: "Computational Complexity Theory",
-            detail: "Graduate · DIRO",
+            name: "TBC",
+            detail: "TBC",
           },
           fr: {
-            name: "Théorie de la complexité computationnelle",
-            detail: "Cycles supérieurs · DIRO",
-          },
-        },
-        {
-          code: "IFT 3015",
-          en: {
-            name: "Data Structures and Algorithms",
-            detail: "Undergraduate · DIRO",
-          },
-          fr: {
-            name: "Structures de données et algorithmes",
-            detail: "Premier cycle · DIRO",
+            name: "TBC",
+            detail: "TBC",
           },
         },
       ],
@@ -1618,34 +1603,26 @@ window.PEOPLE_DATA = {
     },
   ],
   pastPostdocs: [
-    { name: "Julien Cazeau", years: "2019–2021", note: "Now at CNRS, Paris" },
     {
-      name: "Srinivasan Arunachalam",
-      years: "2020–2022",
-      supervisor: "Gilles Brassard",
-      note: "Now at IBM Research, New York",
+      name: "Sayantan Chakraborty",
+      years: "2025",
+      supervisor: "Frédéric Dupuis",
+      note: "Now at University of Cologne",
     },
     {
-      name: "Aniket Kate",
-      years: "2018–2020",
-      supervisor: "Louis Salvail",
-      note: "Now at Purdue University",
+      name: "Sam Kuypers",
+      years: "2024-2025",
+      supervisor: "Gilles Brassard",
+      note: "TBC",
     },
   ],
   pastStudents: [
     {
-      name: "Marie-Claire Fontaine",
+      name: "Sophie Berthelette",
       degree: "PhD",
-      year: "2022",
-      supervisor: "Louis Salvail",
-      note: "Now at Université de Sherbrooke",
-    },
-    {
-      name: "Thomas Beaumont",
-      degree: "MSc",
-      year: "2021",
-      supervisor: "Hlér Kristjánsson",
-      note: "Now at Polytechnique Montréal",
+      year: "2025",
+      supervisor: "Gilles Brassard",
+      note: "Now at Università della Svizzera italiana",
     },
     {
       name: "Samuel Ducharme",
@@ -1655,18 +1632,11 @@ window.PEOPLE_DATA = {
       note: "",
     },
     {
-      name: "Laura Giordano",
+      name: "Ashutosh Marwah",
       degree: "PhD",
-      year: "2023",
-      supervisor: "Gilles Brassard",
-      note: "Now at ETH Zürich",
-    },
-    {
-      name: "Marc-Antoine Plante",
-      degree: "MSc",
-      year: "2020",
+      year: "2025",
       supervisor: "Frédéric Dupuis",
-      note: "",
+      note: "Now at Ingonyama",
     },
   ],
 };
