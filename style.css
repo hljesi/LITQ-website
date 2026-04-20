@@ -524,7 +524,7 @@ footer { position: relative; z-index: 2; background: #F2EEE5; border-top: 1px so
 .footer-contact p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 0.5rem; }
 .footer-contact a { color: var(--teal); text-decoration: none; font-size: 0.95rem; }
 .footer-contact a:hover { text-decoration: underline; }
-.footer-map img { width: 100%; height: auto; display: block; border-radius: 6px; border: 1px solid var(--border); opacity: 0.88; margin: 0.5rem 0; }
+.footer-map img { height: 12.5rem; width: auto; max-width: 100%; display: block; border-radius: 6px; border: 1px solid var(--border); opacity: 0.88; margin: 0.5rem 0; }
 /* Research page footer variant (flex layout) */
 footer.footer-flex {
   display: flex; justify-content: space-between; align-items: flex-start;

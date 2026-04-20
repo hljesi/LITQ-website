@@ -30,7 +30,7 @@
     <li><a href="research.html">Recherche</a></li>
     <li><a href="people.html">Équipe</a></li>
     <li><a href="publications.html">Publications</a></li>
-    <li><a href="#positions">Rejoindre</a></li>
+    <li><a href="positions.html">Rejoindre</a></li>
   </ul>
   <a href="../en/index.html" class="lang-toggle">EN</a>
   <button class="nav-burger" id="burger" aria-label="Menu">
@@ -50,14 +50,10 @@
       <span class="hero-line"><span class="hero-line-inner">théorique et quantique</span></span>
     </h1>
     <p class="hero-body">
-      Nous étudions les fondements mathématiques de l'informatique et développons des algorithmes,
-      des résultats de complexité et des protocoles cryptographiques pour les technologies quantiques.
+      Nous étudions les fondements mathématiques de l'informatique, de l'information et du calcul quantiques
+      à la complexité classique et à la théorie des graphes.
       Basé au DIRO, Université de Montréal.
     </p>
-    <div class="hero-actions">
-      <a href="research.html" class="btn-pri">Explorer la recherche →</a>
-      <a href="#people" class="btn-sec">Rencontrer l'équipe</a>
-    </div>
   </div>
 </section>
 
@@ -78,10 +74,9 @@
         Nos recherches portent sur la cryptographie classique et quantique, la complexité computationnelle,
         le calcul quantique et la théorie des graphes.
       </p>
-      <p class="reveal reveal-d2">
-        Le LITQ est toujours à la recherche d'étudiant(e)s dynamiques à tous les niveaux
-        et accueille chaleureusement les visiteurs.
-      </p>
+      <div class="reveal" style="margin-top:2rem;">
+        <a href="research.html" class="btn-sec">Explorer notre recherche →</a>
+      </div>
     </div>
     <div class="about-img-wrap reveal reveal-d1">
       <img src="../images/quorumuottawa_2024.png" alt="Groupe LITQ au Quorum Ottawa 2024">
@@ -107,14 +102,6 @@
     </div>
     <button class="carousel-btn carousel-btn--next" aria-label="Suivant">&#8594;</button>
   </div>
-  <p class="people-section-title reveal" style="margin-top:2rem;">Étudiant(e)s &amp; Postdocs</p>
-  <div class="team-carousel-wrap reveal">
-    <button class="carousel-btn carousel-btn--prev" aria-label="Précédent">&#8592;</button>
-    <div class="team-carousel-track-outer">
-      <div class="team-grid" id="carousel-students"></div>
-    </div>
-    <button class="carousel-btn carousel-btn--next" aria-label="Suivant">&#8594;</button>
-  </div>
   <div class="reveal" style="text-align:center;margin-top:3rem;">
     <a href="people.html" class="btn-sec">Voir tous les membres →</a>
   </div>
@@ -127,45 +114,6 @@
   <div class="reveal" id="pub-list"></div>
   <div class="reveal" style="text-align:center;margin-top:3.5rem;">
     <a href="publications.html" class="btn-sec">Voir plus de publications →</a>
-  </div>
-</section>
-
-<!-- ══════════ OPEN POSITIONS ══════════ -->
-<section class="section" id="positions" style="padding-bottom:4rem;">
-  <div class="section-mesh" aria-hidden="true">
-    <img src="../brand_assets/tilde-ellipse-green3.png" alt=""
-         style="width:65%; max-width:740px; top:0%; left:-8%; transform:translateY(-50%); transform: rotate(-90deg);" />
-    <img src="../brand_assets/tilde-ellipse-purple6.png" alt=""
-         style="width:70%; max-width:1000px; top:20%; right:-5%; opacity:0.17;" />
-  </div>
-  <div class="join-inner">
-    <div class="join-text">
-      <div class="sec-eyebrow reveal">Rejoindre le LITQ</div>
-      <h2 class="sec-title reveal">Informations sur les <br><em class="teal">postes ouverts</em></h2>
-      <div class="accent-rule reveal"></div>
-      <div style="background:var(--bg);padding:1.5rem 1.8rem;display:flex;flex-direction:column;gap:1.2rem;">
-        <p class="reveal" style="margin-bottom:0;">
-          Le LITQ accueille les candidatures d'étudiant(e)s prospectifs à la maîtrise et au doctorat
-          intéressé(e)s par l'informatique théorique ou l'information quantique. Les candidat(e)s à la maîtrise
-          sont généralement encouragé(e)s à s'inscrire au programme d'informatique ou de physique de
-          l'Université de Montréal avant de contacter les professeurs. Les candidat(e)s au doctorat peuvent
-          trouver des postes annoncés ici ou contacter un membre du corps professoral en décrivant brièvement
-          leurs intérêts de recherche, et en joignant leur CV et leurs relevés de notes.
-        </p>
-        <p class="reveal reveal-d1" style="margin-bottom:0;">
-          Les candidat(e)s au doctorat doivent avoir une formation en mathématiques,
-          en informatique ou en physique. Tous les postes sont accompagnés d'un financement.
-        </p>
-      </div>
-    </div>
-    <div class="reveal reveal-d1" style="align-self:center;">
-      <p style="font-family:var(--ff-mono);font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-subtle);margin-bottom:1.2rem;">Postes ouverts</p>
-        <a class="position-item" href="phd-quantum-algorithms.html" style="text-decoration:none;">
-          <span class="position-label">Poste de doctorat — Modèle</span>
-          <span class="position-detail position-open">● Ouvert</span>
-        </a>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -205,15 +153,20 @@
       <div class="location-photo-caption">Montréal, Québec · Canada</div>
     </div>
   </div>
+  <p class="reveal" style="text-align:center;margin-top:3rem;color:var(--text-muted);">
+    Le LITQ est toujours à la recherche d'étudiant(e)s dynamiques à tous les niveaux et accueille chaleureusement les visiteurs.
+  </p>
+  <div class="reveal" style="text-align:center;margin-top:1rem;">
+    <a href="positions.html" class="btn-sec">Intéressé(e) à nous rejoindre ? →</a>
+  </div>
 </section>
 
 <!-- ══════════ FOOTER ══════════ -->
 <footer>
   <div>
     <div class="footer-logo">LITQ</div>
-    <p class="footer-desc">Laboratoire d'informatique théorique et quantique de l'Université de Montréal — faisant progresser les fondements mathématiques du calcul et de l'information quantiques.</p>
+    <p class="footer-desc">Laboratoire d'informatique théorique et quantique</p>
     <div class="footer-affil"><div class="footer-affil-dot"></div><span>DIRO — Université de Montréal</span></div>
-    <div class="footer-affil"><div class="footer-affil-dot"></div><span>Membre de Quantique Québec</span></div>
   </div>
   <div class="footer-contact">
     <h4>Nous contacter</h4>
@@ -262,7 +215,7 @@
       nullPhotoIndex++;
       photoSrc = 'https://placehold.co/400x400/EDE8DF/' + color + '?text=' + initials;
     } else {
-      photoSrc = '../profile_icons/' + p.photo;
+      photoSrc = p.photo.startsWith('http') ? p.photo : '../profile_icons/' + p.photo;
     }
     return '<a class="team-card" href="profile.html?id=' + p.id + '" style="text-decoration:none;">'
       + '<div class="team-photo"><img src="' + photoSrc + '" alt="' + l.nameFirst + ' ' + l.nameLast + '" loading="lazy"></div>'
@@ -276,27 +229,8 @@
     return (p.fr || p.en).eyebrow === 'Corps professoral';
   }));
 
-  var students = sortBySurname(data.people.filter(function (p) {
-    return (p.fr || p.en).eyebrow !== 'Corps professoral';
-  }));
-
-  var MAX = 7;
-  var shown = students.slice(0, MAX);
-  var remaining = students.length - shown.length;
-
-  var seeMoreCard = '<a href="people.html" class="team-card team-card--more" style="text-decoration:none;">'
-    + '<div class="team-photo-more">'
-    + (remaining > 0 ? '<span class="team-card-more-count">+' + remaining + '</span>' : '')
-    + '<span class="team-card-more-label">' + (remaining > 0 ? 'autres\u00a0membres' : 'voir\u00a0tous\u00a0les\u00a0membres') + '</span>'
-    + '</div>'
-    + '<p class="team-name">Voir tout</p>'
-    + '<p class="team-role">\u2192</p>'
-    + '</a>';
-
   var fEl = document.getElementById('carousel-faculty');
-  var sEl = document.getElementById('carousel-students');
   if (fEl) fEl.innerHTML = faculty.map(makeCard).join('');
-  if (sEl) sEl.innerHTML = shown.map(makeCard).join('') + seeMoreCard;
 })();
 </script>
 
