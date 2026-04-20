@@ -7,7 +7,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
   <style>
     .profile-wrap { max-width: 960px; margin: 0 auto; padding: 7rem 5vw 6rem; position: relative; z-index: 1; }
@@ -68,7 +68,7 @@
     <li><a href="research.html">Research</a></li>
     <li><a href="people.html" class="active">People</a></li>
     <li><a href="publications.html">Publications</a></li>
-    <li><a href="index.html#positions">Join</a></li>
+    <li><a href="positions.html">Join</a></li>
   </ul>
   <a id="lang-toggle" href="../fr/profile.html" class="lang-toggle">FR</a>
   <button class="nav-burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -86,33 +86,24 @@
   </div>
 </main>
 
-<footer class="footer-flex">
+<footer>
   <div>
     <div class="footer-logo">LITQ</div>
-    <p class="footer-desc">Laboratory for Theoretical and Quantum Informatics — Université de Montréal.</p>
+    <p class="footer-desc">Laboratory for Theoretical and Quantum Informatics</p>
+    <div class="footer-affil"><div class="footer-affil-dot"></div><span>DIRO — Université de Montréal</span></div>
   </div>
-  <div class="footer-links" style="flex: 1; justify-content: space-evenly;">
-    <div class="footer-col">
-      <h4>Research</h4>
-      <ul>
-        <li><a href="research.html#algorithms">Quantum Algorithmics</a></li>
-        <li><a href="research.html#info">Quantum Info. Theory</a></li>
-        <li><a href="research.html#complexity">Complexity Theory</a></li>
-        <li><a href="research.html#crypto">Cryptography</a></li>
-        <li><a href="research.html#optimization">Higher-Order Maps &amp; Causality</a></li>
-        <li><a href="research.html#graphs">Graph Theory</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Lab</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="people.html">People</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="index.html#positions">Open Positions</a></li>
-        <li><a href="index.html#location">Location</a></li>
-      </ul>
-    </div>
+  <div class="footer-contact">
+    <h4>Contact Us</h4>
+    <p style="margin-top:0; font-size:0.95rem; line-height:1.7; color:var(--text-muted);">
+      <span style="white-space:nowrap;">Département d'Informatique et de</span><br><span style="white-space:nowrap;">Recherche Opérationnelle (DIRO)</span><br>
+      Université de Montréal<br>
+      Pavillon André-Aisenstadt<br>
+      2920, chemin de la Tour<br>
+      Montréal (Québec) H3T 1J4
+    </p>
+  </div>
+  <div class="footer-map">
+    <img src="../images/LITQ.jpg" alt="LITQ campus map — Université de Montréal, Campus MIL" />
   </div>
 </footer>
 <div class="footer-bottom">
@@ -135,7 +126,7 @@
   }
 
   function renderProfile(person, l, allPeople) {
-    var photoSrc = '../profile_icons/' + person.photo;
+    var photoSrc = person.photo && person.photo.startsWith('http') ? person.photo : '../profile_icons/' + person.photo;
 
     // Links HTML — email obfuscated: address split into parts, assembled only on click
     var ep = l.email.split('@');
@@ -253,7 +244,7 @@
       + '</div>'
       + '<div class="profile-meta">'
       + '<div class="sec-eyebrow reveal">' + l.eyebrow + '</div>'
-      + '<h1 class="profile-name reveal">' + l.nameFirst + '<br><em>' + l.nameLast + '</em></h1>'
+      + '<h1 class="profile-name reveal">' + (person.accentFirst ? '<em>' + l.nameFirst + '</em>' : l.nameFirst) + '<br>' + (person.accentFirst ? l.nameLast : '<em>' + l.nameLast + '</em>') + '</h1>'
       + '<p class="profile-rank reveal">' + l.rank + '</p>'
       + '<div class="profile-tags-wrap reveal reveal-d1">'
       + '<p class="profile-tags-label">Areas</p>'

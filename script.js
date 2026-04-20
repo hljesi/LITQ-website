@@ -20,11 +20,11 @@
   // x0: initial packet centre (fraction of width)
   // r,g,b: stroke colour   a: max opacity   amp: amplitude (fraction of height)
   const packets = [
-    { yF:0.17, k:6.5,  sig:0.14, spd:0.038, om:1.55, x0:0.15, r:109, g:40,  b:217, a:0.70, amp:0.033 },
-    { yF:0.32, k:10.5, sig:0.10, spd:0.055, om:2.20, x0:0.55, r:88,  g:28,  b:135, a:0.58, amp:0.026 },
-    { yF:0.50, k:8.0,  sig:0.17, spd:0.044, om:1.65, x0:0.00, r:15,  g:118, b:110, a:0.65, amp:0.034 },
-    { yF:0.68, k:12.5, sig:0.09, spd:0.066, om:2.60, x0:0.72, r:109, g:40,  b:217, a:0.52, amp:0.023 },
-    { yF:0.85, k:6.0,  sig:0.19, spd:0.031, om:1.25, x0:0.38, r:15,  g:118, b:110, a:0.58, amp:0.036 },
+    { yF:0.27, k:6.5,  sig:0.15, spd:0.038, om:1.55, x0:0.15, r:27,  g:58,  b:140, a:0.70, amp:0.033 },
+    { yF:0.38, k:10.5, sig:0.11, spd:0.055, om:2.20, x0:0.55, r:27,  g:58,  b:140, a:0.58, amp:0.026 },
+    { yF:0.51, k:8.0,  sig:0.18, spd:0.044, om:1.65, x0:0.00, r:15,  g:118, b:110, a:0.65, amp:0.034 },
+    { yF:0.64, k:12.5, sig:0.10, spd:0.066, om:2.60, x0:0.72, r:27,  g:58,  b:140, a:0.52, amp:0.023 },
+    { yF:0.82, k:6.0,  sig:0.20, spd:0.031, om:1.25, x0:0.38, r:15,  g:118, b:110, a:0.58, amp:0.036 },
   ];
 
   function resize() {

@@ -7,7 +7,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
   <style>
     .team-card--more .team-photo-more { aspect-ratio: 1/1; background: var(--surface); border: 1.5px dashed var(--border-teal); display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 0.7rem; transition: background 0.3s, border-color 0.25s; gap: 0.4rem; }
@@ -30,7 +30,7 @@
     <li><a href="research.html">Research</a></li>
     <li><a href="people.html">People</a></li>
     <li><a href="publications.html">Publications</a></li>
-    <li><a href="#positions">Join</a></li>
+    <li><a href="positions.html">Join</a></li>
   </ul>
   <a href="../fr/index.html" class="lang-toggle">FR</a>
   <button class="nav-burger" id="burger" aria-label="Menu">
@@ -53,13 +53,8 @@
       <span class="hero-line"><span class="hero-line-inner">Quantum Informatics</span></span>
     </h1>
     <p class="hero-body">
-      We research the mathematical foundations of computer science, and develop algorithms, complexity results, and cryptographic
-      protocols for quantum technology. Based at DIRO, Université de Montréal.
+      We study the mathematical foundations of computer science, from quantum information and computation to classical complexity and graph theory. Based at DIRO, Université de Montréal.
     </p>
-    <div class="hero-actions">
-      <a href="research.html" class="btn-pri">Explore Research →</a>
-      <a href="#people" class="btn-sec">Meet the Team</a>
-    </div>
   </div>
 </section>
 
@@ -71,19 +66,18 @@
       <h2 class="sec-title reveal">Who we <em class="teal">are</em></h2>
       <div class="accent-rule reveal"></div>
       <p class="reveal">
-        Welcome to the website of the Laboratory of Theoretical and Quantum Computing (LITQ) in the Department
-        of Computer Science and Operations Research (DIRO) at the University of Montreal. Our laboratory has
-        six faculty members and is very active in both research and teaching.
+        Welcome to the website of the Laboratory of Theoretical and Quantum Informatics (LITQ) at the Department
+        of Computer Science and Operations Research (DIRO), Université de Montréal. Our laboratory has
+        seven faculty members and is very active in both research and teaching.
       </p>
       <p class="reveal reveal-d1">
         We work on various aspects related to the foundations of computer science and physics.
-        Our research focuses on classical and quantum cryptography, computational complexity,
-        quantum computing, and graph theory.
+        Our research focuses on quantum information and computation, classical and quantum cryptography,
+        the foundations of quantum mechanics, computational complexity, and graph theory.
       </p>
-      <p class="reveal reveal-d2">
-        The LITQ is always looking for dynamic students at all levels and loves
-        to welcome visitors.
-      </p>
+      <div class="reveal" style="margin-top:2rem;">
+        <a href="research.html" class="btn-sec">Explore our Research →</a>
+      </div>
     </div>
 
     <!-- Group photo -->
@@ -113,14 +107,6 @@
     </div>
     <button class="carousel-btn carousel-btn--next" aria-label="Next">&#8594;</button>
   </div>
-  <p class="people-section-title reveal" style="margin-top:2rem;">Students &amp; Postdocs</p>
-  <div class="team-carousel-wrap reveal">
-    <button class="carousel-btn carousel-btn--prev" aria-label="Previous">&#8592;</button>
-    <div class="team-carousel-track-outer">
-      <div class="team-grid" id="carousel-students"></div>
-    </div>
-    <button class="carousel-btn carousel-btn--next" aria-label="Next">&#8594;</button>
-  </div>
   <div class="reveal" style="text-align:center;margin-top:3rem;">
     <a href="people.html" class="btn-sec">View All Members →</a>
   </div>
@@ -136,68 +122,6 @@
   </div>
 </section>
 
-<!-- ══════════ OPEN POSITIONS ══════════ -->
-<section class="section" id="positions" style="padding-bottom:4rem;">
-  <div class="section-mesh" aria-hidden="true">
-    <!-- green3: heart-leaf — large, centre-left, upright -->
-    <img src="../brand_assets/tilde-ellipse-green3.png" alt=""
-         style="width:65%; max-width:740px; top:0%; left:-8%; transform:translateY(-50%); transform: rotate(-90deg);" />
-    <!-- purple4: 4-pointed star — top-right, dramatic -->
-    <img src="../brand_assets/tilde-ellipse-purple6.png" alt=""
-         style="width:70%; max-width:1000px; top:20%; right:-5%; opacity:0.17;" />
-  </div>
-  <div class="join-inner">
-    <div class="join-text">
-      <div class="sec-eyebrow reveal">Join LITQ</div>
-      <h2 class="sec-title reveal">Information about <br><em class="teal">open positions</em></h2>
-      <div class="accent-rule reveal"></div>
-      <div style="background:var(--bg);padding:1.5rem 1.8rem;display:flex;flex-direction:column;gap:1.2rem;">
-        <p class="reveal" style="margin-bottom:0;">
-          LITQ welcomes applications for prospective Masters and PhD students interested in
-          theoretical computer science or quantum information. Prospective masters students typically are encoraged to
-          join the computer science or physics program at Université de Montréal before contacting
-          professors for the masters thesis. PhD applicants can find advertised positions here or contact
-          a faculty member briefly outlining your research interests, and including your CV and transcripts.
-        </p>
-        <p class="reveal reveal-d1" style="margin-bottom:0;">
-          Prospective PhD students should have a background in mathematics,
-          computer science, or physics. All positions come with finding attatched.
-        </p>
-      </div>
-    </div>
-    <div class="reveal reveal-d1" style="align-self:center;">
-      <p style="font-family:var(--ff-mono);font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-subtle);margin-bottom:1.2rem;">Open Positions</p>
-        <!-- ACTIVE POSITION — comment out the block below when no positions are open -->
-        <a class="position-item" href="phd-quantum-algorithms.html" style="text-decoration:none;">
-          <span class="position-label">PhD Position — Template</span>
-          <span class="position-detail position-open">● Open</span>
-        </a>
-        <!-- NO POSITIONS — uncomment the block below when no positions are open -->
-        <!-- <div class="position-item" style="justify-content:center; color:var(--text-subtle); font-family:var(--ff-mono); font-size:0.75rem; letter-spacing:0.08em; padding:1.8rem 1.5rem;">
-          No PhD opportunities currently available.
-        </div> -->
-
-        <!-- <div class="position-item">
-          <span class="position-label">PhD Fellowship — Quantum Complexity</span>
-          <span class="position-detail position-open">● Open</span>
-        </div>
-        <div class="position-item">
-          <span class="position-label">Postdoctoral Fellowship</span>
-          <span class="position-detail position-open">● Open</span>
-        </div>
-        <div class="position-item">
-          <span class="position-label">MSc Research Position</span>
-          <span class="position-detail position-open">● Open</span>
-        </div>
-        <div class="position-item">
-          <span class="position-label">Undergraduate Research (NSERC USRA)</span>
-          <span class="position-detail position-closed">● Summer 2026</span>
-        </div> -->
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ══════════ LOCATION ══════════ -->
 <section class="section section--alt" id="location">
   <div class="sec-eyebrow reveal">Find Us</div>
@@ -205,7 +129,7 @@
   <div class="location-grid">
     <div class="location-cards">
       <div class="location-card reveal">
-        <div class="location-card-label">Mailing Address</div>
+        <div class="location-card-label">Address</div>
         <address>
           Laboratoire d'informatique théorique et quantique<br>
           Département d'informatique et<br>
@@ -235,20 +159,25 @@
       <div class="location-photo-caption">Montréal, Québec · Canada</div>
     </div>
   </div>
+  <p class="reveal" style="text-align:center;margin-top:3rem;color:var(--text-muted);">
+    LITQ is always looking for dynamic and motivated students at all levels and is very happy to welcome visitors.
+  </p>
+  <div class="reveal" style="text-align:center;margin-top:1rem;">
+    <a href="positions.html" class="btn-sec">Interested in Joining? →</a>
+  </div>
 </section>
 
 <!-- ══════════ FOOTER ══════════ -->
 <footer>
   <div>
     <div class="footer-logo">LITQ</div>
-    <p class="footer-desc">Laboratory for Theoretical and Quantum Informatics at the Université de Montréal — advancing the mathematical foundations of quantum computation and information.</p>
+    <p class="footer-desc">Laboratory for Theoretical and Quantum Informatics</p>
     <div class="footer-affil"><div class="footer-affil-dot"></div><span>DIRO — Université de Montréal</span></div>
-    <div class="footer-affil"><div class="footer-affil-dot"></div><span>Membre de Quantique Québec</span></div>
   </div>
   <div class="footer-contact">
     <h4>Contact Us</h4>
     <p style="margin-top:0; font-size:0.95rem; line-height:1.7; color:var(--text-muted);">
-      Département d'Informatique et de<br>Recherche Opérationnelle (DIRO)<br>
+      <span style="white-space:nowrap;">Département d'Informatique et de</span><br><span style="white-space:nowrap;">Recherche Opérationnelle (DIRO)</span><br>
       Université de Montréal<br>
       Pavillon André-Aisenstadt<br>
       2920, chemin de la Tour<br>
@@ -292,7 +221,7 @@
       nullPhotoIndex++;
       photoSrc = 'https://placehold.co/400x400/EDE8DF/' + color + '?text=' + initials;
     } else {
-      photoSrc = '../profile_icons/' + p.photo;
+      photoSrc = p.photo.startsWith('http') ? p.photo : '../profile_icons/' + p.photo;
     }
     return '<a class="team-card" href="profile.html?id=' + p.id + '" style="text-decoration:none;">'
       + '<div class="team-photo"><img src="' + photoSrc + '" alt="' + l.nameFirst + ' ' + l.nameLast + '" loading="lazy"></div>'
@@ -306,27 +235,8 @@
     return (p.en || p.fr).eyebrow === 'Faculty';
   }));
 
-  var students = sortBySurname(data.people.filter(function (p) {
-    return (p.en || p.fr).eyebrow !== 'Faculty';
-  }));
-
-  var MAX = 7;
-  var shown = students.slice(0, MAX);
-  var remaining = students.length - shown.length;
-
-  var seeMoreCard = '<a href="people.html" class="team-card team-card--more" style="text-decoration:none;">'
-    + '<div class="team-photo-more">'
-    + (remaining > 0 ? '<span class="team-card-more-count">+' + remaining + '</span>' : '')
-    + '<span class="team-card-more-label">' + (remaining > 0 ? 'more\u00a0members' : 'view\u00a0all\u00a0members') + '</span>'
-    + '</div>'
-    + '<p class="team-name">View All</p>'
-    + '<p class="team-role">\u2192</p>'
-    + '</a>';
-
   var fEl = document.getElementById('carousel-faculty');
-  var sEl = document.getElementById('carousel-students');
   if (fEl) fEl.innerHTML = faculty.map(makeCard).join('');
-  if (sEl) sEl.innerHTML = shown.map(makeCard).join('') + seeMoreCard;
 })();
 </script>
 
