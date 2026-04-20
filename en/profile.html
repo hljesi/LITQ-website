@@ -25,9 +25,13 @@
     .profile-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
     .profile-tag { font-family: var(--ff-mono); font-size: 0.71rem; letter-spacing: 0.14em; text-transform: uppercase; padding: 0.35rem 0.85rem; border: 1px solid var(--border-teal); color: var(--teal); background: var(--teal-dim); }
     .profile-links { display: flex; flex-direction: column; gap: 0.7rem; }
-    .profile-link { display: inline-flex; align-items: center; gap: 0.55rem; font-family: var(--ff-mono); font-size: 0.78rem; letter-spacing: 0.06em; color: var(--text-muted); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; width: fit-content; }
+    .profile-link { display: inline-flex; align-items: center; gap: 0.55rem; font-family: var(--ff-display); font-size: 1rem; font-weight: 300; color: var(--text-muted); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; width: fit-content; }
     .profile-link:hover { color: var(--accent); border-color: var(--accent); }
-    .profile-link--email::before { content: '✉'; font-size: 0.72rem; }
+    .profile-link--email::before { content: '✉'; font-size: 0.85rem; }
+    .profile-link--website-wrap { display: flex; flex-direction: column; gap: 0.25rem; margin-bottom: 0.3rem; text-decoration: none; }
+    .profile-link--website-pre { font-family: var(--ff-mono); font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-subtle); }
+    .profile-link--website-label { font-family: var(--ff-display); font-size: 1rem; font-weight: 300; color: var(--text-muted); border-bottom: 1px solid var(--border); padding-bottom: 2px; width: fit-content; transition: color 0.2s, border-color 0.2s; }
+    .profile-link--website-wrap:hover .profile-link--website-label { color: var(--accent); border-color: var(--accent); }
     .profile-body { display: grid; grid-template-columns: 1fr; gap: 3.5rem; }
     .profile-section { border-top: 1px solid var(--border); padding-top: 2rem; }
     .profile-section-label { font-family: var(--ff-display); font-size: 1.65rem; font-weight: 300; letter-spacing: -0.01em; color: var(--text); display: block; margin-bottom: 1.1rem; }
@@ -130,13 +134,20 @@
 
     // Links HTML — email obfuscated: address split into parts, assembled only on click
     var ep = l.email.split('@');
+    var websiteLinks = (l.links || []).filter(function(lk) { return lk.label === 'Personal Website' && lk.url && lk.url !== '#'; });
+    var otherLinks   = (l.links || []).filter(function(lk) { return lk.label !== 'Personal Website'; });
     const linksHtml = [
-      '<a href="#" class="profile-link profile-link--email" data-eu="' + ep[0] + '" data-ed="' + ep[1] + '" onclick="this.href=\'mailto:\'+this.dataset.eu+\'@\'+this.dataset.ed;return true;">Email</a>'
-    ].concat((l.links || []).filter(function(lk) { return lk.url && lk.url !== '#'; }).map(function(lk) {
-      return '<a href="' + lk.url + '" class="profile-link" target="_blank" rel="noopener">' + lk.label + ' →</a>';
-    })).concat((l.links || []).filter(function(lk) { return !lk.url || lk.url === '#'; }).map(function(lk) {
-      return '<a href="#" class="profile-link">' + lk.label + ' →</a>';
-    })).join('\n');
+        '<a href="#" class="profile-link profile-link--email" data-eu="' + ep[0] + '" data-ed="' + ep[1] + '" onclick="this.href=\'mailto:\'+this.dataset.eu+\'@\'+this.dataset.ed;return true;">Email</a>'
+      ].concat(otherLinks.filter(function(lk) { return lk.url && lk.url !== '#'; }).map(function(lk) {
+        return '<a href="' + lk.url + '" class="profile-link" target="_blank" rel="noopener">' + lk.label + ' →</a>';
+      })).concat(otherLinks.filter(function(lk) { return !lk.url || lk.url === '#'; }).map(function(lk) {
+        return '<a href="#" class="profile-link">' + lk.label + ' →</a>';
+      })).join('\n') + websiteLinks.map(function(lk) {
+        return '<a href="' + lk.url + '" class="profile-link--website-wrap" target="_blank" rel="noopener">'
+          + '<span class="profile-link--website-pre">For full information see:</span>'
+          + '<span class="profile-link--website-label">Personal Website →</span>'
+          + '</a>';
+      }).join('');
 
     // Research area tags
     const tagsHtml = l.researchAreaTags.map(function(t) {
