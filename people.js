@@ -7,29 +7,19 @@ window.PEOPLE_DATA = {
       supervises: ["samuel-ducharme", "remi-ligez", "muxue-guo"],
       formerStudents: [
         { name: "Claude Crépeau", role: "master's 1997" },
-        { name: "Anne Broadbent", role: "PhD 2004" }
+        { name: "Anne Broadbent", role: "PhD 2004" },
       ],
       teaching: [
         {
-          code: "IFT 6155",
+          code: "IFT 3155/IFT 6155",
           en: {
             name: "Informatique quantique",
-            detail: "Graduate · DIRO . Fall 2025/Fall 2026",
+            detail: "Undergraduate / Graduate · DIRO · Fall 2025/Fall 2026",
           },
           fr: {
             name: "Informatique quantique",
-            detail: "Cycles supérieurs · DIRO . Automne 2025/Automne 2026",
-          },
-        },
-        {
-          code: "IFT 3155",
-          en: {
-            name: "Informatique quantique",
-            detail: "Undergraduate · DIRO . Fall 2025/Fall 2026",
-          },
-          fr: {
-            name: "Informatique quantique",
-            detail: "Premier cycle · DIRO . Automne 2025/Automne 2026",
+            detail:
+              "Premier cycle / Cycles supérieurs · DIRO · Automne 2025/Automne 2026",
           },
         },
       ],
@@ -188,7 +178,7 @@ window.PEOPLE_DATA = {
     },
     {
       id: "frederic-dupuis",
-      photo: null,
+      photo: "fred_square.jpg",
       supervisedBy: null,
       supervises: [
         "gabriele-di-matteo",
@@ -249,18 +239,19 @@ window.PEOPLE_DATA = {
         rank: "Associate Professor · DIRO, Université de Montréal",
         researchAreaTags: ["Quantum Cryptography", "Information Theory"],
         email: "dupuis@iro.umontreal.ca",
-        links: [{ label: "Personal Website", url: "#" }],
+        links: [
+          {
+            label: "Personal Website",
+            url: "https://www.iro.umontreal.ca/~dupuisf/",
+          },
+        ],
         bio: [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+          "Frédéric Dupuis is an associate professor at the computer science department of the University of Montreal. He is particularly interested in quantum information theory and in quantum cryptography.",
         ],
         researchInterests: [
-          "Quantum Shannon theory and channel capacities",
-          "One-shot and smooth entropy measures in quantum systems",
-          "Decoupling theorems and their applications",
-          "Security of quantum key distribution protocols",
-          "Randomness extraction and privacy amplification",
-          "Quantum resource theories and thermodynamics",
+          "Quantum Shannon theory",
+          "Quantum cryptography",
+          "Quantum information theory",
         ],
       },
       fr: {
@@ -274,7 +265,12 @@ window.PEOPLE_DATA = {
           "Entropie",
         ],
         email: "dupuis@iro.umontreal.ca",
-        links: [{ label: "Site web personnel", url: "#" }],
+        links: [
+          {
+            label: "Site web personnel",
+            url: "https://www.iro.umontreal.ca/~dupuisf/",
+          },
+        ],
         bio: [
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
           "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
