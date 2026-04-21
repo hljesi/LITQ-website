@@ -275,10 +275,9 @@ body::before {
 /* ── ABOUT ────────────────────────── */
 .about-grid { display: grid; grid-template-columns: 1fr 1.35fr; gap: 5rem; align-items: center; }
 .about-text p { color: var(--text); font-size: 1.0rem; line-height: 1.85; margin-bottom: 1.2rem; }
-.about-img-wrap { position: relative; overflow: hidden; border-radius: 4px; border: 1px solid var(--border-teal); }
-.about-img-wrap img { width: 100%; height: auto; display: block; filter: saturate(82%); transition: filter 0.5s; }
+.about-img-wrap { position: relative; }
+.about-img-wrap img { width: 100%; height: auto; display: block; filter: saturate(82%); transition: filter 0.5s; border-radius: 4px; border: 1px solid var(--border-teal); overflow: hidden; }
 .about-img-wrap:hover img { filter: saturate(100%); }
-.about-img-wrap::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(109,40,217,0.07) 0%, transparent 55%); pointer-events: none; }
 
 /* ── RESEARCH TEASER ──────────────── */
 .research-teaser-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
@@ -520,6 +519,9 @@ footer { position: relative; z-index: 2; background: #F2EEE5; border-top: 1px so
 .footer-affil { display: flex; gap: 0.5rem; align-items: center; margin-top: 1.5rem; }
 .footer-affil-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); opacity: 0.6; }
 .footer-affil span { font-family: var(--ff-mono); font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-subtle); }
+.footer-affil span a { color: var(--text-subtle); text-decoration: underline; text-underline-offset: 2px; transition: color 0.2s; }
+.footer-affil span a:hover { color: var(--teal); }
+.footer-design { font-family: var(--ff-mono); font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-subtle); margin-top: 0.75rem; opacity: 0.7; }
 .footer-contact h4 { font-family: var(--ff-mono); font-size: 0.74rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 1.2rem; }
 .footer-contact p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 0.5rem; }
 .footer-contact a { color: var(--teal); text-decoration: none; font-size: 0.95rem; }

@@ -7,8 +7,7 @@ window.PEOPLE_DATA = {
       supervises: ["samuel-ducharme", "remi-ligez", "muxue-guo"],
       formerStudents: [
         { name: "Claude Crépeau", role: "master's 1997" },
-        { name: "Anne Broadbent", role: "PhD 2004" },
-        { name: "Samuel Ducharme", id: "samuel-ducharme", role: "MSc 2024" },
+        { name: "Anne Broadbent", role: "PhD 2004" }
       ],
       teaching: [
         {
@@ -88,6 +87,7 @@ window.PEOPLE_DATA = {
       photo: "louis_salvail.jpeg",
       supervisedBy: null,
       supervises: [
+        "charlie-pilon-senterre",
         "mohammed-barhoush",
         "louis-charles-thibodeau",
         "florian-le-mouel",
@@ -1623,13 +1623,6 @@ window.PEOPLE_DATA = {
       year: "2025",
       supervisor: "Gilles Brassard",
       note: "Now at Università della Svizzera italiana",
-    },
-    {
-      name: "Samuel Ducharme",
-      degree: "MSc",
-      year: "2024",
-      supervisor: "Gilles Brassard",
-      note: "",
     },
     {
       name: "Ashutosh Marwah",
