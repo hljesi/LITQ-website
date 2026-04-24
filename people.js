@@ -178,7 +178,8 @@ window.PEOPLE_DATA = {
     },
     {
       id: "frederic-dupuis",
-      photo: "fred_square.jpg",
+      photo: "fred.jpg",
+      photoFit: "contain",
       supervisedBy: null,
       supervises: [
         "gabriele-di-matteo",
@@ -706,10 +707,7 @@ window.PEOPLE_DATA = {
         researchAreaTags: ["Research Area 1", "Research Area 2"],
         email: "fu@iro.umontreal.ca",
         links: [{ label: "Personal Website", url: "#" }],
-        bio: [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-        ],
+        bio: [],
         researchInterests: [
           "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod",
           "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
@@ -726,17 +724,8 @@ window.PEOPLE_DATA = {
         researchAreaTags: ["Domaine de recherche 1", "Domaine de recherche 2"],
         email: "fu@iro.umontreal.ca",
         links: [{ label: "Site web personnel", url: "#" }],
-        bio: [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-        ],
-        researchInterests: [
-          "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod",
-          "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
-          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum",
-          "Excepteur sint occaecat cupidatat non proident sunt in culpa officia",
-          "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium",
-        ],
+        bio: [],
+        researchInterests: [],
       },
     },
     {
@@ -947,7 +936,8 @@ window.PEOPLE_DATA = {
     },
     {
       id: "philippe-lamontagne",
-      photo: null,
+      photo: "PhilippeLamontagne.jpg",
+      photoFit: "contain",
       supervisedBy: null,
       supervises: ["alexey-norkin", "linhui-fu", "ding-wen-li"],
       formerStudents: [],
@@ -961,8 +951,8 @@ window.PEOPLE_DATA = {
         email: "lamontagne@iro.umontreal.ca",
         links: [{ label: "Personal Website", url: "#" }],
         bio: [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+          "I am a Research officer in the Cryptography and Quantum Computing team of the Digital Technologies research center and adjunct professor at UdeM. My research expertise is in quantum cryptography. I am interested in exploiting quantum information for advanced cryptographic tasks form lesser assumptions.",
+          "I also do research on the security of classical cryptography against quantum adversaries, also known as post-quantum cryptography. I am also interested in cryptographic solutions to privacy.",
         ],
         researchInterests: [
           "Quantum-secure cryptographic protocols",
@@ -986,8 +976,8 @@ window.PEOPLE_DATA = {
         email: "lamontagne@iro.umontreal.ca",
         links: [{ label: "Site web personnel", url: "#" }],
         bio: [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+          "Je suis agent de recherche dans l'équipe de cryptographie et de calcul quantique centre de recherche en technologies numériques et professeur associé à l'UdeM. Mon expertise de recherche est la cryptographie quantique. Je m'intéresse à l'exploitation de l'information quantique pour des tâches cryptographiques avancées à partir d'hypothèses réduites.",
+          "Je fais également de la recherche en cryptographie post-quantique, la branche de la cryptographie classique qui s'intéresse à la sécurité face à un adversaire quantique. Je m'intéresse aussi aux solutions cryptographiques au calcul respectueux de la vie privée.",
         ],
         researchInterests: [
           "Protocoles cryptographiques à sécurité quantique",
