@@ -139,8 +139,9 @@
     } else {
       photoSrc = p.photo.startsWith('http') ? p.photo : '../profile_icons/' + p.photo;
     }
+    var imgStyle = '';
     return '<a id="' + p.id + '" class="team-card" href="profile.html?id=' + p.id + '" style="text-decoration:none;">'
-      + '<div class="team-photo"><img src="' + photoSrc + '" alt="' + l.nameFirst + ' ' + l.nameLast + '" loading="lazy"></div>'
+      + '<div class="team-photo"><img src="' + photoSrc + '" alt="' + l.nameFirst + ' ' + l.nameLast + '" loading="lazy"' + imgStyle + '></div>'
       + '<p class="team-name">' + l.nameFirst + ' ' + l.nameLast + '</p>'
       + '<p class="team-role">' + rankShort + '</p>'
       + '<p class="team-area">' + area + '</p>'
