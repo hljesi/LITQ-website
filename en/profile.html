@@ -248,7 +248,7 @@
       var initials = l.nameFirst.charAt(0) + '.' + l.nameLast.charAt(0) + '.';
       photoSrc = 'https://placehold.co/400x400/EDE8DF/' + color + '?text=' + initials;
     }
-    var photoImgStyle = person.photoFit ? ' style="aspect-ratio:auto;object-fit:contain"' : '';
+    var photoImgStyle = person.profilePhotoFit ? ' style="aspect-ratio:auto;object-fit:contain"' : '';
     var photoContent = '<img src="' + photoSrc + '" alt="' + l.nameFirst + ' ' + l.nameLast + '"' + photoImgStyle + '>';
 
     return '<a href="people.html#' + person.id + '" class="btn-back">← Back to Team</a>'
