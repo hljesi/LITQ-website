@@ -3,211 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LITQ — Laboratoire d'informatique théorique et quantique</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>LITQ — Version française à venir</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
-  <style>
-    .team-card--more .team-photo-more { aspect-ratio: 1/1; background: var(--surface); border: 1.5px dashed var(--border-teal); display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 0.7rem; transition: background 0.3s, border-color 0.25s; gap: 0.4rem; }
-    .team-card--more:hover .team-photo-more { background: var(--teal-dim); border-color: var(--teal); border-style: solid; }
-    .team-card-more-count { font-family: var(--ff-display); font-size: 2.1rem; font-weight: 300; color: var(--teal); line-height: 1; }
-    .team-card-more-label { font-family: var(--ff-mono); font-size: 0.60rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-subtle); text-align: center; padding: 0 0.6rem; }
-    .team-card--more .team-name { color: var(--teal) !important; }
-  </style>
 </head>
 <body>
 
-<!-- ══════════ NAV ══════════ -->
-<nav id="nav">
-  <a href="#home" class="nav-logo">
+<nav id="nav" class="always-solid">
+  <a href="../en/index.html" class="nav-logo">
     <span class="nav-logo-name">LITQ</span>
     <span class="nav-logo-sub">Université de Montréal</span>
   </a>
-  <ul class="nav-links">
-    <li><a href="#home">Accueil</a></li>
-    <li><a href="research.html">Recherche</a></li>
-    <li><a href="people.html">Équipe</a></li>
-    <li><a href="publications.html">Publications</a></li>
-    <li><a href="positions.html">Rejoindre</a></li>
-  </ul>
-  <a href="../en/index.html" class="lang-toggle">EN</a>
-  <button class="nav-burger" id="burger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
+  <a href="../en/index.html" class="lang-toggle" style="margin-left:auto;">EN</a>
 </nav>
 
-<!-- ══════════ HERO ══════════ -->
-<section class="hero" id="home">
-  <canvas id="wave-canvas"></canvas>
-  <div class="hero-wave-overlay"></div>
-  <div class="hero-inner">
-    <div class="hero-tag">Quantique · Théorie · Calcul</div>
-    <h1 class="hero-h1">
-      <span class="hero-line"><span class="hero-line-inner">Laboratoire</span></span>
-      <span class="hero-line"><span class="hero-line-inner">d'<em class="hero-italic">informatique</em></span></span>
-      <span class="hero-line"><span class="hero-line-inner">théorique et quantique</span></span>
+<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem;position:relative;z-index:1;">
+  <div style="text-align:center;max-width:520px;">
+    <div style="font-family:var(--ff-mono);font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-subtle);margin-bottom:1.5rem;">LITQ · Université de Montréal</div>
+    <h1 style="font-family:var(--ff-display);font-size:clamp(2rem,5vw,3.2rem);font-weight:300;color:var(--text);letter-spacing:-0.02em;line-height:1.2;margin-bottom:1.25rem;">
+      Version française<br><em style="color:var(--teal);">à venir</em>
     </h1>
-    <p class="hero-body">
-      Nous étudions les fondements mathématiques de l'informatique, de l'information et du calcul quantiques
-      à la complexité classique et à la théorie des graphes.
-      Basé au DIRO, Université de Montréal.
+    <p style="font-family:var(--ff-body);font-size:1rem;color:var(--text-muted);line-height:1.7;margin-bottom:2.5rem;">
+      La version française du site est en cours de préparation.<br>
+      Merci de votre patience.
     </p>
+    <a href="../en/index.html" style="font-family:var(--ff-mono);font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);text-decoration:none;border:1.5px solid var(--accent);padding:0.65rem 1.6rem;display:inline-block;transition:background 0.2s,color 0.2s;" onmouseover="this.style.background='var(--accent)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--accent)'">
+      Vers la version anglaise
+    </a>
   </div>
-</section>
-
-<!-- ══════════ ABOUT ══════════ -->
-<section class="section" id="about" style="padding-bottom:4.5rem;">
-  <div class="about-grid">
-    <div class="about-text">
-      <div class="sec-eyebrow reveal">À propos du LITQ</div>
-      <h2 class="sec-title reveal">Qui nous <em class="teal">sommes</em></h2>
-      <div class="accent-rule reveal"></div>
-      <p class="reveal">
-        Bienvenue sur le site du Laboratoire d'informatique théorique et quantique (LITQ) du Département
-        d'informatique et de recherche opérationnelle (DIRO) de l'Université de Montréal. Notre laboratoire
-        compte plusieurs professeurs et est très actif tant en recherche qu'en enseignement.
-      </p>
-      <p class="reveal reveal-d1">
-        Nous travaillons sur divers aspects liés aux fondements de l'informatique et de la physique.
-        Nos recherches portent sur la cryptographie classique et quantique, la complexité computationnelle,
-        le calcul quantique et la théorie des graphes.
-      </p>
-      <div class="reveal" style="margin-top:2rem;">
-        <a href="research.html" class="btn-sec">Explorer notre recherche →</a>
-      </div>
-    </div>
-    <div class="about-img-wrap reveal reveal-d1">
-      <img src="../images/quorum-2025-group-photo.jpg" alt="Groupe LITQ au Quorum Ottawa 2025">
-      <p style="font-family:var(--ff-mono); font-size:0.62rem; letter-spacing:0.1em; color:var(--text-subtle); line-height:1.6; margin-top:0.75rem; text-align:center;">Membres du groupe avec des collègues de l'ensemble du Québec &amp; Ontario lors de l'atelier QUORUM 2025 à Ottawa.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════ PEOPLE ══════════ -->
-<section class="section" id="people">
-  <div class="section-mesh" aria-hidden="true">
-    <img src="../brand_assets/tilde-ellipse-purple4.png" alt=""
-         style="width:95%; max-width:960px; top:-15%; right:-15%;" />
-    <img src="../brand_assets/tilde-ellipse-green6.png" alt=""
-         style="width:65%; max-width:640px; bottom:-5%; left:5%; opacity:0.19;" />
-  </div>
-  <div class="sec-eyebrow sec-eyebrow--purple reveal">L'équipe</div>
-  <h2 class="sec-title reveal">Rencontrer nos <em>chercheurs</em></h2>
-  <p class="people-section-title reveal">Corps professoral</p>
-  <div class="team-carousel-wrap reveal">
-    <button class="carousel-btn carousel-btn--prev" aria-label="Précédent">&#8592;</button>
-    <div class="team-carousel-track-outer">
-      <div class="team-grid" id="carousel-faculty"></div>
-    </div>
-    <button class="carousel-btn carousel-btn--next" aria-label="Suivant">&#8594;</button>
-  </div>
-  <div class="reveal" style="text-align:center;margin-top:3rem;">
-    <a href="people.html" class="btn-sec">Voir tous les membres →</a>
-  </div>
-</section>
-
-<!-- ══════════ ACTUALITÉS ══════════ -->
-<section class="section section--alt" id="news">
-  <div class="sec-eyebrow reveal">Quoi de neuf</div>
-  <h2 class="sec-title reveal">Dernières <em>actualités</em></h2>
-  <div style="max-width:780px; margin-top:3rem; display:flex; flex-direction:column; gap:1.5rem;">
-
-    <div class="reveal" style="display:flex; gap:2rem; align-items:flex-start; padding:2rem 2.2rem; border:1px solid var(--border-teal); background:var(--surface);">
-      <div style="flex-shrink:0; font-family:var(--ff-mono); font-size:0.62rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--teal); padding-top:0.2rem; min-width:80px;">Mar 2026</div>
-      <p style="font-size:1rem; line-height:1.8; color:var(--text-muted); margin:0;">
-        Notre propre <strong style="color:var(--text); font-weight:500;">Prof. Gilles Brassard</strong> vient de remporter le
-        <a href="https://awards.acm.org/about/2025-turing" target="_blank" rel="noopener" style="color:var(--text); font-weight:500; text-decoration:underline; text-underline-offset:2px;">Prix Turing 2025</a>
-        — la plus haute distinction internationale en informatique —
-        aux côtés de Charles H. Bennett
-        <em>« pour leur rôle essentiel dans l'amorce et l'essor de la révolution quantique en informatique et dans les technologies de l'information et des communications »</em>!
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- ══════════ PUBLICATIONS ══════════ -->
-<section class="section section--alt" id="publications">
-  <div class="sec-eyebrow reveal">Publications sélectionnées</div>
-  <h2 class="sec-title reveal">Recherches <em>récentes</em></h2>
-  <div class="reveal" id="pub-list"></div>
-  <div class="reveal" style="text-align:center;margin-top:3.5rem;">
-    <a href="publications.html" class="btn-sec">Voir plus de publications →</a>
-  </div>
-</section>
-
-<!-- ══════════ LOCATION ══════════ -->
-<section class="section section--alt" id="location">
-  <div class="sec-eyebrow reveal">Nous trouver</div>
-  <h2 class="sec-title reveal">Situé à <em class="teal">Montréal</em></h2>
-  <div class="location-grid">
-    <div class="location-cards">
-      <div class="location-card reveal">
-        <div class="location-card-label">Adresse postale</div>
-        <address>
-          Laboratoire d'informatique théorique et quantique<br>
-          Département d'informatique et<br>
-          de recherche opérationnelle (DIRO)<br>
-          Locaux : 3344 et 3350<br>
-          Pavillon André-Aisenstadt<br>
-          2920 Chemin de la Tour<br>
-          Montréal (Québec) H3T 1J4 &nbsp;Canada
-        </address>
-      </div>
-      <div class="location-card reveal reveal-d1">
-        <div class="location-card-label">Comment nous rejoindre</div>
-        <p><strong style="color:var(--text);font-weight:500;">Métro</strong> — Station Université de Montréal (ligne bleue, sortie Chemin de la Tour)</p>
-        <p><strong style="color:var(--text);font-weight:500;">Bâtiment</strong> — Pavillon André-Aisenstadt, le bâtiment de mathématiques et d'informatique sur le campus principal de l'UdeM</p>
-        <p><strong style="color:var(--text);font-weight:500;">Stationnement</strong> — Stationnement payant disponible sur le Chemin de la Tour et au stationnement de l'Université de Montréal</p>
-        <div style="margin-top:1rem;">
-          <a href="https://www.stm.info/fr/infos/reseaux/plans-des-reseaux" class="location-pill location-pill--teal" target="_blank" rel="noopener">🚇 Ligne bleue</a>
-          <a href="https://diro.umontreal.ca/accueil/" class="location-pill location-pill--teal" target="_blank" rel="noopener">DIRO</a>
-          <a href="https://maps.app.goo.gl/NFE4Kb53aWZVRdHu5" class="location-pill" target="_blank" rel="noopener">Google Maps</a>
-        </div>
-      </div>
-    </div>
-    <div class="location-photo-wrap reveal reveal-d1">
-      <img src="../brand_assets/ParcFleursDeMacadam_01carolineperronphotographies.webp"
-           alt="Montréal — Parc des Fleurs de Macadam" loading="lazy">
-      <div class="location-photo-caption">Montréal, Québec · Canada</div>
-    </div>
-  </div>
-  <p class="reveal" style="text-align:center;margin-top:3rem;color:var(--text-muted);">
-    Le LITQ est toujours à la recherche d'étudiant(e)s dynamiques à tous les niveaux et accueille chaleureusement les visiteurs.
-  </p>
-  <div class="reveal" style="text-align:center;margin-top:1rem;">
-    <a href="positions.html" class="btn-sec">Intéressé(e) à nous rejoindre ? →</a>
-  </div>
-</section>
-
-<!-- ══════════ FOOTER ══════════ -->
-<footer>
-  <div>
-    <div class="footer-logo">LITQ</div>
-    <p class="footer-desc">Laboratoire d'informatique théorique et quantique</p>
-    <div class="footer-affil"><div class="footer-affil-dot"></div><span><a href="https://diro.umontreal.ca/accueil/" target="_blank" rel="noopener">DIRO</a> — Université de Montréal</span></div>
-    <div class="footer-affil"><div class="footer-affil-dot"></div><span>Member of <a href="https://www.intriq.org" target="_blank" rel="noopener">INTRIQ</a>, <a href="https://quorumuottawa.ca" target="_blank" rel="noopener">QUORUM</a>, and <a href="https://ivado.ca/en/" target="_blank" rel="noopener">IVADO</a></span></div>
-  </div>
-  <div class="footer-contact">
-    <h4>Nous contacter</h4>
-    <p style="margin-top:0; font-size:0.95rem; line-height:1.7; color:var(--text-muted);">
-      Département d'Informatique et de<br>Recherche Opérationnelle (DIRO)<br>
-      Université de Montréal<br>
-      Pavillon André-Aisenstadt<br>
-      2920, chemin de la Tour<br>
-      Montréal (Québec) H3T 1J4
-    </p>
-  </div>
-  <div class="footer-map">
-    <img src="../images/LITQ.jpg" alt="Carte du campus LITQ — Université de Montréal, Campus MIL" />
-  </div>
-</footer>
-<div class="footer-bottom">
-  <p>© 2026 LITQ — Université de Montréal. Tous droits réservés.</p>
-  <p>Département d'Informatique et de Recherche Opérationnelle</p>
-  <p>Website design by Daniel Bilsborrow</p>
 </div>
 
 <script src="../people.js"></script>

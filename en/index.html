@@ -246,8 +246,12 @@
     } else {
       photoSrc = p.photo.startsWith('http') ? p.photo : '../profile_icons/' + p.photo;
     }
+    var thumbStyle = '';
+    if (p.thumbnailZoom) thumbStyle += '--thumb-zoom:' + p.thumbnailZoom + ';';
+    if (p.thumbnailPosition) thumbStyle += '--thumb-pos:' + p.thumbnailPosition + ';';
+    if (p.thumbnailOrigin) thumbStyle += '--thumb-origin:' + p.thumbnailOrigin + ';';
     return '<a class="team-card" href="profile.html?id=' + p.id + '" style="text-decoration:none;">'
-      + '<div class="team-photo"><img src="' + photoSrc + '" alt="' + l.nameFirst + ' ' + l.nameLast + '" loading="lazy"></div>'
+      + '<div class="team-photo"' + (thumbStyle ? ' style="' + thumbStyle + '"' : '') + '><img src="' + photoSrc + '" alt="' + l.nameFirst + ' ' + l.nameLast + '" loading="lazy"></div>'
       + '<p class="team-name">' + l.nameFirst + ' ' + l.nameLast + '</p>'
       + '<p class="team-role">' + rankShort + '</p>'
       + '<p class="team-area">' + area + '</p>'

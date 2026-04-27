@@ -187,6 +187,7 @@ if (nav && !nav.classList.contains('always-solid')) {
 
     function update() {
       offset = Math.min(offset, maxOffset());
+      track.style.justifyContent = maxOffset() === 0 ? 'center' : 'flex-start';
       applyOffset();
     }
 

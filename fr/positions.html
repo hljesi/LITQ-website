@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rejoindre le LITQ</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>LITQ — Version française à venir</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -12,86 +11,29 @@
 </head>
 <body>
 
-<!-- ══════════ NAV ══════════ -->
 <nav id="nav" class="always-solid">
-  <a href="index.html" class="nav-logo">
+  <a href="../en/index.html" class="nav-logo">
     <span class="nav-logo-name">LITQ</span>
     <span class="nav-logo-sub">Université de Montréal</span>
   </a>
-  <ul class="nav-links">
-    <li><a href="index.html">Accueil</a></li>
-    <li><a href="research.html">Recherche</a></li>
-    <li><a href="people.html">Équipe</a></li>
-    <li><a href="publications.html">Publications</a></li>
-    <li><a href="positions.html" class="active">Rejoindre</a></li>
-  </ul>
-  <a href="../en/positions.html" class="lang-toggle">EN</a>
-  <button class="nav-burger" id="burger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
+  <a href="../en/positions.html" class="lang-toggle" style="margin-left:auto;">EN</a>
 </nav>
 
-<!-- ══════════ EN-TÊTE DE PAGE ══════════ -->
-<header class="page-header">
-  <div class="page-header-mesh" aria-hidden="true">
-    <img src="../brand_assets/tilde-ellipse-green3.png" alt=""
-         style="width: 65vw; max-width: 860px; min-width: 600px; right: -10%; top: -20%; opacity: 0.20;" />
-  </div>
-  <div class="page-header-inner">
-    <div class="page-header-eyebrow">LITQ · Rejoindre</div>
-    <h1 style="font-size:clamp(2.2rem, 4.5vw, 3.8rem);">Nous <em>rejoindre</em></h1>
-    <p class="page-header-body">
-      Le LITQ accueille les candidatures d'étudiant(e)s prospectifs à la maîtrise et au doctorat,
-      ainsi que de stagiaires et de chercheur(e)s postdoctoraux·ales, intéressé(e)s par l'informatique
-      théorique ou l'information quantique.
-      Les candidat(e)s à la maîtrise sont généralement encouragé(e)s à s'inscrire au programme
-      d'informatique (ou de physique) de l'Université de Montréal avant de contacter les professeurs
-      pour le mémoire de maîtrise. (L'exception est si un(e) étudiant(e) dispose déjà d'une expérience
-      de recherche significative dans le domaine concerné &ndash; dans ce cas, procéder de la même façon
-      qu'un(e) candidat(e) au doctorat.)
-      Les candidat(e)s au doctorat et les postdoctorant(e)s peuvent trouver des postes annoncés ici
-      ou contacter un membre du corps professoral en décrivant brièvement leurs intérêts de recherche,
-      et en joignant leur CV et leurs relevés de notes.
+<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem;position:relative;z-index:1;">
+  <div style="text-align:center;max-width:520px;">
+    <div style="font-family:var(--ff-mono);font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-subtle);margin-bottom:1.5rem;">LITQ · Université de Montréal</div>
+    <h1 style="font-family:var(--ff-display);font-size:clamp(2rem,5vw,3.2rem);font-weight:300;color:var(--text);letter-spacing:-0.02em;line-height:1.2;margin-bottom:1.25rem;">
+      Version française<br><em style="color:var(--teal);">à venir</em>
+    </h1>
+    <p style="font-family:var(--ff-body);font-size:1rem;color:var(--text-muted);line-height:1.7;margin-bottom:2.5rem;">
+      La version française du site est en cours de préparation.<br>
+      Merci de votre patience.
     </p>
-    <p class="page-header-body" style="margin-top:1rem;">
-      Les candidat(e)s au doctorat doivent avoir une formation en mathématiques,
-      en informatique ou en physique. Tous les postes sont accompagnés d'un financement.
-    </p>
+    <a href="../en/positions.html" style="font-family:var(--ff-mono);font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);text-decoration:none;border:1.5px solid var(--accent);padding:0.65rem 1.6rem;display:inline-block;transition:background 0.2s,color 0.2s;" onmouseover="this.style.background='var(--accent)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--accent)'">
+      Vers la version anglaise
+    </a>
   </div>
-  <div class="page-header-deco">→</div>
-</header>
-
-<main style="max-width:900px; margin:0 auto; padding:5rem 5vw 6rem; position:relative; z-index:1;">
-</main>
-
-<!-- ══════════ PIED DE PAGE ══════════ -->
-<footer>
-  <div>
-    <div class="footer-logo">LITQ</div>
-    <p class="footer-desc">Laboratoire d'informatique théorique et quantique</p>
-    <div class="footer-affil"><div class="footer-affil-dot"></div><span><a href="https://diro.umontreal.ca/accueil/" target="_blank" rel="noopener">DIRO</a> — Université de Montréal</span></div>
-    <div class="footer-affil"><div class="footer-affil-dot"></div><span>Member of <a href="https://www.intriq.org" target="_blank" rel="noopener">INTRIQ</a>, <a href="https://quorumuottawa.ca" target="_blank" rel="noopener">QUORUM</a>, and <a href="https://ivado.ca/en/" target="_blank" rel="noopener">IVADO</a></span></div>
-  </div>
-  <div class="footer-contact">
-    <h4>Nous contacter</h4>
-    <p style="margin-top:0; font-size:0.95rem; line-height:1.7; color:var(--text-muted);">
-      <span style="white-space:nowrap;">Département d'Informatique et de</span><br><span style="white-space:nowrap;">Recherche Opérationnelle (DIRO)</span><br>
-      Université de Montréal<br>
-      Pavillon André-Aisenstadt<br>
-      2920, chemin de la Tour<br>
-      Montréal (Québec) H3T 1J4
-    </p>
-  </div>
-  <div class="footer-map">
-    <img src="../images/LITQ.jpg" alt="Carte du campus LITQ — Université de Montréal, Campus MIL" />
-  </div>
-</footer>
-<div class="footer-bottom">
-  <p>© 2026 LITQ — Université de Montréal. Tous droits réservés.</p>
-  <p>Département d'Informatique et de Recherche Opérationnelle</p>
-  <p>Website design by Daniel Bilsborrow</p>
 </div>
 
-<script src="../script.js" defer></script>
 </body>
 </html>

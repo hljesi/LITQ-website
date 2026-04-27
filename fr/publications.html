@@ -3,177 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Publications — LITQ</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>LITQ — Version française à venir</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
-  <style>
-    /* ── BARRE DE FILTRE ── */
-    .pub-filter-bar {
-      display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;
-      margin-bottom: 2.8rem;
-    }
-    .pub-filter-btn {
-      font-family: var(--ff-mono); font-size: 0.62rem; letter-spacing: 0.14em;
-      text-transform: uppercase; padding: 0.4rem 0.9rem;
-      border: 1px solid var(--border); background: transparent;
-      color: var(--text-muted); cursor: pointer;
-      transition: border-color 0.2s, color 0.2s, background 0.2s;
-    }
-    .pub-filter-btn:hover { border-color: var(--teal); color: var(--teal); }
-    .pub-filter-btn.active { border-color: var(--teal); color: var(--teal); background: var(--teal-dim); }
-    .pub-filter-label {
-      font-family: var(--ff-mono); font-size: 0.60rem; letter-spacing: 0.18em;
-      text-transform: uppercase; color: var(--text-subtle); margin-right: 0.4rem;
-    }
-
-    /* ── LISTE DE PUBLICATIONS ── */
-    .pub-list-full { max-width: 860px; }
-    .pub-item-full {
-      display: grid;
-      grid-template-columns: 3.5rem 1fr auto;
-      gap: 1.5rem 2rem;
-      align-items: start;
-      padding: 2rem 0;
-      border-bottom: 1px solid var(--border);
-      opacity: 0;
-      transform: translateY(14px);
-      transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.16,1,0.3,1);
-    }
-    .pub-item-full:first-child { border-top: 1px solid var(--border); }
-    .pub-item-full.visible { opacity: 1; transform: none; }
-    .pub-year { font-family: var(--ff-mono); font-size: 0.7rem; color: var(--text-subtle); padding-top: 4px; }
-    .pub-title { font-family: var(--ff-display); font-size: 1.25rem; font-weight: 400; color: var(--text); line-height: 1.4; margin-bottom: 0.5rem; }
-    .pub-meta { font-size: 0.92rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
-    .pub-link { font-family: var(--ff-mono); font-size: 0.80rem; letter-spacing: 0.06em; padding: 0.35rem 0.8rem; border: 1px solid rgba(28,16,9,0.14); color: var(--text-muted); text-decoration: none; white-space: nowrap; transition: border-color 0.2s, color 0.2s; align-self: center; }
-    .pub-link:hover { border-color: var(--teal); color: var(--teal); }
-
-    /* ── ÉTAT CHARGEMENT / VIDE ── */
-    .pub-state {
-      text-align: center; padding: 4rem 2rem;
-      font-family: var(--ff-mono); font-size: 0.68rem;
-      letter-spacing: 0.18em; color: var(--text-subtle); text-transform: uppercase;
-    }
-
-    /* ── PAGINATION ── */
-    .pub-pagination {
-      display: flex; align-items: center; gap: 0.8rem; margin-top: 3rem;
-      flex-wrap: wrap;
-    }
-    .pub-pagination-info {
-      font-family: var(--ff-mono); font-size: 0.60rem; letter-spacing: 0.14em;
-      text-transform: uppercase; color: var(--text-subtle); margin-right: auto;
-    }
-    .pub-page-btn {
-      font-family: var(--ff-mono); font-size: 0.62rem; letter-spacing: 0.1em;
-      text-transform: uppercase; padding: 0.45rem 1rem;
-      border: 1px solid var(--border); background: transparent;
-      color: var(--text-muted); cursor: pointer;
-      transition: border-color 0.2s, color 0.2s, background 0.2s;
-    }
-    .pub-page-btn:hover:not(:disabled) { border-color: var(--teal); color: var(--teal); }
-    .pub-page-btn:disabled { opacity: 0.35; cursor: not-allowed; }
-
-    @media (max-width: 640px) {
-      .pub-item-full { grid-template-columns: 2.5rem 1fr; }
-      .pub-link { display: none; }
-    }
-  </style>
 </head>
 <body>
 
-<!-- ══════════ NAV ══════════ -->
 <nav id="nav" class="always-solid">
-  <a href="index.html" class="nav-logo">
+  <a href="../en/index.html" class="nav-logo">
     <span class="nav-logo-name">LITQ</span>
     <span class="nav-logo-sub">Université de Montréal</span>
   </a>
-  <ul class="nav-links">
-    <li><a href="index.html">Accueil</a></li>
-    <li><a href="research.html">Recherche</a></li>
-    <li><a href="people.html">Équipe</a></li>
-    <li><a href="publications.html" class="active">Publications</a></li>
-    <li><a href="positions.html">Rejoindre</a></li>
-  </ul>
-  <a href="../en/publications.html" class="lang-toggle">EN</a>
-  <button class="nav-burger" id="burger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
+  <a href="../en/publications.html" class="lang-toggle" style="margin-left:auto;">EN</a>
 </nav>
 
-<!-- ══════════ EN-TÊTE DE PAGE ══════════ -->
-<header class="page-header">
-  <div class="page-header-mesh" aria-hidden="true">
-    <img src="../brand_assets/tilde-ellipse-green5.png" alt=""
-         style="width: 65vw; max-width: 860px; min-width: 600px;; right: -10%; top: -20%; opacity: 0.20;" />
-  </div>
-  <div class="page-header-inner">
-    <div class="page-header-eyebrow">LITQ · Publications</div>
-    <h1 style="font-size: clamp(2.2rem, 4.5vw, 3.8rem);">Nos <em>publications</em></h1>
-    <p class="page-header-body">
-      Un flux en direct des travaux récents du corps professoral du LITQ.
+<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem;position:relative;z-index:1;">
+  <div style="text-align:center;max-width:520px;">
+    <div style="font-family:var(--ff-mono);font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-subtle);margin-bottom:1.5rem;">LITQ · Université de Montréal</div>
+    <h1 style="font-family:var(--ff-display);font-size:clamp(2rem,5vw,3.2rem);font-weight:300;color:var(--text);letter-spacing:-0.02em;line-height:1.2;margin-bottom:1.25rem;">
+      Version française<br><em style="color:var(--teal);">à venir</em>
+    </h1>
+    <p style="font-family:var(--ff-body);font-size:1rem;color:var(--text-muted);line-height:1.7;margin-bottom:2.5rem;">
+      La version française du site est en cours de préparation.<br>
+      Merci de votre patience.
     </p>
-  </div>
-  <div class="page-header-deco">⟩⟨</div>
-</header>
-
-<!-- ══════════ PUBLICATIONS PRINCIPALE ══════════ -->
-<section class="section" id="publications" style="padding-top: 5rem; overflow: hidden; position: relative;">
-  <div aria-hidden="true" style="position:absolute; bottom:-2%; right:-10%; width:120%; max-width:800px; pointer-events:none; z-index:0; user-select:none; transform:rotate(-90deg)">
-    <img src="../brand_assets/tilde-ellipse-purple6.png" alt="" style="width:100%; opacity:0.18; mix-blend-mode:multiply;">
-  </div>
-  <div class="pub-list-full" style="position:relative; z-index:1;">
-
-    <div class="pub-filter-bar" id="filter-bar" style="display:none;">
-      <span class="pub-filter-label">Filtrer par</span>
-      <button class="pub-filter-btn active" data-filter="all">Tout</button>
-    </div>
-
-    <div id="pub-list-full"></div>
-
-    <div class="pub-pagination" id="pub-pagination" style="display:none;">
-      <span class="pub-pagination-info" id="pagination-info"></span>
-      <button class="pub-page-btn" id="btn-prev" disabled>← Préc.</button>
-      <button class="pub-page-btn" id="btn-next">Suiv. →</button>
-    </div>
-  </div>
-
-  <div style="margin-top: 5rem; padding-top: 3rem; border-top: 1px solid var(--border); text-align: center;">
-    <a href="https://arxiv.org/search/?searchtype=author&query=Brassard+OR+Dupuis+OR+Salvail+OR+Kristjansson+OR+Sokolov+OR+Hahn+OR+Boyer+OR+Lamontagne"
-       class="btn-sec" target="_blank" rel="noopener">
-      Voir toutes les publications sur arXiv →
+    <a href="../en/publications.html" style="font-family:var(--ff-mono);font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);text-decoration:none;border:1.5px solid var(--accent);padding:0.65rem 1.6rem;display:inline-block;transition:background 0.2s,color 0.2s;" onmouseover="this.style.background='var(--accent)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--accent)'">
+      Vers la version anglaise
     </a>
   </div>
-</section>
-
-<!-- ══════════ PIED DE PAGE ══════════ -->
-<footer>
-  <div>
-    <div class="footer-logo">LITQ</div>
-    <p class="footer-desc">Laboratoire d'informatique théorique et quantique</p>
-    <div class="footer-affil"><div class="footer-affil-dot"></div><span><a href="https://diro.umontreal.ca/accueil/" target="_blank" rel="noopener">DIRO</a> — Université de Montréal</span></div>
-    <div class="footer-affil"><div class="footer-affil-dot"></div><span>Member of <a href="https://www.intriq.org" target="_blank" rel="noopener">INTRIQ</a>, <a href="https://quorumuottawa.ca" target="_blank" rel="noopener">QUORUM</a>, and <a href="https://ivado.ca/en/" target="_blank" rel="noopener">IVADO</a></span></div>
-  </div>
-  <div class="footer-contact">
-    <h4>Nous contacter</h4>
-    <p style="margin-top:0; font-size:0.95rem; line-height:1.7; color:var(--text-muted);">
-      <span style="white-space:nowrap;">Département d'Informatique et de</span><br><span style="white-space:nowrap;">Recherche Opérationnelle (DIRO)</span><br>
-      Université de Montréal<br>
-      Pavillon André-Aisenstadt<br>
-      2920, chemin de la Tour<br>
-      Montréal (Québec) H3T 1J4
-    </p>
-  </div>
-  <div class="footer-map">
-    <img src="../images/LITQ.jpg" alt="Carte du campus LITQ — Université de Montréal, Campus MIL" />
-  </div>
-</footer>
-<div class="footer-bottom">
-  <p>© 2026 LITQ — Université de Montréal. Tous droits réservés.</p>
-  <p>Département d'Informatique et de Recherche Opérationnelle</p>
-  <p>Website design by Daniel Bilsborrow</p>
 </div>
 
 <script src="../script.js" defer></script>

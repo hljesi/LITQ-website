@@ -135,12 +135,12 @@
     var photoSrc = person.photo && person.photo.startsWith('http') ? person.photo : '../profile_icons/' + person.photo;
 
     // Links HTML — email obfuscated: address split into parts, assembled only on click
-    var ep = l.email.split('@');
+    var ep = l.email ? l.email.split('@') : null;
     var websiteLinks = (l.links || []).filter(function(lk) { return lk.label === 'Personal Website' && lk.url && lk.url !== '#'; });
     var otherLinks   = (l.links || []).filter(function(lk) { return lk.label !== 'Personal Website'; });
-    const linksHtml = [
-        '<a href="#" class="profile-link profile-link--email" data-eu="' + ep[0] + '" data-ed="' + ep[1] + '" onclick="this.href=\'mailto:\'+this.dataset.eu+\'@\'+this.dataset.ed;return true;">Email</a>'
-      ].concat(otherLinks.filter(function(lk) { return lk.url && lk.url !== '#'; }).map(function(lk) {
+    const emailLink = ep ? ['<a href="#" class="profile-link profile-link--email" data-eu="' + ep[0] + '" data-ed="' + ep[1] + '" onclick="this.href=\'mailto:\'+this.dataset.eu+\'@\'+this.dataset.ed;return true;">Email</a>'] : [];
+    const linksHtml = emailLink
+      .concat(otherLinks.filter(function(lk) { return lk.url && lk.url !== '#'; }).map(function(lk) {
         return '<a href="' + lk.url + '" class="profile-link" target="_blank" rel="noopener">' + lk.label + ' →</a>';
       })).concat(otherLinks.filter(function(lk) { return !lk.url || lk.url === '#'; }).map(function(lk) {
         return '<a href="#" class="profile-link">' + lk.label + ' →</a>';

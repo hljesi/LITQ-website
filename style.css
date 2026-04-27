@@ -308,9 +308,9 @@ body::before {
 .team-grid { display: flex; gap: 1.4rem; transition: transform 0.45s cubic-bezier(0.16,1,0.3,1); will-change: transform; }
 .team-card { cursor: pointer; flex: 0 0 170px; width: 170px; }
 .team-photo { aspect-ratio: 1/1; background: var(--surface); overflow: hidden; position: relative; margin-bottom: 0.7rem; }
-.team-photo img { width: 100%; height: 100%; object-fit: cover; filter: saturate(80%); transition: filter 0.4s, transform 0.6s cubic-bezier(0.16,1,0.3,1); }
+.team-photo img { width: 100%; height: 100%; object-fit: cover; object-position: var(--thumb-pos, top center); filter: saturate(80%); transform: scale(var(--thumb-zoom, 1)); transform-origin: var(--thumb-origin, center top); transition: filter 0.4s, transform 0.6s cubic-bezier(0.16,1,0.3,1); }
 .team-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(247,243,235,0.5) 0%, transparent 50%); }
-.team-card:hover .team-photo img { filter: saturate(110%); transform: scale(1.06); }
+.team-card:hover .team-photo img { filter: saturate(110%); transform: scale(calc(var(--thumb-zoom, 1) * 1.06)); }
 .team-name { font-family: var(--ff-display); font-size: 1.18rem; font-weight: 300; color: var(--text); margin-bottom: 0.25rem; }
 .team-role { font-family: var(--ff-mono); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); }
 .team-area { font-size: 0.88rem; color: var(--teal); margin-top: 0.2rem; }

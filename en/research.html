@@ -46,8 +46,9 @@
 </header>
 
 <!-- ══════════ RESEARCH AREAS ══════════ -->
-<main style="max-width:900px; margin:0 auto; padding:5rem 5vw 8rem; text-align:center;">
-  <p style="font-family:var(--ff-mono); font-size:0.78rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--text-subtle);">Coming soon</p>
+<main style="max-width:900px; margin:0 auto; padding:5rem 5vw 8rem;">
+  <div id="research-list"></div>
+  <p style="font-family:var(--ff-mono); font-size:0.78rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--text-subtle); text-align:center; margin-top:5rem;">More info coming soon</p>
 </main>
 
 <!-- ══════════ FOOTER ══════════ -->
@@ -78,6 +79,48 @@
   <p>Website design by Daniel Bilsborrow</p>
 </div>
 
+<script src="../people.js"></script>
+<script>
+(function () {
+  var lang = 'en';
+  var list = document.getElementById('research-list');
+
+  // Build topic → people map
+  var topicMap = {};
+  window.PEOPLE_DATA.people.forEach(function (person) {
+    var d = person[lang];
+    if (!d || !d.researchAreaTags || d.researchAreaTags.length === 0) return;
+    d.researchAreaTags.forEach(function (topic) {
+      if (!topicMap[topic]) topicMap[topic] = [];
+      topicMap[topic].push({ name: d.nameFirst + ' ' + d.nameLast, role: d.eyebrow });
+    });
+  });
+
+  var topics = Object.keys(topicMap).sort(function (a, b) { return a.localeCompare(b); });
+
+  topics.forEach(function (topic, i) {
+    var row = document.createElement('div');
+    row.style.cssText = 'display:flex;align-items:flex-start;gap:2.5rem;padding:2.25rem 0;border-bottom:1px solid rgba(88,28,135,0.13);' + (i === 0 ? 'border-top:1px solid rgba(88,28,135,0.13);' : '');
+
+    var topicEl = document.createElement('div');
+    topicEl.style.cssText = 'flex:1;';
+    topicEl.innerHTML = '<span style="font-family:var(--ff-display);font-size:1.12rem;font-weight:300;color:var(--text);">' + topic + '</span>';
+
+    var peopleEl = document.createElement('div');
+    peopleEl.style.cssText = 'display:flex;flex-wrap:wrap;gap:0.45rem;min-width:0;';
+    topicMap[topic].forEach(function (person) {
+      var chip = document.createElement('span');
+      chip.style.cssText = 'font-family:var(--ff-mono);font-size:0.70rem;letter-spacing:0.06em;padding:0.32rem 0.8rem;border:1px solid rgba(88,28,135,0.2);border-radius:100px;color:var(--accent);background:rgba(27,58,140,0.05);white-space:nowrap;';
+      chip.textContent = person.name;
+      peopleEl.appendChild(chip);
+    });
+
+    row.appendChild(topicEl);
+    row.appendChild(peopleEl);
+    list.appendChild(row);
+  });
+})();
+</script>
 <script src="../script.js" defer></script>
 </body>
 </html>
