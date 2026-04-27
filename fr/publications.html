@@ -191,6 +191,37 @@
   let allPapers  = [];
   let currentPage = 1;
 
+  /* ╔══════════════════════════════════════════════════════════════════╗
+     ║ TEMP — ARTICLES MANUELS (pas encore indexés par OpenAlex)         ║
+     ║ SUPPRIMER ce bloc MANUAL_PAPERS + la ligne [TEMP-MERGE] plus bas  ║
+     ║ dès que ces articles apparaîtront dans le flux API.               ║
+     ╚══════════════════════════════════════════════════════════════════╝ */
+  const MANUAL_PAPERS = [
+    {
+      title: 'CoALFake: Collaborative Active Learning with Human-LLM Co-Annotation for Cross-Domain Fake News Detection',
+      authorships: [
+        { author: { display_name: 'Esma Aïmeur' } },
+        { author: { display_name: 'Gilles Brassard' } },
+        { author: { display_name: 'Dorsaf Sallami' } }
+      ],
+      venue: 'arXiv',
+      year: 2026,
+      paperLink: 'https://arxiv.org/abs/2604.04174'
+    },
+    {
+      title: 'On the power of multipartite entanglement for pseudotelepathy',
+      authorships: [
+        { author: { display_name: 'Gilles Brassard' } },
+        { author: { display_name: 'Xavier Coiteux-Roy' } },
+        { author: { display_name: 'Rémi Ligez' } }
+      ],
+      venue: 'arXiv',
+      year: 2026,
+      paperLink: 'https://arxiv.org/abs/2603.17956'
+    }
+  ];
+  /* ╚════════════════════ FIN DU BLOC TEMP MANUAL PAPERS ════════════════╝ */
+
   const FACULTY = [
     { id: 'A5110284072', name: 'G. Brassard'    },
     { id: 'A5066085467', name: 'F. Dupuis'       },
@@ -308,7 +339,9 @@
 
     if (papers.length === 0) { showError(); return; }
 
-    allPapers = papers;
+    /* [TEMP-MERGE] Préfixe MANUAL_PAPERS. Lors de la suppression du bloc manuel
+       ci-dessus, rétablir cette ligne à :    allPapers = papers; */
+    allPapers = MANUAL_PAPERS.concat(papers);
 
     renderPage(1);
 
