@@ -130,7 +130,7 @@ window.PEOPLE_DATA = {
         links: [
           {
             label: "Personal Website",
-            url: "https://diro.umontreal.ca/repertoire-departement/professeurs/fiche/in/in27374/sg/Louis%20Salvail/",
+            url: "https://www.iro.umontreal.ca/~salvail/Fiche%20personnelle.html",
           },
         ],
         bio: [
@@ -160,7 +160,7 @@ window.PEOPLE_DATA = {
         links: [
           {
             label: "Site web personnel",
-            url: "https://diro.umontreal.ca/repertoire-departement/professeurs/fiche/in/in27374/sg/Louis%20Salvail/",
+            url: "https://www.iro.umontreal.ca/~salvail/Fiche%20personnelle.html",
           },
         ],
         bio: [
@@ -314,7 +314,12 @@ window.PEOPLE_DATA = {
           "Discrete Mathematics",
         ],
         email: "hahn@iro.umontreal.ca",
-        links: [{ label: "Personal Website", url: "#" }],
+        links: [
+          {
+            label: "Personal Website",
+            url: "https://www.iro.umontreal.ca/~hahn/",
+          },
+        ],
         bio: [],
         researchInterests: [],
       },
