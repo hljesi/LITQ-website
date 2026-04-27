@@ -134,16 +134,14 @@ window.PEOPLE_DATA = {
           },
         ],
         bio: [
-          "Louis Salvail is a Full Professor at the Département d'Informatique et de Recherche Opérationnelle (DIRO) at the Université de Montréal, and a founding member of LITQ.",
-          "He received his PhD from the Université de Montréal and held postdoctoral positions at Aarhus University and the University of Waterloo before returning to Montréal. He is an internationally recognized expert in quantum cryptography and computational complexity.",
+          "I obtained my PhD from the Université de Montréal in 1998. In the language of scientific lineages, my fathers are Gilles Brassard and Claude Crépeau. Strangely, Gilles is also my grandfather since Claude is my brother. In academia, these affiliations are entirely natural.",
+          "I began my university career at Aarhus University in Denmark from 1998 to 2008. I had the incredible fortune of working with Ivan Damgaard, to whom I owe a great deal. It was at Aarhus University that I learned the fundamentals of classical cryptography that are so useful to me today.",
+          "I joined the Department of Computer Science at the Université de Montréal in June 2008.",
         ],
         researchInterests: [
-          "Quantum cryptography and quantum key distribution",
-          "Two-party and multi-party quantum protocols",
-          "Computational complexity and reductions",
-          "Oblivious transfer and commitment schemes",
-          "Foundations of cryptographic security",
-          "Post-quantum cryptographic primitives",
+        "Quantum cryptography",
+        "Classical cryptography",
+        "Quantum information theory",
         ],
       },
       fr: {
@@ -311,7 +309,6 @@ window.PEOPLE_DATA = {
         researchAreaTags: [
           "Graph Theory",
           "Combinatorics",
-          "Discrete Mathematics",
         ],
         email: "hahn@iro.umontreal.ca",
         links: [
@@ -1092,7 +1089,6 @@ window.PEOPLE_DATA = {
         researchAreaTags: [
           "Graph Theory",
           "Combinatorics",
-          "Discrete Mathematics",
         ],
         links: [{ label: "Personal Website", url: "#" }],
         bio: [],

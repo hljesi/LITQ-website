@@ -107,7 +107,7 @@
     topicEl.innerHTML = '<span style="font-family:var(--ff-display);font-size:1.12rem;font-weight:300;color:var(--text);">' + topic + '</span>';
 
     var peopleEl = document.createElement('div');
-    peopleEl.style.cssText = 'display:flex;flex-wrap:wrap;gap:0.45rem;min-width:0;';
+    peopleEl.style.cssText = 'display:flex;flex-wrap:wrap;gap:0.45rem;min-width:0;justify-content:flex-end;';
     topicMap[topic].forEach(function (person) {
       var chip = document.createElement('span');
       chip.style.cssText = 'font-family:var(--ff-mono);font-size:0.70rem;letter-spacing:0.06em;padding:0.32rem 0.8rem;border:1px solid rgba(88,28,135,0.2);border-radius:100px;color:var(--accent);background:rgba(27,58,140,0.05);white-space:nowrap;';
