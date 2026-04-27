@@ -38,11 +38,11 @@ window.PEOPLE_DATA = {
           },
         ],
         bio: [
-          "Gilles Brassard is a Full Professor at the Université de Montréal, where he has been a faculty member since 1979, and holds the Canada Research Chair in Quantum Information Science. Together with Charles H. Bennett, he co-invented quantum cryptography with the BB84 quantum key distribution protocol.",
+          "Gilles Brassard is a Full Professor at the Université de Montréal, where he has been a faculty member since 1979, and holds the Canada Research Chair in Quantum Information Science. Together with Charles H. Bennett, he co-invented quantum cryptography with the BB84 quantum key establishment protocol.",
           "Brassard has made groundbreaking contributions to quantum information and computation, including the discovery of quantum teleportation, entanglement distillation, amplitude amplification and quantum pseudo-telepathy, shaping the mathematical foundations of the field.",
         ],
         researchInterests: [
-          "Quantum cryptography and quantum key distribution",
+          "Quantum cryptography and quantum key establishment",
           "Quantum algorithms",
           "Quantum information",
           "Foundations of quantum theory",
@@ -62,11 +62,11 @@ window.PEOPLE_DATA = {
           },
         ],
         bio: [
-          "Gilles Brassard est Professeur titulaire à l'Université de Montréal, où il est membre du corps professoral depuis 1979, et titulaire de la Chaire de recherche du Canada en science de l'information quantique. Avec Charles H. Bennett, il a co-inventé la cryptographie quantique avec le protocole de distribution de clés quantiques BB84.",
+          "Gilles Brassard est Professeur titulaire à l'Université de Montréal, où il est membre du corps professoral depuis 1979, et titulaire de la Chaire de recherche du Canada en science de l'information quantique. Avec Charles H. Bennett, il a co-inventé la cryptographie quantique avec le protocole d'établissement de clés quantiques BB84.",
           "Brassard a apporté des contributions majeures à l'information et au calcul quantiques, notamment la découverte de la téléportation quantique, la distillation d'intrication, l'amplification d'amplitude et la pseudo-télépathie quantique, façonnant ainsi les fondements mathématiques du domaine.",
         ],
         researchInterests: [
-          "Cryptographie quantique et distribution de clés quantiques",
+          "Cryptographie quantique et établissement de clés quantiques",
           "Algorithmes quantiques",
           "Information quantique",
           "Fondements de la théorie quantique",
@@ -318,18 +318,8 @@ window.PEOPLE_DATA = {
         ],
         email: "hahn@iro.umontreal.ca",
         links: [{ label: "Personal Website", url: "#" }],
-        bio: [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-        ],
-        researchInterests: [
-          "Structural and extremal graph theory",
-          "Graph coloring and chromatic polynomials",
-          "Combinatorial optimization and matching theory",
-          "Algebraic combinatorics and symmetric functions",
-          "Probabilistic methods in discrete mathematics",
-          "Network design and connectivity problems",
-        ],
+        bio: [],
+        researchInterests: [],
       },
       fr: {
         eyebrow: "Corps professoral",
@@ -343,18 +333,8 @@ window.PEOPLE_DATA = {
         ],
         email: "hahn@iro.umontreal.ca",
         links: [{ label: "Site web personnel", url: "#" }],
-        bio: [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-        ],
-        researchInterests: [
-          "Théorie des graphes structurale et extrémale",
-          "Coloration de graphes et polynômes chromatiques",
-          "Optimisation combinatoire et théorie du couplage",
-          "Combinatoire algébrique et fonctions symétriques",
-          "Méthodes probabilistes en mathématiques discrètes",
-          "Conception de réseaux et problèmes de connectivité",
-        ],
+        bio: [],
+        researchInterests: [],
       },
     },
     {
@@ -461,12 +441,7 @@ window.PEOPLE_DATA = {
         rank: "Assistant Professor · DIRO, Université de Montréal",
         researchAreaTags: ["Complexity Theory"],
         email: "sokolov@iro.umontreal.ca",
-        links: [
-          {
-            label: "Personal Website",
-            url: "https://simons.berkeley.edu/people/dmitry-sokolov",
-          },
-        ],
+        links: [],
         bio: [
           "2026 –, Assistant Professor (UdeM)",
           "2022 – 2026, Researcher (EPFL)",
@@ -490,12 +465,7 @@ window.PEOPLE_DATA = {
         rank: "Professeur adjoint · DIRO, Université de Montréal",
         researchAreaTags: ["Théorie de la complexité"],
         email: "sokolov@iro.umontreal.ca",
-        links: [
-          {
-            label: "Site web personnel",
-            url: "https://simons.berkeley.edu/people/dmitry-sokolov",
-          },
-        ],
+        links: [],
         bio: [
           "2026 –, Professeur adjoint (UdeM)",
           "2022 – 2026, Chercheur (EPFL)",
