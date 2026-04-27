@@ -3,331 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bourse doctorale — Algorithmes quantiques · LITQ</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>LITQ — Version française à venir</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
-  <style>
-    /* ── Overrides spécifiques à la page ── */
-    .phd-page {
-      position: relative;
-      min-height: 100vh;
-      overflow: hidden;
-    }
-
-    .phd-bg {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      z-index: 0;
-    }
-    .phd-bg img {
-      position: absolute;
-      width: 70vw;
-      max-width: 900px;
-      right: -12%;
-      top: 8%;
-      opacity: 0.18;
-      mix-blend-mode: multiply;
-    }
-
-    .phd-wrap {
-      position: relative;
-      z-index: 1;
-      max-width: 820px;
-      margin: 0 auto;
-      padding: 9rem 5vw 8rem;
-    }
-
-    .phd-breadcrumb {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-family: var(--ff-mono);
-      font-size: 0.62rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--text-subtle);
-      margin-bottom: 3.5rem;
-    }
-    .phd-breadcrumb a {
-      color: var(--text-subtle);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .phd-breadcrumb a:hover { color: var(--teal); }
-    .phd-breadcrumb-sep { opacity: 0.4; }
-
-    .phd-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-family: var(--ff-mono);
-      font-size: 0.62rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--teal);
-      border: 1px solid var(--border-teal);
-      padding: 0.3rem 0.8rem;
-      margin-bottom: 1.6rem;
-    }
-    .phd-badge-dot {
-      width: 6px; height: 6px;
-      border-radius: 50%;
-      background: var(--teal);
-    }
-
-    .phd-title {
-      font-family: var(--ff-display);
-      font-size: clamp(2.4rem, 5vw, 3.8rem);
-      font-weight: 300;
-      line-height: 1.15;
-      letter-spacing: -0.02em;
-      color: var(--text);
-      margin-bottom: 0.5rem;
-    }
-    .phd-title em {
-      font-style: italic;
-      color: var(--teal);
-    }
-
-    .phd-divider {
-      width: 48px;
-      height: 1.5px;
-      background: var(--teal);
-      margin: 2.2rem 0 2.8rem;
-      opacity: 0.55;
-    }
-
-    .phd-lead {
-      font-size: 1.08rem;
-      line-height: 1.85;
-      color: var(--text-muted);
-      margin-bottom: 3.5rem;
-      max-width: 680px;
-    }
-
-    .phd-section {
-      margin-bottom: 3rem;
-    }
-    .phd-section-label {
-      font-family: var(--ff-mono);
-      font-size: 0.62rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 1.1rem;
-    }
-    .phd-section-label--teal { color: var(--teal); }
-    .phd-section h3 {
-      font-family: var(--ff-display);
-      font-size: 1.45rem;
-      font-weight: 400;
-      color: var(--text);
-      margin-bottom: 0.9rem;
-      letter-spacing: -0.01em;
-    }
-    .phd-section p {
-      font-size: 1rem;
-      line-height: 1.85;
-      color: var(--text-muted);
-      margin-bottom: 0.9rem;
-    }
-
-    .phd-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.65rem;
-      margin-top: 0.4rem;
-    }
-    .phd-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-      font-size: 1rem;
-      line-height: 1.7;
-      color: var(--text-muted);
-    }
-    .phd-list li::before {
-      content: '—';
-      font-family: var(--ff-mono);
-      color: var(--teal);
-      opacity: 0.7;
-      flex-shrink: 0;
-      margin-top: 0.05rem;
-    }
-
-    .phd-details-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1px;
-      background: var(--border-teal);
-      border: 1px solid var(--border-teal);
-      margin-bottom: 3rem;
-    }
-    .phd-detail-cell {
-      background: var(--bg);
-      padding: 1.4rem 1.6rem;
-    }
-    .phd-detail-cell-label {
-      font-family: var(--ff-mono);
-      font-size: 0.58rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--text-subtle);
-      margin-bottom: 0.4rem;
-    }
-    .phd-detail-cell-value {
-      font-family: var(--ff-display);
-      font-size: 1.05rem;
-      color: var(--text);
-      font-weight: 400;
-    }
-
-    .phd-rule {
-      border: none;
-      border-top: 1px solid var(--border);
-      margin: 2.5rem 0;
-    }
-
-    .phd-cta {
-      display: flex;
-      align-items: center;
-      gap: 1.2rem;
-      flex-wrap: wrap;
-      margin-top: 3.5rem;
-      padding-top: 2.5rem;
-      border-top: 1px solid var(--border);
-    }
-    .phd-cta-note {
-      font-size: 0.88rem;
-      color: var(--text-subtle);
-      line-height: 1.6;
-    }
-  </style>
 </head>
 <body>
 
-<!-- ══════════ NAV ══════════ -->
 <nav id="nav" class="always-solid">
-  <a href="index.html" class="nav-logo">
+  <a href="../en/index.html" class="nav-logo">
     <span class="nav-logo-name">LITQ</span>
     <span class="nav-logo-sub">Université de Montréal</span>
   </a>
-  <ul class="nav-links">
-    <li><a href="index.html">Accueil</a></li>
-    <li><a href="research.html">Recherche</a></li>
-    <li><a href="people.html">Équipe</a></li>
-    <li><a href="publications.html">Publications</a></li>
-    <li><a href="positions.html">Rejoindre</a></li>
-  </ul>
-  <a href="../en/phd-quantum-algorithms.html" class="lang-toggle">EN</a>
-  <button class="nav-burger" id="burger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
+  <a href="../en/phd-quantum-algorithms.html" class="lang-toggle" style="margin-left:auto;">EN</a>
 </nav>
 
-<div class="phd-page">
-
-  <!-- Décoration d'arrière-plan -->
-  <div class="phd-bg" aria-hidden="true">
-    <img src="../brand_assets/tilde-ellipse-green4.png" alt="">
-  </div>
-
-  <div class="phd-wrap">
-
-    <!-- Fil d'Ariane -->
-    <nav class="phd-breadcrumb" aria-label="Fil d'Ariane">
-      <a href="index.html">LITQ</a>
-      <span class="phd-breadcrumb-sep">·</span>
-      <a href="positions.html">Postes ouverts</a>
-      <span class="phd-breadcrumb-sep">·</span>
-      <span>Bourse doctorale</span>
-    </nav>
-
-    <!-- Insigne -->
-    <div class="phd-badge">
-      <span class="phd-badge-dot"></span>
-      Poste ouvert
-    </div>
-
-    <!-- Titre -->
-    <h1 class="phd-title">Bourse doctorale —<br><em>Modèle</em></h1>
-    <div class="phd-divider"></div>
-
-    <!-- Description -->
-    <div class="phd-section">
-      <div class="phd-section-label">Description du projet</div>
-      <h3>Axe de recherche</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur.
-      </p>
-      <p>
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-        id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-        doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi
-        architecto beatae vitae dicta sunt explicabo.
-      </p>
-    </div>
-
-    <hr class="phd-rule">
-
-    <!-- Prérequis -->
-    <div class="phd-section">
-      <div class="phd-section-label phd-section-label--teal">Prérequis</div>
-      <h3>Profil recherché</h3>
-      <p>
-        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-        consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-        est, qui dolorem ipsum quia dolor sit amet.
-      </p>
-      <ul class="phd-list">
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-        <li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
-        <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco</li>
-        <li>Duis aute irure dolor in reprehenderit in voluptate velit</li>
-        <li>Excepteur sint occaecat cupidatat non proident deserunt</li>
-        <li>Nemo enim ipsam voluptatem sequi nesciunt et quasi architecto</li>
-      </ul>
-    </div>
-
-  </div>
-</div>
-
-<!-- ══════════ PIED DE PAGE ══════════ -->
-<footer>
-  <div>
-    <div class="footer-logo">LITQ</div>
-    <p class="footer-desc">Laboratoire d'informatique théorique et quantique</p>
-    <div class="footer-affil"><div class="footer-affil-dot"></div><span><a href="https://diro.umontreal.ca/accueil/" target="_blank" rel="noopener">DIRO</a> — Université de Montréal</span></div>
-    <div class="footer-affil"><div class="footer-affil-dot"></div><span>Member of <a href="https://www.intriq.org" target="_blank" rel="noopener">INTRIQ</a>, <a href="https://quorumuottawa.ca" target="_blank" rel="noopener">QUORUM</a>, and <a href="https://ivado.ca/en/" target="_blank" rel="noopener">IVADO</a></span></div>
-  </div>
-  <div class="footer-contact">
-    <h4>Nous contacter</h4>
-    <p style="margin-top:0; font-size:0.95rem; line-height:1.7; color:var(--text-muted);">
-      <span style="white-space:nowrap;">Département d'Informatique et de</span><br><span style="white-space:nowrap;">Recherche Opérationnelle (DIRO)</span><br>
-      Université de Montréal<br>
-      Pavillon André-Aisenstadt<br>
-      2920, chemin de la Tour<br>
-      Montréal (Québec) H3T 1J4
+<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem;position:relative;z-index:1;">
+  <div style="text-align:center;max-width:520px;">
+    <div style="font-family:var(--ff-mono);font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-subtle);margin-bottom:1.5rem;">LITQ · Université de Montréal</div>
+    <h1 style="font-family:var(--ff-display);font-size:clamp(2rem,5vw,3.2rem);font-weight:300;color:var(--text);letter-spacing:-0.02em;line-height:1.2;margin-bottom:1.25rem;">
+      Version française<br><em style="color:var(--teal);">à venir</em>
+    </h1>
+    <p style="font-family:var(--ff-body);font-size:1rem;color:var(--text-muted);line-height:1.7;margin-bottom:2.5rem;">
+      La version française du site est en cours de préparation.<br>
+      Merci de votre patience.
     </p>
+    <a href="../en/phd-quantum-algorithms.html" style="font-family:var(--ff-mono);font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);text-decoration:none;border:1.5px solid var(--accent);padding:0.65rem 1.6rem;display:inline-block;transition:background 0.2s,color 0.2s;" onmouseover="this.style.background='var(--accent)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--accent)'">
+      Vers la version anglaise
+    </a>
   </div>
-  <div class="footer-map">
-    <img src="../images/LITQ.jpg" alt="Carte du campus LITQ — Université de Montréal, Campus MIL" />
-  </div>
-</footer>
-<div class="footer-bottom">
-  <p>© 2026 LITQ — Université de Montréal. Tous droits réservés.</p>
-  <p>Département d'Informatique et de Recherche Opérationnelle</p>
-  <p>Website design by Daniel Bilsborrow</p>
 </div>
 
-<script src="../script.js" defer></script>
 </body>
 </html>
