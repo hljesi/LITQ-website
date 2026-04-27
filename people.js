@@ -883,8 +883,8 @@ window.PEOPLE_DATA = {
         nameLast: "Lamontagne",
         rank: "Adjunct Professor · DIRO, Université de Montréal",
         researchAreaTags: ["Quantum Cryptography"],
-        email: "lamontagne@iro.umontreal.ca",
-        links: [{ label: "Personal Website", url: "#" }],
+        email: "philippe.lamontagne.1@umontreal.ca",
+        links: [{ label: "Personal Website", url: "https://cnrc.canada.ca/en/corporate/contact-us/nrc-directory-science-professionals/philippe-lamontagne" }],
         bio: [
           "I am a Research officer in the Cryptography and Quantum Computing team of the Digital Technologies research center and adjunct professor at UdeM. My research expertise is in quantum cryptography. I am interested in exploiting quantum information for advanced cryptographic tasks form lesser assumptions.",
           "I also do research on the security of classical cryptography against quantum adversaries, also known as post-quantum cryptography. I am also interested in cryptographic solutions to privacy.",
@@ -908,8 +908,8 @@ window.PEOPLE_DATA = {
           "Calcul sécurisé",
           "Cryptographie post-quantique",
         ],
-        email: "lamontagne@iro.umontreal.ca",
-        links: [{ label: "Site web personnel", url: "#" }],
+        email: "philippe.lamontagne.1@umontreal.ca",
+        links: [{ label: "Site web personnel", url: "https://cnrc.canada.ca/fr/organisation/contactez-nous/repertoire-scientifiques-cnrc/philippe-lamontagne" }],
         bio: [
           "Je suis agent de recherche dans l'équipe de cryptographie et de calcul quantique centre de recherche en technologies numériques et professeur associé à l'UdeM. Mon expertise de recherche est la cryptographie quantique. Je m'intéresse à l'exploitation de l'information quantique pour des tâches cryptographiques avancées à partir d'hypothèses réduites.",
           "Je fais également de la recherche en cryptographie post-quantique, la branche de la cryptographie classique qui s'intéresse à la sécurité face à un adversaire quantique. Je m'intéresse aussi aux solutions cryptographiques au calcul respectueux de la vie privée.",
