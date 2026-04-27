@@ -300,6 +300,29 @@
     { id: 'A5044037051', name: 'P. Lamontagne'   }, // Prof. Philippe Lamontagne
   ];
 
+  /* ╔══════════════════════════════════════════════════════════════════╗
+     ║ TEMP — MANUAL PAPERS (not yet indexed by OpenAlex)                ║
+     ║ DELETE this entire MANUAL_PAPERS block + the [TEMP-MERGE] line    ║
+     ║ further down once these papers appear in the API feed.            ║
+     ╚══════════════════════════════════════════════════════════════════╝ */
+  const MANUAL_PAPERS = [
+    {
+      title: 'On the power of multipartite entanglement for pseudotelepathy',
+      authorDisplay: 'G. Brassard, X. Coiteux-Roy, R. Ligez',
+      venue: 'arXiv',
+      year: 2026,
+      paperLink: 'https://arxiv.org/abs/2603.17956'
+    },
+        {
+      title: 'CoALFake: Collaborative Active Learning with Human-LLM Co-Annotation for Cross-Domain Fake News Detection',
+      authorDisplay: 'E. Aïmeur, G. Brassard, D. Sallami',
+      venue: 'arXiv',
+      year: 2026,
+      paperLink: 'https://arxiv.org/abs/2604.04174'
+    }
+  ];
+  /* ╚════════════════════════ END TEMP MANUAL PAPERS ════════════════════╝ */
+
   /* ── 3. Utility: HTML-escape a string ── */
   function esc(s) {
     return String(s)
@@ -372,6 +395,11 @@
     });
 
     if (papers.length === 0) { showError(); return; }
+
+    /* [TEMP-MERGE] Prepends MANUAL_PAPERS so they appear at the top of the
+       Selected Publications list. When removing the manual block above,
+       delete the next line entirely. */
+    papers.unshift.apply(papers, MANUAL_PAPERS);
 
     /* ── 7. Render top 5 with staggered fade-in ── */
     pubList.innerHTML = papers.slice(0, 5).map(function (p) {

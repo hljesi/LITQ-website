@@ -35,5 +35,193 @@
   </div>
 </div>
 
+<script src="../script.js" defer></script>
+
+<script>
+(async function () {
+
+  const pubContainer = document.getElementById('pub-list-full');
+  const pagination   = document.getElementById('pub-pagination');
+  const paginationInfo = document.getElementById('pagination-info');
+  const btnPrev      = document.getElementById('btn-prev');
+  const btnNext      = document.getElementById('btn-next');
+
+  const PER_PAGE = 20;
+  let allPapers  = [];
+  let currentPage = 1;
+
+  /* ╔══════════════════════════════════════════════════════════════════╗
+     ║ TEMP — ARTICLES MANUELS (pas encore indexés par OpenAlex)         ║
+     ║ SUPPRIMER ce bloc MANUAL_PAPERS + la ligne [TEMP-MERGE] plus bas  ║
+     ║ dès que ces articles apparaîtront dans le flux API.               ║
+     ╚══════════════════════════════════════════════════════════════════╝ */
+  const MANUAL_PAPERS = [
+    {
+      title: 'CoALFake: Collaborative Active Learning with Human-LLM Co-Annotation for Cross-Domain Fake News Detection',
+      authorships: [
+        { author: { display_name: 'Esma Aïmeur' } },
+        { author: { display_name: 'Gilles Brassard' } },
+        { author: { display_name: 'Dorsaf Sallami' } }
+      ],
+      venue: 'arXiv',
+      year: 2026,
+      paperLink: 'https://arxiv.org/abs/2604.04174'
+    },
+    {
+      title: 'On the power of multipartite entanglement for pseudotelepathy',
+      authorships: [
+        { author: { display_name: 'Gilles Brassard' } },
+        { author: { display_name: 'Xavier Coiteux-Roy' } },
+        { author: { display_name: 'Rémi Ligez' } }
+      ],
+      venue: 'arXiv',
+      year: 2026,
+      paperLink: 'https://arxiv.org/abs/2603.17956'
+    }
+  ];
+  /* ╚════════════════════ FIN DU BLOC TEMP MANUAL PAPERS ════════════════╝ */
+
+  const FACULTY = [
+    { id: 'A5110284072', name: 'G. Brassard'    },
+    { id: 'A5066085467', name: 'F. Dupuis'       },
+    { id: 'A5059511887', name: 'L. Salvail'      },
+    { id: 'A5049102572', name: 'H. Kristjánsson' },
+    { id: 'A5110941674', name: 'G. Hahn'         },
+    { id: 'A5017300573', name: 'D. Sokolov'      },
+    { id: 'A5103523901', name: 'M. Boyer'        },
+    { id: 'A5044037051', name: 'P. Lamontagne'   },
+  ];
+
+  function esc(s) {
+    return String(s)
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+      .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  function renderAuthors(authorships) {
+    return esc((authorships || []).map(function (a) {
+      const parts = (a.author && a.author.display_name || '').trim().split(' ');
+      if (parts.length < 2) return parts[0] || '';
+      return parts[0][0] + '. ' + parts[parts.length - 1];
+    }).filter(Boolean).join(', '));
+  }
+
+  function renderPage(page, scroll) {
+    const start  = (page - 1) * PER_PAGE;
+    const slice  = allPapers.slice(start, start + PER_PAGE);
+    const total  = allPapers.length;
+    const pages  = Math.ceil(total / PER_PAGE);
+
+    pubContainer.innerHTML = slice.map(function (p) {
+      return '<div class="pub-item-full">'
+        + '<span class="pub-year">' + esc(p.year) + '</span>'
+        + '<div>'
+        + '<p class="pub-title">' + esc(p.title) + '</p>'
+        + '<p class="pub-meta">'
+        +   renderAuthors(p.authorships)
+        + '</p>'
+        + '</div>'
+        + '<a href="' + esc(p.paperLink) + '" class="pub-link" target="_blank" rel="noopener">PDF →</a>'
+        + '</div>';
+    }).join('');
+
+    pubContainer.querySelectorAll('.pub-item-full').forEach(function (el, i) {
+      setTimeout(function () { el.classList.add('visible'); }, i * 55);
+    });
+
+    paginationInfo.textContent = 'Page ' + page + ' sur ' + pages;
+    btnPrev.disabled = page <= 1;
+    btnNext.disabled = page >= pages;
+    if (pages > 1) { pagination.style.display = 'flex'; }
+
+    currentPage = page;
+    if (scroll) { window.scrollTo({ top: document.getElementById('publications').offsetTop - 80, behavior: 'smooth' }); }
+  }
+
+  pubContainer.innerHTML = '<div class="pub-state">Chargement des publications…</div>';
+
+  try {
+    const authorFilter = FACULTY.map(function (f) { return f.id; }).join('|');
+    const fields = 'id,title,publication_year,publication_date,authorships,primary_location,open_access';
+
+    async function fetchPage(cursor) {
+      const url = 'https://api.openalex.org/works'
+        + '?filter=authorships.author.id:' + authorFilter
+        + '&sort=publication_date:desc'
+        + '&per_page=100'
+        + '&select=' + fields
+        + (cursor ? '&cursor=' + cursor : '')
+        + '&mailto=litq@iro.umontreal.ca';
+      const resp = await fetch(url);
+      if (!resp.ok) throw new Error('HTTP ' + resp.status);
+      return resp.json();
+    }
+
+    const seen   = new Set();
+    const papers = [];
+
+    function processResults(results) {
+      (results || []).forEach(function (work) {
+        const openAlexId = work.id || '';
+        if (!openAlexId || seen.has(openAlexId)) return;
+        seen.add(openAlexId);
+
+        const title = (work.title || '').trim().replace(/\s+/g, ' ');
+        if (!title) return;
+
+        const year = work.publication_year || '—';
+        const oa   = work.open_access || {};
+        const loc  = work.primary_location || {};
+
+        const arxivUrl  = oa.oa_url && oa.oa_url.includes('arxiv.org') ? oa.oa_url : null;
+        const doiUrl    = loc.landing_page_url || null;
+        const paperLink = arxivUrl || doiUrl || ('https://openalex.org/' + openAlexId.replace('https://openalex.org/', ''));
+
+        const source = loc.source;
+        const venue  = (source && source.display_name) ? source.display_name
+                     : (arxivUrl ? 'arXiv' : '');
+
+        papers.push({ title, authorships: work.authorships, venue, year, paperLink });
+      });
+    }
+
+    const page1 = await fetchPage(null);
+    processResults(page1.results);
+
+    const nextCursor = page1.meta && page1.meta.next_cursor;
+    if (nextCursor && papers.length >= 50) {
+      try {
+        const page2 = await fetchPage(encodeURIComponent(nextCursor));
+        processResults(page2.results);
+      } catch (e) { /* ignore second page errors */ }
+    }
+
+    if (papers.length === 0) { showError(); return; }
+
+    /* [TEMP-MERGE] Préfixe MANUAL_PAPERS. Lors de la suppression du bloc manuel
+       ci-dessus, rétablir cette ligne à :    allPapers = papers; */
+    allPapers = MANUAL_PAPERS.concat(papers);
+
+    renderPage(1);
+
+    btnPrev.addEventListener('click', function () { if (currentPage > 1) renderPage(currentPage - 1, true); });
+    btnNext.addEventListener('click', function () { if (currentPage < Math.ceil(allPapers.length / PER_PAGE)) renderPage(currentPage + 1, true); });
+
+  } catch (err) {
+    console.warn('[LITQ OpenAlex]', err);
+    showError();
+  }
+
+  function showError() {
+    pubContainer.innerHTML =
+      '<div style="border:1px solid var(--border);padding:3rem 2rem;text-align:center;">'
+      + '<p style="font-family:var(--ff-display);font-style:italic;font-size:1.35rem;font-weight:300;color:var(--text);letter-spacing:-0.01em;margin-bottom:0.75rem;">Impossible de récupérer les publications pour l\'instant.</p>'
+      + '<p style="font-family:var(--ff-mono);font-size:0.62rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-subtle);">Veuillez réessayer plus tard ou consulter directement sur '
+      + '<a href="https://arxiv.org/search/?searchtype=author&query=Brassard+OR+Dupuis+OR+Salvail+OR+Kristjansson+OR+Sokolov+OR+Hahn+OR+Boyer+OR+Lamontagne" style="color:var(--teal);border-bottom:1px solid var(--border-teal);text-decoration:none;" target="_blank" rel="noopener">arXiv</a>'
+      + '</p></div>';
+  }
+
+})();
+</script>
 </body>
 </html>

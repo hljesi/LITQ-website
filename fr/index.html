@@ -35,5 +35,173 @@
   </div>
 </div>
 
+<script src="../people.js"></script>
+<script>
+(function () {
+  var data = window.PEOPLE_DATA;
+  if (!data || !data.people) return;
+
+  function sortBySurname(arr) {
+    return arr.slice().sort(function (a, b) {
+      var aL = (a.fr || a.en).nameLast;
+      var bL = (b.fr || b.en).nameLast;
+      return aL.localeCompare(bL, undefined, { sensitivity: 'base' });
+    });
+  }
+
+  var NULL_COLORS = ['6D28D9', '0F766E'];
+  var nullPhotoIndex = 0;
+
+  function makeCard(p) {
+    var l = p.fr || p.en;
+    var rankShort = l.rank ? l.rank.split('\u00b7')[0].trim() : l.eyebrow;
+    var area = (l.researchAreaTags || []).slice(0, 2).join(' \u00b7 ');
+    var photoSrc;
+    if (p.photo === null) {
+      var initials = l.nameFirst.charAt(0) + '.' + l.nameLast.charAt(0) + '.';
+      var color = NULL_COLORS[nullPhotoIndex % 2];
+      nullPhotoIndex++;
+      photoSrc = 'https://placehold.co/400x400/EDE8DF/' + color + '?text=' + initials;
+    } else {
+      photoSrc = p.photo.startsWith('http') ? p.photo : '../profile_icons/' + p.photo;
+    }
+    return '<a class="team-card" href="profile.html?id=' + p.id + '" style="text-decoration:none;">'
+      + '<div class="team-photo"><img src="' + photoSrc + '" alt="' + l.nameFirst + ' ' + l.nameLast + '" loading="lazy"></div>'
+      + '<p class="team-name">' + l.nameFirst + ' ' + l.nameLast + '</p>'
+      + '<p class="team-role">' + rankShort + '</p>'
+      + '<p class="team-area">' + area + '</p>'
+      + '</a>';
+  }
+
+  var faculty = sortBySurname(data.people.filter(function (p) {
+    return (p.fr || p.en).eyebrow === 'Corps professoral';
+  }));
+
+  var fEl = document.getElementById('carousel-faculty');
+  if (fEl) fEl.innerHTML = faculty.map(makeCard).join('');
+})();
+</script>
+
+<script src="../script.js" defer></script>
+
+<script>
+(async function () {
+  const pubList = document.getElementById('pub-list');
+  if (!pubList) return;
+
+  pubList.innerHTML =
+    '<div style="text-align:center;padding:2.8rem;font-family:var(--ff-mono);' +
+    'font-size:0.68rem;letter-spacing:0.18em;color:var(--text-subtle);text-transform:uppercase;">' +
+    'Chargement des publications\u2026</div>';
+
+  const FACULTY = [
+    { id: 'A5110284072', name: 'G. Brassard'    },
+    { id: 'A5066085467', name: 'F. Dupuis'       },
+    { id: 'A5059511887', name: 'L. Salvail'      },
+    { id: 'A5049102572', name: 'H. Kristjánsson' },
+    { id: 'A5110941674', name: 'G. Hahn'         },
+    { id: 'A5017300573', name: 'D. Sokolov'      },
+    { id: 'A5103523901', name: 'M. Boyer'        },
+    { id: 'A5044037051', name: 'P. Lamontagne'   },
+  ];
+
+  /* ╔══════════════════════════════════════════════════════════════════╗
+     ║ TEMP — ARTICLES MANUELS (pas encore indexés par OpenAlex)         ║
+     ║ SUPPRIMER ce bloc MANUAL_PAPERS + la ligne [TEMP-MERGE] plus bas  ║
+     ║ dès que ces articles apparaîtront dans le flux API.               ║
+     ╚══════════════════════════════════════════════════════════════════╝ */
+  const MANUAL_PAPERS = [
+    {
+      title: 'CoALFake: Collaborative Active Learning with Human-LLM Co-Annotation for Cross-Domain Fake News Detection',
+      authorDisplay: 'E. Aïmeur, G. Brassard, D. Sallami',
+      venue: 'arXiv',
+      year: 2026,
+      paperLink: 'https://arxiv.org/abs/2604.04174'
+    },
+    {
+      title: 'On the power of multipartite entanglement for pseudotelepathy',
+      authorDisplay: 'G. Brassard, X. Coiteux-Roy, R. Ligez',
+      venue: 'arXiv',
+      year: 2026,
+      paperLink: 'https://arxiv.org/abs/2603.17956'
+    }
+  ];
+  /* ╚════════════════════ FIN DU BLOC TEMP MANUAL PAPERS ════════════════╝ */
+
+  function esc(s) {
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  try {
+    const authorFilter = FACULTY.map(function (f) { return f.id; }).join('|');
+    const fields = 'id,title,publication_year,publication_date,authorships,primary_location,open_access';
+    const url = 'https://api.openalex.org/works'
+      + '?filter=authorships.author.id:' + authorFilter
+      + '&sort=publication_date:desc&per_page=20&select=' + fields
+      + '&mailto=litq@iro.umontreal.ca';
+
+    const resp = await fetch(url);
+    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+    const data = await resp.json();
+
+    const seen = new Set();
+    const papers = [];
+
+    (data.results || []).forEach(function (work) {
+      const openAlexId = work.id || '';
+      if (!openAlexId || seen.has(openAlexId)) return;
+      seen.add(openAlexId);
+      const title = (work.title || '').trim().replace(/\s+/g, ' ');
+      if (!title) return;
+      const year = work.publication_year || '—';
+      const allAuthors = (work.authorships || []).map(function (a) {
+        const parts = (a.author && a.author.display_name || '').trim().split(' ');
+        if (parts.length < 2) return parts[0] || '';
+        return parts[0][0] + '. ' + parts[parts.length - 1];
+      }).filter(Boolean);
+      const oa = work.open_access || {};
+      const loc = work.primary_location || {};
+      const arxivUrl = oa.oa_url && oa.oa_url.includes('arxiv.org') ? oa.oa_url : null;
+      const doiUrl = loc.landing_page_url || null;
+      const paperLink = arxivUrl || doiUrl || ('https://openalex.org/' + openAlexId.replace('https://openalex.org/', ''));
+      const source = loc.source;
+      const venue = (source && source.display_name) ? source.display_name : (arxivUrl ? 'arXiv' : '');
+      papers.push({ title, authorDisplay: allAuthors.join(', '), venue, year, paperLink });
+    });
+
+    if (papers.length === 0) { showError(); return; }
+
+    /* [TEMP-MERGE] Préfixe MANUAL_PAPERS pour les afficher en haut de la
+       liste des publications sélectionnées. Lors de la suppression du bloc
+       manuel ci-dessus, supprimer entièrement la ligne suivante. */
+    papers.unshift.apply(papers, MANUAL_PAPERS);
+
+    pubList.innerHTML = papers.slice(0, 5).map(function (p) {
+      return '<div class="pub-item" style="opacity:0;transform:translateY(14px);transition:opacity 0.5s ease,transform 0.5s cubic-bezier(0.16,1,0.3,1);">'
+        + '<span class="pub-year">' + esc(p.year) + '</span>'
+        + '<div><p class="pub-title">' + esc(p.title) + '</p>'
+        + '<p class="pub-meta">' + esc(p.authorDisplay)
+        + (p.venue ? ' <span class="pub-venue">' + esc(p.venue) + '</span>' : '') + '</p></div>'
+        + '<a href="' + esc(p.paperLink) + '" class="pub-link" target="_blank" rel="noopener">PDF →</a>'
+        + '</div>';
+    }).join('');
+
+    pubList.querySelectorAll('.pub-item').forEach(function (el, i) {
+      setTimeout(function () { el.style.opacity = '1'; el.style.transform = 'none'; }, i * 90);
+    });
+
+  } catch (err) {
+    console.warn('[LITQ OpenAlex]', err);
+    showError();
+  }
+
+  function showError() {
+    pubList.innerHTML = '<div style="border:1px solid var(--border);padding:3rem 2rem;text-align:center;">'
+      + '<p style="font-family:var(--ff-display);font-style:italic;font-size:1.35rem;font-weight:300;color:var(--text);letter-spacing:-0.01em;margin-bottom:0.75rem;">Impossible de charger les publications.</p>'
+      + '<p style="font-family:var(--ff-mono);font-size:0.62rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-subtle);">Veuillez réessayer plus tard ou consulter directement '
+      + '<a href="https://arxiv.org/search/?searchtype=author&query=Brassard+OR+Dupuis+OR+Salvail+OR+Kristjansson+OR+Sokolov+OR+Hahn+OR+Boyer+OR+Lamontagne" style="color:var(--teal);border-bottom:1px solid var(--border-teal);text-decoration:none;" target="_blank" rel="noopener">arXiv</a></p></div>';
+  }
+})();
+</script>
 </body>
 </html>
